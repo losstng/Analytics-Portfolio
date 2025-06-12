@@ -1,0 +1,99 @@
+# ===============================
+# 📦 IMPORTING PANDAS
+# ===============================
+import pandas as pd
+
+# ===============================
+# 📄 DATAFRAME CREATION
+# ===============================
+df = pd.DataFrame({
+    "name": ["Alice", "Bob", "Charlie"],
+    "age": [25, 30, 35],
+    "score": [88, 92, 85]
+})
+
+# ===============================
+# 🔍 INSPECTING DATA
+# ===============================
+df.head()                  # First 5 rows
+df.tail(3)                 # Last 3 rows
+df.shape                   # (rows, columns)
+df.columns                 # Column names
+df.index                   # Row indices
+df.info()                  # Summary of dataframe
+df.describe()              # Statistical summary
+
+# ===============================
+# 🔍 SELECTION & FILTERING
+# ===============================
+df["age"]                  # Single column (Series)
+df[["age", "score"]]       # Multiple columns (DataFrame)
+df.loc[0]                  # Row by label
+df.iloc[1]                 # Row by index
+df[df["age"] > 28]         # Conditional filter
+
+# ===============================
+# ✏️ MODIFYING DATA
+# ===============================
+df["passed"] = df["score"] > 90          # New column from condition
+df.rename(columns={"score": "exam_score"}, inplace=True)
+df.drop("passed", axis=1, inplace=True)  # Remove column
+
+# ===============================
+# 🔁 LOOP-LIKE OPERATIONS
+# ===============================
+df["age_plus_10"] = df["age"].apply(lambda x: x + 10)
+df["grade"] = df["score"].map({85: "B", 88: "B+", 92: "A"})
+
+# ===============================
+# 🧹 MISSING DATA
+# ===============================
+df.isna()                  # Detect missing
+df.dropna()                # Drop rows with missing
+df.fillna(0)               # Replace missing with 0
+
+# ===============================
+# 🔗 GROUPING & AGGREGATION
+# ===============================
+df.groupby("age")["score"].mean()       # Group by age, get mean score
+df.agg({"age": ["mean", "max"], "score": "sum"})  # Aggregate multiple
+
+# ===============================
+# 🧾 SORTING & REARRANGING
+# ===============================
+df.sort_values(by="score", ascending=False)
+df.reset_index(drop=True, inplace=True)
+
+# ===============================
+# 📊 MERGING & JOINING
+# ===============================
+df2 = pd.DataFrame({"name": ["Alice", "Bob"], "city": ["NY", "LA"]})
+merged = pd.merge(df, df2, on="name", how="left")  # inner, outer, left, right
+
+# ===============================
+# 🧱 CONCATENATION
+# ===============================
+pd.concat([df, df2], axis=0)  # Stack vertically
+pd.concat([df, df2], axis=1)  # Stack horizontally
+
+# ===============================
+# 📤 I/O OPERATIONS
+# ===============================
+df.to_csv("output.csv", index=False)     # Export to CSV
+df = pd.read_csv("output.csv")           # Read from CSV
+df.to_excel("output.xlsx", index=False)  # Export to Excel
+df = pd.read_excel("output.xlsx")        # Read from Excel
+
+# ===============================
+# 🧮 COMMON STATISTICS
+# ===============================
+df["score"].mean()
+df["score"].median()
+df["score"].std()
+df["score"].value_counts(normalize=True)  # Frequency distribution (%)
+
+# ===============================
+# ⚖️ BOOLEAN LOGIC
+# ===============================
+df[(df["age"] > 25) & (df["score"] > 85)]
+df[(df["age"] < 30) | (df["score"] == 85)]
