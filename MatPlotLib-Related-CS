@@ -1,0 +1,82 @@
+# ===============================
+# 📦 IMPORTING MATPLOTLIB
+# ===============================
+import matplotlib.pyplot as plt
+
+# ===============================
+# 📊 BASIC PLOT TYPES
+# ===============================
+# Line Plot
+plt.plot([1, 2, 3], [4, 5, 6])
+plt.title("Line Plot")
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.show()
+
+# Bar Chart
+plt.bar(["A", "B", "C"], [10, 15, 7])
+plt.title("Bar Chart")
+plt.show()
+
+# Scatter Plot
+plt.scatter([1, 2, 3], [4, 5, 6])
+plt.title("Scatter Plot")
+plt.show()
+
+# Histogram
+data = [1, 2, 2, 3, 3, 3, 4]
+plt.hist(data, bins=4)
+plt.title("Histogram")
+plt.show()
+
+# Pie Chart
+labels = ["Apples", "Bananas", "Cherries"]
+sizes = [30, 50, 20]
+plt.pie(sizes, labels=labels, autopct="%1.1f%%")
+plt.title("Pie Chart")
+plt.show()
+
+# ===============================
+# 🎨 CUSTOMIZATION
+# ===============================
+plt.plot([1, 2, 3], [3, 2, 1], color="red", linestyle="--", linewidth=2, marker="o", label="Series A")
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# ===============================
+# 🖼️ MULTIPLE PLOTS (Subplots)
+# ===============================
+fig, axs = plt.subplots(2, 1)  # 2 rows, 1 column
+axs[0].plot([1, 2, 3], [4, 5, 6])
+axs[1].bar(["X", "Y", "Z"], [5, 6, 7])
+plt.tight_layout()
+plt.show()
+
+# ===============================
+# 📐 AXES & LIMITS
+# ===============================
+plt.plot([10, 20, 30], [1, 2, 3])
+plt.xlim(0, 40)
+plt.ylim(0, 5)
+plt.xticks(rotation=45)  # Rotate x-axis labels
+plt.show()
+
+# ===============================
+# 💾 SAVING PLOTS
+# ===============================
+plt.plot([1, 2, 3], [3, 2, 1])
+plt.savefig("my_plot.png", dpi=300, bbox_inches='tight')  # Save to file
+plt.close()
+
+# ===============================
+# 🔄 COMBINE WITH PANDAS
+# ===============================
+import pandas as pd
+df = pd.DataFrame({
+    "Month": ["Jan", "Feb", "Mar"],
+    "Sales": [100, 120, 90]
+})
+df.plot(kind="bar", x="Month", y="Sales", legend=False)
+plt.title("Monthly Sales")
+plt.show()
