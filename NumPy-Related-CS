@@ -1,0 +1,84 @@
+# ===============================
+# 📦 IMPORTING NUMPY
+# ===============================
+import numpy as np
+
+# ===============================
+# 🔧 ARRAY CREATION
+# ===============================
+a = np.array([1, 2, 3])                    # 1D array
+b = np.array([[1, 2], [3, 4]])             # 2D array
+
+np.zeros((2, 3))                           # Array of zeros
+np.ones((3, 3))                            # Array of ones
+np.full((2, 2), 7)                         # Array filled with 7
+np.eye(3)                                  # Identity matrix
+np.arange(0, 10, 2)                        # [0, 2, 4, 6, 8]
+np.linspace(0, 1, 5)                       # Evenly spaced numbers between 0 and 1
+
+# ===============================
+# 🔍 INSPECTING ARRAYS
+# ===============================
+a.shape                                    # Dimensions
+a.ndim                                     # Number of dimensions
+a.dtype                                    # Data type
+a.size                                     # Total number of elements
+
+# ===============================
+# 🔁 RESHAPING & TRANSFORMING
+# ===============================
+b.reshape((4, 1))                          # Reshape
+b.flatten()                                # Flatten to 1D
+b.T                                        # Transpose
+
+# ===============================
+# 🎯 INDEXING & SLICING
+# ===============================
+a[0]                                       # First element
+b[1, 1]                                    # Row 2, Column 2
+b[0:2, 1]                                  # First two rows, second column
+
+# ===============================
+# 🔄 BOOLEAN MASKING & FILTERING
+# ===============================
+a[a > 1]                                   # [2, 3]
+np.where(a > 1, 1, 0)                      # Replace: if >1 set 1 else 0
+
+# ===============================
+# 🧮 MATHEMATICAL OPERATIONS
+# ===============================
+a + 1                                      # Add scalar
+a * 2                                      # Multiply scalar
+a + np.array([4, 5, 6])                    # Element-wise add
+np.dot(a, np.array([1, 0, 1]))             # Dot product
+np.sum(b)                                  # Sum all elements
+np.mean(b)                                 # Mean
+np.std(b)                                  # Standard deviation
+np.max(b, axis=0)                          # Max per column
+
+# ===============================
+# 🎲 RANDOM GENERATION
+# ===============================
+np.random.rand(2, 2)                       # Uniform distribution [0, 1)
+np.random.randn(2, 2)                      # Normal distribution
+np.random.randint(0, 10, (3, 3))           # Random integers
+
+# ===============================
+# 🧹 UTILITIES & CLEANING
+# ===============================
+np.isnan(b)                                # Detect NaNs
+np.unique(a)                               # Unique values
+np.sort(a)                                 # Sort array
+
+# ===============================
+# 🧱 STACKING & CONCATENATION
+# ===============================
+np.concatenate([a, a])                     # Concatenate 1D
+np.vstack([a, a])                          # Vertical stack
+np.hstack([a, a])                          # Horizontal stack
+
+# ===============================
+# 🧪 LOGIC & COMPARISONS
+# ===============================
+np.all(a > 0)                              # True if all elements > 0
+np.any(a > 2)                              # True if any element > 2
