@@ -6,6 +6,8 @@ import math
 import statsmodels.api as sm
 from statsmodels.formula.api import ols
 from statsmodels.stats.multicomp import pairwise_tukeyhsd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
 
 d = pd.read_csv('marketing_sales_data.csv')
 d = sns.load_dataset("diamonds", cache=False)
