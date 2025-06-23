@@ -16,6 +16,9 @@ d = sns.load_dataset("diamonds", cache=False)
 d.head()
 d["color"].value_counts()
 
+X = a[['Acc (vertical)']]
+Y = a[['LyingDown']]
+
 # some data cleaning
 colorless = d[d["color"].isin(["E","F","H","D","I"])]
 colorless = colorless[["color","price"]].reset_index(drop=True)
