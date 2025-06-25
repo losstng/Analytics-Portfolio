@@ -116,6 +116,9 @@ resample(data_minority,
                                  n_samples=len(data_majority), # to match majority class
                                  random_state=0)
 
+data_upsampled[["verified_status", "video_transcription_text"]].groupby(by="verified_status")[["video_transcription_text"]].agg(func=lambda array: np.mean([len(text) for text in array]))
+
+data_upsampled["text_length"] = data_upsampled["video_transcription_text"].apply(func=lambda text: len(text))
 
 # # Predictions & probabilities
 # y_pred = clf.predict(X_test)
@@ -137,3 +140,38 @@ resample(data_minority,
 # )
 # plt.title('Logistic Regression Fit')
 # plt.show()
+
+
+
+
+sns.histplot(data=data_upsampled, stat="count", multiple="stack", x="text_length", kde=False, palette="pastel", 
+             hue="verified_status", element="bars", legend=True)
+plt.title("Seaborn Stacked Histogram")
+plt.xlabel("video_transcription_text length (number of characters)")
+plt.ylabel("Count")
+plt.title("Distribution of video_transcription_text length for videos posted by verified accounts and videos posted by unverified accounts")
+plt.show()
+
+data_upsampled.corr(numeric_only=True)
+
+plt.figure(figsize=(8, 6))
+sns.heatmap(
+    data_upsampled[["video_duration_sec", "claim_status", "author_ban_status", "video_view_count", 
+                    "video_like_count", "video_share_count", "video_download_count", "video_comment_count", "text_length"]]
+    .corr(numeric_only=True), 
+    annot=True, 
+    cmap="crest")
+plt.title("Heatmap of the dataset")
+plt.show()
+
+
+X_train_encoded = X_encoder.fit_transform(X_train_to_encode)
+
+X_encoder.get_feature_names_out()
+
+X_train_encoded_df = pd.DataFrame(data=X_train_encoded, columns=X_encoder.get_feature_names_out())
+
+target_labels = ["verified", "not verified"]
+print(classification_report(y_test_final, y_pred, target_names=target_labels))
+
+pd.DataFrame(data={"Feature Name":log_clf.feature_names_in_, "Model Coefficient":log_clf.coef_[0]})
