@@ -111,6 +111,12 @@ colorless.to_csv('diamonds_clean.csv', index=False)
 # X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 # clf = LogisticRegression().fit(X_train, y_train)
 
+resample(data_minority,
+                                 replace=True,                 # to sample with replacement
+                                 n_samples=len(data_majority), # to match majority class
+                                 random_state=0)
+
+
 # # Predictions & probabilities
 # y_pred = clf.predict(X_test)
 # y_proba = clf.predict_proba(X_test)[:, 1]
