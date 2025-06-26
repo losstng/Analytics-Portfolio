@@ -1,0 +1,132 @@
+
+-- Query SELECT Problems Using the Classic Models database
+
+select distinct city
+from offices;
+
+select E.employeenumber, E.lastname, E.firstname, E.extension
+from employees E
+join offices O on E.officecode = O.officecode
+where O.city = 'Paris';
+
+select productcode, productname, productvendor, quantityinstock, productline
+from products
+where quantityinstock >= 200 and quantityinstock < 1200;
+
+SELECT 
+  productcode,  
+  productname,  
+  productvendor,  
+  buyprice,  
+  msrp 
+FROM products
+WHERE msrp = ( 
+  SELECT MIN(msrp) FROM products 
+);
+
+SELECT productname, msrp - buyprice AS profit
+FROM products
+WHERE msrp - buyprice = (
+  SELECT MAX(msrp - buyprice)
+  FROM products
+);
+
+SELECT country, COUNT(*) AS "Customers"
+FROM customers
+GROUP BY country
+HAVING COUNT(*) = 2
+ORDER BY country ASC;
+
+SELECT 
+  p.productcode, 
+  p.productname, 
+  COUNT(od.ordernumber) AS "ordercount"
+FROM products p
+JOIN orderdetails od ON p.productcode = od.productcode
+GROUP BY p.productcode, p.productname
+HAVING COUNT(od.ordernumber) = 25;
+
+SELECT 
+  p.productcode, 
+  p.productname, 
+  COUNT(od.ordernumber) AS "OrderCount"
+FROM products p
+JOIN orderdetails od ON p.productcode = od.productcode
+GROUP BY p.productcode, p.productname
+HAVING COUNT(od.ordernumber) = 25
+ORDER BY p.productcode;
+
+SELECT 
+  e.employeenumber, 
+  e.firstname || ' ' || e.lastname AS name
+FROM employees e
+JOIN employees m ON e.reportsto = m.employeenumber
+WHERE m.firstname = 'Diane' AND m.lastname = 'Murphy'
+   OR m.firstname = 'Gerard' AND m.lastname = 'Bondur';
+
+SELECT employeenumber, lastname, firstname
+FROM employees
+WHERE reportsto IS NULL;
+
+SELECT productname
+FROM products
+WHERE productline = 'Classic Cars'
+  AND productname LIKE '195%';
+
+SELECT TO_CHAR(orderdate, 'Month') AS month_name,
+       COUNT(*) AS total_orders
+FROM orders
+WHERE EXTRACT(YEAR FROM orderdate) = 2004
+GROUP BY month_name, EXTRACT(MONTH FROM orderdate)
+ORDER BY total_orders DESC
+LIMIT 1;
+
+SELECT e.firstname, e.lastname
+FROM employees e
+LEFT JOIN customers c ON e.employeenumber = c.salesrepemployeenumber
+WHERE e.jobtitle = 'Sales Rep'
+  AND c.customernumber IS NULL;
+
+SELECT c.customername
+FROM customers c
+LEFT JOIN orders o ON c.customernumber = o.customernumber
+WHERE c.country = 'Switzerland'
+  AND o.ordernumber IS NULL;
+
+SELECT c.customername, SUM(od.quantityordered) AS total_quantity
+FROM customers c
+JOIN orders o ON c.customernumber = o.customernumber
+JOIN orderdetails od ON o.ordernumber = od.ordernumber
+GROUP BY c.customername
+HAVING SUM(od.quantityordered) > 1650;
+
+-- Query DML/DDL Problems Using the Classic Models database
+
+CREATE TABLE TopCustomers (
+    customernumber INTEGER NOT NULL,
+    contactdate DATE NOT NULL,
+    ordertotal REAL NOT NULL, constraint PKTopCustomers primary key (CustomerNumber)
+);
+
+INSERT INTO TopCustomers (customernumber, contactdate, ordertotal)
+SELECT c.customernumber, CURRENT_DATE, SUM(od.priceeach * od.quantityordered)
+FROM customers c
+JOIN orders o ON c.customernumber = o.customernumber
+JOIN orderdetails od ON o.ordernumber = od.ordernumber
+GROUP BY c.customernumber
+HAVING SUM(od.priceeach * od.quantityordered) > 140000
+LIMIT 10;
+
+SELECT * FROM TopCustomers
+ORDER BY ordertotal DESC;
+
+ALTER TABLE TopCustomers
+ADD COLUMN ordercount INTEGER;
+
+UPDATE TopCustomers
+SET ordercount = FLOOR(RANDOM() * 10) + 1;
+
+SELECT * FROM TopCustomers
+ORDER BY ordercount DESC;
+
+DROP TABLE TopCustomers;
