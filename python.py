@@ -1,177 +1,83 @@
-# =============================================================================
-# 1. IMPORTS
-# =============================================================================
 import pandas as pd
-import numpy as np
-import math
-import matplotlib.pyplot as plt
 import seaborn as sns
-
-import statsmodels.api as sm
-from statsmodels.formula.api import ols
-from statsmodels.stats.multicomp import pairwise_tukeyhsd
-
+import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.preprocessing import OneHotEncoder
-from sklearn import metrics
+import statsmodels.api as sm
 
-# =============================================================================
-# 2. LOAD DATA
-# =============================================================================
-# Example: marketing sales data
-# d_sales = pd.read_csv('marketing_sales_data.csv')
+####load
+p = sns.load_dataset("penguins")
+data = pd.read_csv('marketing_and_sales_data_evaluate_lr.csv')
 
-# Example: diamonds dataset for demonstration
-d = sns.load_dataset("diamonds", cache=False)
+####explore
+p.head()
+sns.pairplot(p)
+d.isna().sum()
+data[['TV','Radio','Social_Media']].describe()
 
-# =============================================================================
-# 3. EXPLORATORY DATA ANALYSIS (EDA)
-# =============================================================================
-# Peek at the first rows and category counts
-print(d.head())
-print(d['color'].value_counts())
-# Check for missing values
-print(d.isna().sum())
-# Visualize pairwise relationships
-sns.pairplot(d)
+missing_sales = data.Sales.isna().mean()
+missing_sales = round(missing_sales*100, 2)
+print('Percentage of promotions missing Sales: ' +  str(missing_sales) + '%')
+
+print(data.groupby('TV')['Sales'].mean())
+
+data = data.rename(columns={'Social Media': 'Social_Media'})
+####cleaning
+p = p[p['species'] != "Chinstrap"]
+
+d = d.dropna(axis=0)
+data = data.dropna(subset = ['Sales'], axis = 0)
+
+p = p[["body_mass_g", "bill_length_mm", "sex", "species"]]
+p.columns = ["body_mass_g", "bill_length_mm", "gender", "species"]
+X_train, X_test, y_train, y_test = train_test_split(p_X, p_y, test_size=0.3, random_state=42)
+
+####ordinary least squared
+from statsmodels.formula.api import ols
+
+ols_d = p_f[['bill_length_mm', 'body_mass_g']]
+ols_formula = "body_mass_g ~ bill_length_mm"
+
+OLS = ols(formula=ols_formula, data=ols_d)
+model=OLS.fit()
+model.summary()
+
+###models assumptions
+#linearity assumption
+sns.regplot(x = "bill_length_mm", y = "body_mass_g", data = ols_d) 
+
+#normality assumption
+fitted_values = model.predict(X) 
+r = model.resid
+fig = sns.histplot(r)
+fig.set_xlabel('Residual Value')
+fig.set_title('Histogram of Residuals')
+plt.show()
+&&&&
+fig = sm.qqplot(model.resid, line = 's')
 plt.show()
 
-# =============================================================================
-# 4. DATA CLEANING & FEATURE ENGINEERING
-# =============================================================================
-# Filter to a subset of colors and keep only price
-colorless = (
-    d[d["color"].isin(["E", "F", "H", "D", "I"])]
-    [["color", "price"]]
-    .reset_index(drop=True)
-)
+#homoscedasticity assumption
+fig = sns.scatterplot(x=fitted_values, y=residuals)
+fig.axhline(0)
 
-# Convert 'color' to a categorical and drop unused levels
-colorless['color'] = colorless['color'].astype('category')
-colorless['color'] = colorless['color'].cat.remove_unused_categories()
-
-# Add a log-transformed price column
-colorless['log_price'] = np.log(colorless['price'])
-
-# Drop any remaining NaNs and reset index
-colorless.dropna(inplace=True)
-colorless.reset_index(drop=True, inplace=True)
-
-# Save cleaned dataset
-colorless.to_csv('diamonds_clean.csv', index=False)
-
-# =============================================================================
-# 5. ONE-WAY ANOVA (Sales ~ TV)
-# =============================================================================
-# (Uncomment and load your actual sales data into d_sales first)
-# model_sales = ols('Sales ~ C(TV)', data=d_sales).fit()
-# print("Type I ANOVA:\n", sm.stats.anova_lm(model_sales, typ=1))
-# print("Type II ANOVA:\n", sm.stats.anova_lm(model_sales, typ=2))
-# print("Type III ANOVA:\n", sm.stats.anova_lm(model_sales, typ=3))
-
-# =============================================================================
-# 6. RESIDUAL DIAGNOSTICS
-# =============================================================================
-# resid = model_sales.resid
-# # Histogram + Q-Q plot
-# fig, ax = plt.subplots(1, 2, figsize=(10, 4))
-# sns.histplot(resid, ax=ax[0], kde=True).set_title('Residuals Histogram')
-# sm.qqplot(resid, line='s', ax=ax[1]).set_title('Normal Q-Q')
-# plt.tight_layout()
-# plt.show()
-# # Fitted vs. Residuals
-# plt.figure(figsize=(6, 4))
-# sns.scatterplot(x=model_sales.fittedvalues, y=resid)
-# plt.axhline(0, color='red', linestyle='--')
-# plt.xlabel('Fitted Values'); plt.ylabel('Residuals')
-# plt.title('Residuals vs. Fitted')
-# plt.show()
-
-# =============================================================================
-# 7. POST HOC: TUKEY HSD
-# =============================================================================
-# tukey_results = pairwise_tukeyhsd(
-#     endog=d_sales['Sales'],
-#     groups=d_sales['TV'],
-#     alpha=0.05
-# )
-# print(tukey_results.summary())
-
-# =============================================================================
-# 8. LOGISTIC REGRESSION TEMPLATE
-# =============================================================================
-# -- Prepare df_s with 'Inflight entertainment' and binary 'satisfaction_enc' --
-# df_s = pd.read_csv('your_data.csv')
-# encoder = OneHotEncoder(drop='first', sparse=False)
-# df_s['satisfaction_enc'] = encoder.fit_transform(df_s[['satisfaction']])[:, 0]
-
-# X = df_s[['Inflight entertainment']]
-# y = df_s['satisfaction_enc']
-# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-# clf = LogisticRegression().fit(X_train, y_train)
-
-resample(data_minority,
-                                 replace=True,                 # to sample with replacement
-                                 n_samples=len(data_majority), # to match majority class
-                                 random_state=0)
-
-data_upsampled[["verified_status", "video_transcription_text"]].groupby(by="verified_status")[["video_transcription_text"]].agg(func=lambda array: np.mean([len(text) for text in array]))
-
-data_upsampled["text_length"] = data_upsampled["video_transcription_text"].apply(func=lambda text: len(text))
-
-# # Predictions & probabilities
-# y_pred = clf.predict(X_test)
-# y_proba = clf.predict_proba(X_test)[:, 1]
-
-# # Evaluation metrics
-# print("Accuracy:", metrics.accuracy_score(y_test, y_pred))
-# print("Precision:", metrics.precision_score(y_test, y_pred))
-# print("Recall:", metrics.recall_score(y_test, y_pred))
-# print("F1 Score:", metrics.f1_score(y_test, y_pred))
-
-# # Plot logistic regression fit
-# sns.regplot(
-#     x="Inflight entertainment",
-#     y="satisfaction_enc",
-#     data=df_s,
-#     logistic=True,
-#     ci=None
-# )
-# plt.title('Logistic Regression Fit')
-# plt.show()
-
-
-
-
-sns.histplot(data=data_upsampled, stat="count", multiple="stack", x="text_length", kde=False, palette="pastel", 
-             hue="verified_status", element="bars", legend=True)
-plt.title("Seaborn Stacked Histogram")
-plt.xlabel("video_transcription_text length (number of characters)")
-plt.ylabel("Count")
-plt.title("Distribution of video_transcription_text length for videos posted by verified accounts and videos posted by unverified accounts")
+fig.set_xlabel("Fitted Values")
+fig.set_ylabel("Residuals")
 plt.show()
 
-data_upsampled.corr(numeric_only=True)
+#no multicollinearity (applicable to multiple linear)
+from statsmodels.stats.outliers_influence import variance_inflation_factor
+VIF
+X = data[['Radio','Social_Media']]
+vif = [variance_inflation_factor(X.values, i) for i in range(X.shape[1])]
+df_vif = pd.DataFrame(vif, index=X.columns, columns = ['VIF'])
+df_vif
 
-plt.figure(figsize=(8, 6))
-sns.heatmap(
-    data_upsampled[["video_duration_sec", "claim_status", "author_ban_status", "video_view_count", 
-                    "video_like_count", "video_share_count", "video_download_count", "video_comment_count", "text_length"]]
-    .corr(numeric_only=True), 
-    annot=True, 
-    cmap="crest")
-plt.title("Heatmap of the dataset")
-plt.show()
+####multiple linear regression
+p_X = p[["bill_length_mm", "gender", "species"]]
+p_y = p[["body_mass_g"]]
 
+ols_formula = 'body_mass_g ~ bill_length_mm + C(gender) + C(species)'
 
-X_train_encoded = X_encoder.fit_transform(X_train_to_encode)
-
-X_encoder.get_feature_names_out()
-
-X_train_encoded_df = pd.DataFrame(data=X_train_encoded, columns=X_encoder.get_feature_names_out())
-
-target_labels = ["verified", "not verified"]
-print(classification_report(y_test_final, y_pred, target_names=target_labels))
-
-pd.DataFrame(data={"Feature Name":log_clf.feature_names_in_, "Model Coefficient":log_clf.coef_[0]})
+OLS = ols(formula = ols_formula, data = p_X)
+model=OLS.fit()
+model.summary()
