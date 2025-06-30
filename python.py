@@ -5,11 +5,15 @@ from sklearn.model_selection import train_test_split
 import statsmodels.api as sm
 from sklearn.linear_model import LogisticRegression
 import sklearn.metrics as metrics
+from sklearn.preprocessing import StandardScaler
 %pylab inline
 import plotly.graph_objects as go
 from sklearn.cluster import KMeans
 from sklearn.datasets import make_blobs
 from sklearn.metrics import silhouette_score
+from sklearn import naive_bayes
+from sklearn import model_selection
+from sklearn import metrics
 
 ####load & data load
 p = sns.load_dataset("penguins")
@@ -86,6 +90,7 @@ X.head()
 
 ####cleaning
 p = p[p['species'] != "Chinstrap"]
+df.drop('column_name', axis=1, inplace=True)
 
 colorless = d[d["color"].isin(["E","F","H","D","I"])]
 colorless = colorless[["color","price"]].reset_index(drop=True)
@@ -110,6 +115,9 @@ X_scaled[:2,:]
 # Prepping data, feature engineering
 
 penguins_subset['sex'] = penguins_subset['sex'].str.upper()
+
+# Convert `sex` column from categorical to numeric.
+penguins_subset = pd.get_dummies(penguins_subset, drop_first = True, columns=['sex'])
 
 ####ordinary least squared
 from statsmodels.formula.api import ols
@@ -414,7 +422,7 @@ sil_score = kmeans_sil(num_clusters, X_scaled)
 sil_score
 
 ## visualization with K-means metrics
-plot = sns.lineplot(x=num_clusters, y=inertia)
+plot = sns.lineplot(x=num_clusters, y=inertia, marker = 'o')
 plot.set_xlabel("Number of clusters");
 plot.set_ylabel("Inertia");
 
@@ -434,3 +442,28 @@ print('Unique labels:', np.unique(kmeans5.labels_))
 
 X['cluster'] = kmeans5.labels_
 X.head()
+
+# Verify if any `cluster` can be differentiated by `species`.
+penguins_subset.groupby(by=['cluster', 'species']).size()
+
+# visualization
+penguins_subset.groupby(by=['cluster', 'species']).size().plot.bar(title='Clusters differentiated by species',
+                                                                   figsize=(6, 5),
+                                                                   ylabel='Size',
+                                                                   xlabel='(Cluster, Species)');
+
+penguins_subset.groupby(by=['cluster','species','sex_MALE']).size().unstack(level = 'species', fill_value=0).plot.bar(title='Clusters differentiated by species and sex',
+                                                                                                                      figsize=(6, 5),
+                                                                                                                      ylabel='Size',
+                                                                                                                      xlabel='(Cluster, Sex)')
+plt.legend(bbox_to_anchor=(1.3, 1.0))
+
+#### Naive Bayes Model
+nb = naive_bayes.GaussianNB()
+nb.fit(X_train, y_train)
+y_pred = nb.predict(X_test)
+
+print('accuracy score:'), print(metrics.accuracy_score(y_test, y_pred))
+print('precision score:'), print(metrics.precision_score(y_test, y_pred))
+print('recall score:'), print(metrics.recall_score(y_test, y_pred))
+print('f1 score:'), print(metrics.f1_score(y_test, y_pred))
