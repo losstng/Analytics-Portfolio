@@ -8,11 +8,14 @@ import sklearn.metrics as metrics
 %pylab inline
 import plotly.graph_objects as go
 from sklearn.cluster import KMeans
+from sklearn.datasets import make_blobs
+from sklearn.metrics import silhouette_score
 
-####load
+####load & data load
 p = sns.load_dataset("penguins")
 data = pd.read_csv('marketing_and_sales_data_evaluate_lr.csv')
 img = plt.imread('using_kmeans_for_color_compression_tulips_photo.jpg')
+rng = np.random.default_rng(seed=44) # random
 
 ####explore
 p.head()
@@ -20,6 +23,8 @@ sns.pairplot(p)
 d.isna().sum()
 data[['TV','Radio','Social_Media']].describe()
 colorless["color"].values
+df['your_column'].value_counts()
+df['your_column'].value_counts(normalize=True) * 100
 
 missing_sales = data.Sales.isna().mean()
 missing_sales = round(missing_sales*100, 2)
@@ -71,6 +76,14 @@ fig.update_layout(scene = dict(
                   )
 fig.show()
 
+#### randomly generating numbers
+
+rng = np.random.default_rng(seed=44)
+centers = rng.integers(low=3, high=7)
+X, y = make_blobs(n_samples=1000, n_features=6, centers=centers, random_state=42)
+X = pd.DataFrame(X)
+X.head()
+
 ####cleaning
 p = p[p['species'] != "Chinstrap"]
 
@@ -88,7 +101,15 @@ X_train, X_test, y_train, y_test = train_test_split(p_X, p_y, test_size=0.3, ran
 
 data = data.rename(columns={'Social Media': 'Social_Media'})
 
-colorless.to_csv('diamonds.csv',index=False,header=list(colorless.columns))
+colorless.to_csv('diamonds.csv',index=False,header=list(colorless.columns)
+
+# scaling
+X_scaled = StandardScaler().fit_transform(X)
+X_scaled[:2,:]
+
+# Prepping data, feature engineering
+
+penguins_subset['sex'] = penguins_subset['sex'].str.upper()
 
 ####ordinary least squared
 from statsmodels.formula.api import ols
@@ -198,6 +219,7 @@ disp = metrics.ConfusionMatrixDisplay(confusion_matrix = cm,display_labels = clf
 disp.plot()
 
 #### K-means
+## image reference
 kmeans = KMeans(n_clusters=3, random_state=42).fit(img_flat)
 np.unique(kmeans3.labels_)
 
@@ -322,3 +344,93 @@ k_values = np.arange(2, 11)
 for i, k in enumerate(k_values):
     cluster_image_grid(k, axs[i], img=img)
     axs[i].title.set_text('k=' + str(k))
+
+## standard reference
+kmeans3 = KMeans(n_clusters=3, random_state=42)
+
+kmeans3.fit(X_scaled)
+
+## results & metrics
+
+# inertia
+print('Clusters: ', kmeans3.labels_)
+print('Inertia: ', kmeans3.inertia_)
+
+# Create a list from 2-10. 
+num_clusters = [i for i in range(2, 11)]
+
+def kmeans_inertia(num_clusters, x_vals):
+    '''
+    Fits a KMeans model for different values of k.
+    Calculates an inertia score for each k value.
+
+    Args:
+        num_clusters: (list of ints)  - The different k values to try
+        x_vals:       (array)         - The training data
+
+    Returns: 
+        inertia:      (list)          - A list of inertia scores, one for each \
+                                      value of k
+    '''
+
+    inertia = []
+    for num in num_clusters:
+        kms = KMeans(n_clusters=num, random_state=42)
+        kms.fit(x_vals)
+        inertia.append(kms.inertia_)
+    
+    return inertia
+  
+inertia = kmeans_inertia(num_clusters, X_scaled)
+inertia
+
+# silhoutte score
+kmeans3_sil_score = silhouette_score(X_scaled, kmeans3.labels_)
+kmeans3_sil_score
+
+def kmeans_sil(num_clusters, x_vals):
+    '''
+    Fits a KMeans model for different values of k.
+    Calculates a silhouette score for each k value
+
+    Args:
+        num_clusters: (list of ints)  - The different k values to try
+        x_vals:       (array)         - The training data
+
+    Returns: 
+        sil_score:    (list)          - A list of silhouette scores, one for each \
+                                      value of k
+    '''
+  
+    sil_score = []
+    for num in num_clusters:
+        kms = KMeans(n_clusters=num, random_state=42)
+        kms.fit(x_vals)
+        sil_score.append(silhouette_score(x_vals, kms.labels_))
+    
+    return sil_score
+
+sil_score = kmeans_sil(num_clusters, X_scaled)
+sil_score
+
+## visualization with K-means metrics
+plot = sns.lineplot(x=num_clusters, y=inertia)
+plot.set_xlabel("Number of clusters");
+plot.set_ylabel("Inertia");
+
+plot = sns.lineplot(x=num_clusters, y=sil_score)
+plot.set_xlabel("# of clusters");
+plot.set_ylabel("Silhouette Score");
+
+centers
+
+## further analysis
+
+kmeans5 = KMeans(n_clusters=5, random_state=42)
+kmeans5.fit(X_scaled)
+
+print(kmeans5.labels_[:5])
+print('Unique labels:', np.unique(kmeans5.labels_))
+
+X['cluster'] = kmeans5.labels_
+X.head()
