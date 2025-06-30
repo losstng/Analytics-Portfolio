@@ -5,10 +5,14 @@ from sklearn.model_selection import train_test_split
 import statsmodels.api as sm
 from sklearn.linear_model import LogisticRegression
 import sklearn.metrics as metrics
+%pylab inline
+import plotly.graph_objects as go
+from sklearn.cluster import KMeans
 
 ####load
 p = sns.load_dataset("penguins")
 data = pd.read_csv('marketing_and_sales_data_evaluate_lr.csv')
+img = plt.imread('using_kmeans_for_color_compression_tulips_photo.jpg')
 
 ####explore
 p.head()
@@ -24,6 +28,48 @@ print('Percentage of promotions missing Sales: ' +  str(missing_sales) + '%')
 print(data.groupby('TV')['Sales'].mean())
 
 sns.boxplot(x = "color", y = "log_price", data = d)
+
+#####photos
+img = plt.imread('using_kmeans_for_color_compression_tulips_photo.jpg')
+
+## Reshape the image so that each row represents a single pixel | defined by three values: R, G, B
+print(img.shape)
+plt.imshow(img)
+plt.axis('off')
+
+img_flat = img.reshape(img.shape[0]*img.shape[1], 3)
+img_flat[:5, :]
+
+img_flat_df = pd.DataFrame(img_flat, columns = ['r', 'g', 'b'])
+img_flat_df.head()
+
+# Create 3D plot where each pixel in the `img` is displayed in its actual color
+trace = go.Scatter3d(x = img_flat_df.r,
+                     y = img_flat_df.g,
+                     z = img_flat_df.b,
+                     mode='markers',
+                     marker=dict(size=1,
+                                 color=['rgb({},{},{})'.format(r,g,b) for r,g,b 
+                                        in zip(img_flat_df.r.values, 
+                                               img_flat_df.g.values, 
+                                               img_flat_df.b.values)],
+                                 opacity=0.5))
+
+data = [trace]
+
+layout = go.Layout(margin=dict(l=0,
+                               r=0,
+                               b=0,
+                               t=0),
+                               )
+
+fig = go.Figure(data=data, layout=layout)
+fig.update_layout(scene = dict(
+                    xaxis_title='R',
+                    yaxis_title='G',
+                    zaxis_title='B'),
+                  )
+fig.show()
 
 ####cleaning
 p = p[p['species'] != "Chinstrap"]
@@ -54,7 +100,7 @@ OLS = ols(formula=ols_formula, data=ols_d)
 model=OLS.fit()
 model.summary()
 
-###models assumptions
+####models assumptions
 #linearity assumption
 sns.regplot(x = "bill_length_mm", y = "body_mass_g", data = ols_d) 
 
@@ -150,3 +196,129 @@ sns.regplot(x='Acc (vertical)', y='LyingDown', data=a, logistic=True)
 cm = metrics.confusion_matrix(y_test, y_pred, labels = clf.classes_)
 disp = metrics.ConfusionMatrixDisplay(confusion_matrix = cm,display_labels = clf.classes_)
 disp.plot()
+
+#### K-means
+kmeans = KMeans(n_clusters=3, random_state=42).fit(img_flat)
+np.unique(kmeans3.labels_)
+
+centers = kmeans3.cluster_centers_
+
+def show_swatch(RGB_value):
+    '''
+    Takes in an RGB value and outputs a color swatch
+    '''
+    R, G, B = RGB_value
+    rgb = [[np.array([R,G,B]).astype('uint8')]]
+    plt.figure()
+    plt.imshow(rgb)
+    plt.axis('off');
+
+for pixel in centers:
+    show_swatch(pixel)
+
+def cluster_image(k, img=img):
+    '''
+    Fits a K-means model to a photograph.
+    Replaces photo's pixels with RGB values of model's centroids.
+    Displays the updated image.
+
+    Args:
+      k:    (int)          - Your selected K-value
+      img:  (numpy array)  - Your original image converted to a numpy array
+
+    Returns:
+      The output of plt.imshow(new_img), where new_img is a new numpy array \
+      where each row of the original array has been replaced with the \ 
+      coordinates of its nearest centroid.
+    '''
+
+    img_flat = img.reshape(img.shape[0]*img.shape[1], 3)
+    kmeans = KMeans(n_clusters = k, random_state = 42).fit(img_flat)
+    new_img = img_flat.copy()
+  
+    for i in np.unique(kmeans.labels_):
+        new_img[kmeans.labels_ == i, :] = kmeans.cluster_centers_[i]
+  
+    new_img = new_img.reshape(img.shape)
+
+    return plt.imshow(new_img), plt.axis('off');
+
+cluster_image(3);
+
+
+print(kmeans3.labels_.shape)
+print(kmeans3.labels_)
+print(np.unique(kmeans3.labels_))
+print(kmeans3.cluster_centers_)
+
+img_flat_df['cluster'] = kmeans3.labels_
+img_flat_df.head()
+
+# color conversion helper
+series_conversion = {0: 'rgb' +str(tuple(kmeans3.cluster_centers_[0])),
+                     1: 'rgb' +str(tuple(kmeans3.cluster_centers_[1])),
+                     2: 'rgb' +str(tuple(kmeans3.cluster_centers_[2])),
+                     }
+series_conversion
+
+# Replace the cluster numbers in the 'cluster' col with formatted RGB values 
+# (made ready for plotting)
+img_flat_df['cluster'] = img_flat_df['cluster'].map(series_conversion)
+img_flat_df.head()
+
+# show the data plot when k=3
+trace = go.Scatter3d(x = img_flat_df.r,
+                     y = img_flat_df.g,
+                     z = img_flat_df.b,
+                     mode='markers',
+                     marker=dict(size=1,
+                                 color=img_flat_df.cluster,
+                                 opacity=1))
+
+data = trace
+
+layout = go.Layout(margin=dict(l=0,
+                               r=0,
+                               b=0,
+                               t=0))
+
+fig = go.Figure(data=data, layout=layout)
+fig.show()
+
+
+# now the function that will guides us all
+def cluster_image_grid(k, ax, img=img):
+    '''
+    Fits a K-means model to a photograph.
+    Replaces photo's pixels with RGB values of model's centroids.
+    Displays the updated image on an axis of a figure.
+
+    Args:
+      k:    (int)          - Your selected K-value
+      ax:   (int)          - Index of the axis of the figure to plot to
+      img:  (numpy array)  - Your original image converted to a numpy array
+
+    Returns:
+      A new image where each row of img's array has been replaced with the \ 
+      coordinates of its nearest centroid. Image is assigned to an axis that \
+      can be used in an image grid figure.
+    '''
+    img_flat = img.reshape(img.shape[0]*img.shape[1], 3)
+    kmeans = KMeans(n_clusters=k, random_state=42).fit(img_flat)
+    new_img = img_flat.copy()
+
+    for i in np.unique(kmeans.labels_):
+        new_img[kmeans.labels_==i, :] = kmeans.cluster_centers_[i]
+
+    new_img = new_img.reshape(img.shape)
+    ax.imshow(new_img)
+    ax.axis('off')
+
+fig, axs = plt.subplots(3, 3)
+fig = matplotlib.pyplot.gcf()
+fig.set_size_inches(9, 12)
+axs = axs.flatten()
+k_values = np.arange(2, 11)
+for i, k in enumerate(k_values):
+    cluster_image_grid(k, axs[i], img=img)
+    axs[i].title.set_text('k=' + str(k))
