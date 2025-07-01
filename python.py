@@ -34,12 +34,17 @@ sns.pairplot(p)
 d.isna().sum()
 data[['TV','Radio','Social_Media']].describe()
 colorless["color"].values
+df_original['Class'].unique()
 df['your_column'].value_counts()
 df['your_column'].value_counts(normalize=True) * 100
+
+df_original.isna().sum()
 
 missing_sales = data.Sales.isna().mean()
 missing_sales = round(missing_sales*100, 2)
 print('Percentage of promotions missing Sales: ' +  str(missing_sales) + '%')
+
+
 
 print(data.groupby('TV')['Sales'].mean())
 
@@ -47,6 +52,37 @@ sns.boxplot(x = "color", y = "log_price", data = d)
 
 avg_churned_bal = df_original[df_original['Exited']==1]['Balance'].mean()
 avg_churned_bal
+
+#####cleaning
+p = p[p['species'] != "Chinstrap"]
+df.drop('column_name', axis=1, inplace=True)
+
+colorless = d[d["color"].isin(["E","F","H","D","I"])]
+colorless = colorless[["color","price"]].reset_index(drop=True)
+colorless.color = colorless.color.cat.remove_categories(["G","J"])
+colorless.insert(2, "log_price", [math.log(price) for price in colorless["price"]])
+
+d = d.dropna(axis=0)
+data = data.dropna(subset = ['Sales'], axis = 0)
+
+p = p[["body_mass_g", "bill_length_mm", "sex", "species"]]
+p.columns = ["body_mass_g", "bill_length_mm", "gender", "species"]
+X_train, X_test, y_train, y_test = train_test_split(p_X, p_y, test_size=0.3, random_state=42)
+
+data = data.rename(columns={'Social Media': 'Social_Media'})
+
+colorless.to_csv('diamonds.csv',index=False,header=list(colorless.columns)
+
+## scaling
+X_scaled = StandardScaler().fit_transform(X)
+X_scaled[:2,:]
+
+## Prepping data, feature engineering
+
+penguins_subset['sex'] = penguins_subset['sex'].str.upper()
+
+# Convert `sex` column from categorical to numeric.
+penguins_subset = pd.get_dummies(penguins_subset, drop_first = True, columns=['sex'])
 
 #### feature engineering
 
@@ -117,36 +153,7 @@ X, y = make_blobs(n_samples=1000, n_features=6, centers=centers, random_state=42
 X = pd.DataFrame(X)
 X.head()
 
-#####cleaning
-p = p[p['species'] != "Chinstrap"]
-df.drop('column_name', axis=1, inplace=True)
 
-colorless = d[d["color"].isin(["E","F","H","D","I"])]
-colorless = colorless[["color","price"]].reset_index(drop=True)
-colorless.color = colorless.color.cat.remove_categories(["G","J"])
-colorless.insert(2, "log_price", [math.log(price) for price in colorless["price"]])
-
-d = d.dropna(axis=0)
-data = data.dropna(subset = ['Sales'], axis = 0)
-
-p = p[["body_mass_g", "bill_length_mm", "sex", "species"]]
-p.columns = ["body_mass_g", "bill_length_mm", "gender", "species"]
-X_train, X_test, y_train, y_test = train_test_split(p_X, p_y, test_size=0.3, random_state=42)
-
-data = data.rename(columns={'Social Media': 'Social_Media'})
-
-colorless.to_csv('diamonds.csv',index=False,header=list(colorless.columns)
-
-## scaling
-X_scaled = StandardScaler().fit_transform(X)
-X_scaled[:2,:]
-
-## Prepping data, feature engineering
-
-penguins_subset['sex'] = penguins_subset['sex'].str.upper()
-
-# Convert `sex` column from categorical to numeric.
-penguins_subset = pd.get_dummies(penguins_subset, drop_first = True, columns=['sex'])
 
 #####ordinary least squared
 from statsmodels.formula.api import ols
