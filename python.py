@@ -29,6 +29,7 @@ rng = np.random.default_rng(seed=44) # random
 
 #####explore
 p.head()
+df.dtypes
 sns.pairplot(p)
 d.isna().sum()
 data[['TV','Radio','Social_Media']].describe()
