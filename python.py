@@ -16,6 +16,9 @@ from sklearn import model_selection
 from sklearn import metrics
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import GridSearchCV
+from sklearn.ensemble import RandomForestClassifier
+import pickle
+from sklearn.model_selection import PredefinedSplit
 
 #####load & data load
 file = 'Churn_Modelling.csv'
@@ -555,3 +558,61 @@ def make_results(model_name, model_object):
 result_table = make_results("Tuned Decision Tree", clf)
 result_table.to_csv("Results.csv")
 result_table
+
+# adding further results
+
+results = pd.concat([rf_cv_results, results])
+results
+
+## further tuning in Bagging & Random Forest
+rf = RandomForestClassifier(random_state=0)
+
+cv_params = {'max_depth': [2,3,4,5, None], 
+             'min_samples_leaf': [1,2,3],
+             'min_samples_split': [2,3,4],
+             'max_features': [2,3,4],
+             'n_estimators': [75, 100, 125, 150]
+             }  
+
+scoring = {'accuracy', 'precision', 'recall', 'f1'}
+
+rf_cv = GridSearchCV(rf, cv_params, scoring=scoring, cv=5, refit='f1')
+rf_cv.fit(X_train, y_train)
+
+rf_cv.best_params_
+
+rf_cv.best_score_
+
+## further process in seperate validation set
+
+X_tr, X_val, y_tr, y_val = train_test_split(X_train, y_train, test_size=0.2, 
+                                            stratify=y_train, random_state=10)
+split_index = [0 if x in X_val.index else -1 for x in X_train.index]
+
+rf = RandomForestClassifier(random_state=0)
+
+cv_params = {'max_depth': [2,3,4,5, None], 
+             'min_samples_leaf': [1,2,3],
+             'min_samples_split': [2,3,4],
+             'max_features': [2,3,4],
+             'n_estimators': [75, 100, 125, 150]
+             }  
+
+scoring = {'accuracy', 'precision', 'recall', 'f1'}
+
+custom_split = PredefinedSplit(split_index)
+
+rf_val = GridSearchCV(rf, cv_params, scoring=scoring, cv=custom_split, refit='f1')
+
+rf_val.fit(X_train, y_train)
+
+rf_val.best_params_
+
+##### ML model saving
+path = '/home/jovyan/work/'
+with open(path+'rf_cv_model.pickle', 'wb') as to_write:
+    pickle.dump(rf_cv, to_write)
+
+with open(path + 'rf_cv_model.pickle', 'rb') as to_read:
+    rf_cv = pickle.load(to_read)
+
