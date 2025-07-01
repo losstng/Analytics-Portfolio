@@ -499,6 +499,10 @@ plot_tree(decision_tree, max_depth=2, fontsize=14, feature_names=X.columns,
           class_names={0:'stayed', 1:'churned'}, filled=True);
 plt.show()
 
+
+plt.figure(figsize=(20,12))
+plot_tree(clf.best_estimator_, max_depth=2, fontsize=14, feature_names=X.columns);
+
 ## hyperparameter tuning
 # Assign a dictionary of hyperparameters to search over
 tree_para = {'max_depth':[4,5,6,7,8,9,10,11,12,15,20,30,40,50],
@@ -508,6 +512,13 @@ tree_para = {'max_depth':[4,5,6,7,8,9,10,11,12,15,20,30,40,50],
 scoring = {'accuracy', 'precision', 'recall', 'f1'}
 
 tuned_decision_tree = DecisionTreeClassifier(random_state = 42)
+
+importances = decision_tree.feature_importances_
+
+forest_importances = pd.Series(importances, index=X.columns).sort_values(ascending=False)
+
+fig, ax = plt.subplots()
+forest_importances.plot.bar(ax=ax);
 
 # Instantiate the GridSearch
 clf = GridSearchCV(tuned_decision_tree, 
