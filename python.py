@@ -91,6 +91,8 @@ churn_df = df_original.drop(['RowNumber', 'CustomerId', 'Surname', 'Gender'],
                             axis=1)
 
 # transformation
+
+df_subset['Class'] = df_subset['Class'].map({"Business": 3, "Eco Plus": 2, "Eco": 1}) # manually assign values
 churn_df = pd.get_dummies(churn_df, drop_first=True)
 
 # splitting the data
