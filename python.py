@@ -14,14 +14,20 @@ from sklearn.metrics import silhouette_score
 from sklearn import naive_bayes
 from sklearn import model_selection
 from sklearn import metrics
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import GridSearchCV
 
-####load & data load
+#####load & data load
+file = 'Churn_Modelling.csv'
+df_original = pd.read_csv(file)
+df_original.head()
+
 p = sns.load_dataset("penguins")
 data = pd.read_csv('marketing_and_sales_data_evaluate_lr.csv')
 img = plt.imread('using_kmeans_for_color_compression_tulips_photo.jpg')
 rng = np.random.default_rng(seed=44) # random
 
-####explore
+#####explore
 p.head()
 sns.pairplot(p)
 d.isna().sum()
@@ -37,6 +43,28 @@ print('Percentage of promotions missing Sales: ' +  str(missing_sales) + '%')
 print(data.groupby('TV')['Sales'].mean())
 
 sns.boxplot(x = "color", y = "log_price", data = d)
+
+avg_churned_bal = df_original[df_original['Exited']==1]['Balance'].mean()
+avg_churned_bal
+
+#### feature engineering
+
+# selection
+churn_df = df_original.drop(['RowNumber', 'CustomerId', 'Surname', 'Gender'], 
+                            axis=1)
+
+# transformation
+churn_df = pd.get_dummies(churn_df, drop_first=True)
+
+# splitting the data
+y = churn_df['Exited']
+
+X = churn_df.copy()
+X = X.drop('Exited', axis=1)
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, 
+                                                    test_size=0.25, stratify=y, 
+                                                    random_state=42)
 
 #####photos
 img = plt.imread('using_kmeans_for_color_compression_tulips_photo.jpg')
@@ -80,7 +108,7 @@ fig.update_layout(scene = dict(
                   )
 fig.show()
 
-#### randomly generating numbers
+##### randomly generating numbers
 
 rng = np.random.default_rng(seed=44)
 centers = rng.integers(low=3, high=7)
@@ -88,7 +116,7 @@ X, y = make_blobs(n_samples=1000, n_features=6, centers=centers, random_state=42
 X = pd.DataFrame(X)
 X.head()
 
-####cleaning
+#####cleaning
 p = p[p['species'] != "Chinstrap"]
 df.drop('column_name', axis=1, inplace=True)
 
@@ -108,18 +136,18 @@ data = data.rename(columns={'Social Media': 'Social_Media'})
 
 colorless.to_csv('diamonds.csv',index=False,header=list(colorless.columns)
 
-# scaling
+## scaling
 X_scaled = StandardScaler().fit_transform(X)
 X_scaled[:2,:]
 
-# Prepping data, feature engineering
+## Prepping data, feature engineering
 
 penguins_subset['sex'] = penguins_subset['sex'].str.upper()
 
 # Convert `sex` column from categorical to numeric.
 penguins_subset = pd.get_dummies(penguins_subset, drop_first = True, columns=['sex'])
 
-####ordinary least squared
+#####ordinary least squared
 from statsmodels.formula.api import ols
 
 ols_d = p_f[['bill_length_mm', 'body_mass_g']]
@@ -129,11 +157,11 @@ OLS = ols(formula=ols_formula, data=ols_d)
 model=OLS.fit()
 model.summary()
 
-####models assumptions
+#####models assumptions
 #linearity assumption
 sns.regplot(x = "bill_length_mm", y = "body_mass_g", data = ols_d) 
 
-#normality assumption
+##normality assumption
 fitted_values = model.predict(X) 
 r = model.resid
 fig = sns.histplot(r)
@@ -144,7 +172,7 @@ plt.show()
 fig = sm.qqplot(model.resid, line = 's')
 plt.show()
 
-#homoscedasticity assumption
+##homoscedasticity assumption
 fig = sns.scatterplot(x=fitted_values, y=residuals)
 fig.axhline(0)
 
@@ -152,7 +180,7 @@ fig.set_xlabel("Fitted Values")
 fig.set_ylabel("Residuals")
 plt.show()
 
-#no multicollinearity (applicable to multiple linear)
+##no multicollinearity (applicable to multiple linear)
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 VIF
 X = data[['Radio','Social_Media']]
@@ -160,7 +188,7 @@ vif = [variance_inflation_factor(X.values, i) for i in range(X.shape[1])]
 df_vif = pd.DataFrame(vif, index=X.columns, columns = ['VIF'])
 df_vif
 
-####multiple linear regression
+#####multiple linear regression
 p_X = p[["bill_length_mm", "gender", "species"]]
 p_y = p[["body_mass_g"]]
 
@@ -170,42 +198,42 @@ OLS = ols(formula = ols_formula, data = p_X)
 model=OLS.fit()
 model.summary()
 
-####ANOVA & ANCOVA & MANOVA & MANCOVA
+#####ANOVA & ANCOVA & MANOVA & MANCOVA
 
-#One way Anova
+###One way Anova
 model = ols(formula = "log_price ~ C(color)", data = d.fit())
 
 sm.stats.anova_lm(model, typ = 2)
 sm.stats.anova_lm(model, typ = 1)
 sm.stats.anova_lm(model, typ = 3)
 
-#Two way Anova
+###Two way Anova
 model2 = ols(formula = "log_price ~ C(color) + C(cut) + C(color):C(cut)", data = diamonds2).fit()
 
 sm.stats.anova_lm(model2, typ = 2)
 sm.stats.anova_lm(model2, typ = 1)
 sm.stats.anova_lm(model2, typ = 3)
 
-#ANOVA post hoc test - used for hypothesis testing
+###ANOVA post hoc test - used for hypothesis testing
 from statsmodels.stats.multicomp import pairwise_tukeyhsd
 tukey_oneway = pairwise_tukeyhsd(endog = diamonds["log_price"], groups = diamonds["color"], alpha = 0.05)
 tukey_oneway.summary()
 
-#ANCOVA
+###ANCOVA
 model_ancova = ols("log_price ~ C(color) + carat", data=df_ancova).fit()
 sm.stats.anova_lm(model_ancova, typ=2)
 
-#MANOVA
+####MANOVA
 from statsmodels.multivariate.manova import MANOVA
 
 manova_model = MANOVA.from_formula('Sales + Revenue ~ C(Channel)', data=df_manova)
 print(manova_model.mv_test())
 
-#MANCOVA
+###MANCOVA
 mancova_model = MANOVA.from_formula('Sales + Revenue ~ C(Channel) + MarketingSpend', data=df_mancova)
 print(mancova_model.mv_test())
 
-#### Logistic regression
+###### Logistic regression
 # binomial logistic regression model
 X = a[['Acc (vertical)']]
 Y = a[['LyingDown']]
@@ -221,12 +249,12 @@ clf.predict_proba(X_test)[::,-1]
 
 sns.regplot(x='Acc (vertical)', y='LyingDown', data=a, logistic=True)
 
-# Confusion metrics
+### Confusion metrics
 cm = metrics.confusion_matrix(y_test, y_pred, labels = clf.classes_)
 disp = metrics.ConfusionMatrixDisplay(confusion_matrix = cm,display_labels = clf.classes_)
 disp.plot()
 
-#### K-means
+##### K-means
 ## image reference
 kmeans = KMeans(n_clusters=3, random_state=42).fit(img_flat)
 np.unique(kmeans3.labels_)
@@ -247,20 +275,6 @@ for pixel in centers:
     show_swatch(pixel)
 
 def cluster_image(k, img=img):
-    '''
-    Fits a K-means model to a photograph.
-    Replaces photo's pixels with RGB values of model's centroids.
-    Displays the updated image.
-
-    Args:
-      k:    (int)          - Your selected K-value
-      img:  (numpy array)  - Your original image converted to a numpy array
-
-    Returns:
-      The output of plt.imshow(new_img), where new_img is a new numpy array \
-      where each row of the original array has been replaced with the \ 
-      coordinates of its nearest centroid.
-    '''
 
     img_flat = img.reshape(img.shape[0]*img.shape[1], 3)
     kmeans = KMeans(n_clusters = k, random_state = 42).fit(img_flat)
@@ -284,7 +298,7 @@ print(kmeans3.cluster_centers_)
 img_flat_df['cluster'] = kmeans3.labels_
 img_flat_df.head()
 
-# color conversion helper
+## color conversion helper
 series_conversion = {0: 'rgb' +str(tuple(kmeans3.cluster_centers_[0])),
                      1: 'rgb' +str(tuple(kmeans3.cluster_centers_[1])),
                      2: 'rgb' +str(tuple(kmeans3.cluster_centers_[2])),
@@ -318,21 +332,7 @@ fig.show()
 
 # now the function that will guides us all
 def cluster_image_grid(k, ax, img=img):
-    '''
-    Fits a K-means model to a photograph.
-    Replaces photo's pixels with RGB values of model's centroids.
-    Displays the updated image on an axis of a figure.
 
-    Args:
-      k:    (int)          - Your selected K-value
-      ax:   (int)          - Index of the axis of the figure to plot to
-      img:  (numpy array)  - Your original image converted to a numpy array
-
-    Returns:
-      A new image where each row of img's array has been replaced with the \ 
-      coordinates of its nearest centroid. Image is assigned to an axis that \
-      can be used in an image grid figure.
-    '''
     img_flat = img.reshape(img.shape[0]*img.shape[1], 3)
     kmeans = KMeans(n_clusters=k, random_state=42).fit(img_flat)
     new_img = img_flat.copy()
@@ -353,7 +353,7 @@ for i, k in enumerate(k_values):
     cluster_image_grid(k, axs[i], img=img)
     axs[i].title.set_text('k=' + str(k))
 
-## standard reference
+#### standard reference
 kmeans3 = KMeans(n_clusters=3, random_state=42)
 
 kmeans3.fit(X_scaled)
@@ -368,19 +368,6 @@ print('Inertia: ', kmeans3.inertia_)
 num_clusters = [i for i in range(2, 11)]
 
 def kmeans_inertia(num_clusters, x_vals):
-    '''
-    Fits a KMeans model for different values of k.
-    Calculates an inertia score for each k value.
-
-    Args:
-        num_clusters: (list of ints)  - The different k values to try
-        x_vals:       (array)         - The training data
-
-    Returns: 
-        inertia:      (list)          - A list of inertia scores, one for each \
-                                      value of k
-    '''
-
     inertia = []
     for num in num_clusters:
         kms = KMeans(n_clusters=num, random_state=42)
@@ -458,7 +445,7 @@ penguins_subset.groupby(by=['cluster','species','sex_MALE']).size().unstack(leve
                                                                                                                       xlabel='(Cluster, Sex)')
 plt.legend(bbox_to_anchor=(1.3, 1.0))
 
-#### Naive Bayes Model
+##### Naive Bayes Model
 nb = naive_bayes.GaussianNB()
 nb.fit(X_train, y_train)
 y_pred = nb.predict(X_test)
@@ -467,3 +454,83 @@ print('accuracy score:'), print(metrics.accuracy_score(y_test, y_pred))
 print('precision score:'), print(metrics.precision_score(y_test, y_pred))
 print('recall score:'), print(metrics.recall_score(y_test, y_pred))
 print('f1 score:'), print(metrics.f1_score(y_test, y_pred))
+
+
+##### Decision Tree
+#### baseline model
+decision_tree = DecisionTreeClassifier(random_state=0)
+
+decision_tree.fit(X_train, y_train)
+
+dt_pred = decision_tree.predict(X_test)
+
+## small cap performance
+print("Accuracy:", "%.3f" % accuracy_score(y_test, dt_pred))
+print("Precision:", "%.3f" % precision_score(y_test, dt_pred))
+print("Recall:", "%.3f" % recall_score(y_test, dt_pred))
+print("F1 Score:", "%.3f" % f1_score(y_test, dt_pred))
+
+## confusion matrix
+def conf_matrix_plot(model, x_data, y_data):
+  
+    model_pred = model.predict(x_data)
+    cm = confusion_matrix(y_data, model_pred, labels=model.classes_)
+    disp = ConfusionMatrixDisplay(confusion_matrix=cm,
+                             display_labels=model.classes_)
+  
+    disp.plot(values_format='')  # `values_format=''` suppresses scientific notation
+    plt.show()
+
+conf_matrix_plot(decision_tree, X_test, y_test)
+
+## decision tree
+plt.figure(figsize=(15,12))
+plot_tree(decision_tree, max_depth=2, fontsize=14, feature_names=X.columns, 
+          class_names={0:'stayed', 1:'churned'}, filled=True);
+plt.show()
+
+## hyperparameter tuning
+# Assign a dictionary of hyperparameters to search over
+tree_para = {'max_depth':[4,5,6,7,8,9,10,11,12,15,20,30,40,50],
+             'min_samples_leaf': [2, 5, 10, 20, 50]}
+
+# Assign a dictionary of scoring metrics to capture
+scoring = {'accuracy', 'precision', 'recall', 'f1'}
+
+tuned_decision_tree = DecisionTreeClassifier(random_state = 42)
+
+# Instantiate the GridSearch
+clf = GridSearchCV(tuned_decision_tree, 
+                   tree_para, 
+                   scoring = scoring, 
+                   cv=5, 
+                   refit="f1")
+
+# Fit the model
+clf.fit(X_train, y_train)
+
+# Examine the best model from GridSearch
+clf.best_estimator_
+
+print("Best Avg. Validation Score: ", "%.4f" % clf.best_score_)
+
+## results
+def make_results(model_name, model_object):
+    f1 = best_estimator_results.mean_test_f1
+    recall = best_estimator_results.mean_test_recall
+    precision = best_estimator_results.mean_test_precision
+    accuracy = best_estimator_results.mean_test_accuracy
+  
+    # Create table of results
+    table = pd.DataFrame({'Model': [model_name],
+                        'F1': [f1],
+                        'Recall': [recall],
+                        'Precision': [precision],
+                        'Accuracy': [accuracy]
+                         }
+                        )
+  
+    return table
+result_table = make_results("Tuned Decision Tree", clf)
+result_table.to_csv("Results.csv")
+result_table
