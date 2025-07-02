@@ -17,7 +17,7 @@ from sklearn import metrics
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
-import pickle
+import pickle as pkl
 from sklearn.model_selection import PredefinedSplit
 
 #####load & data load
@@ -107,6 +107,9 @@ X = X.drop('Exited', axis=1)
 X_train, X_test, y_train, y_test = train_test_split(X, y, 
                                                     test_size=0.25, stratify=y, 
                                                     random_state=42)
+
+X_tr, X_val, y_tr, y_val = train_test_split(X_train, y_train, test_size=0.2, 
+                                            stratify=y_train, random_state=10)
 
 #####photos
 img = plt.imread('using_kmeans_for_color_compression_tulips_photo.jpg')
@@ -514,6 +517,8 @@ tree_para = {'max_depth':[4,5,6,7,8,9,10,11,12,15,20,30,40,50],
 # Assign a dictionary of scoring metrics to capture
 scoring = {'accuracy', 'precision', 'recall', 'f1'}
 
+## decision tree
+
 tuned_decision_tree = DecisionTreeClassifier(random_state = 42)
 
 importances = decision_tree.feature_importances_
@@ -589,24 +594,59 @@ X_tr, X_val, y_tr, y_val = train_test_split(X_train, y_train, test_size=0.2,
                                             stratify=y_train, random_state=10)
 split_index = [0 if x in X_val.index else -1 for x in X_train.index]
 
+custom_split = PredefinedSplit(split_index)
 rf = RandomForestClassifier(random_state=0)
 
-cv_params = {'max_depth': [2,3,4,5, None], 
-             'min_samples_leaf': [1,2,3],
-             'min_samples_split': [2,3,4],
-             'max_features': [2,3,4],
-             'n_estimators': [75, 100, 125, 150]
-             }  
+cv_params = {'n_estimators' : [50,100], 
+              'max_depth' : [10,50],        
+              'min_samples_leaf' : [0.5,1], 
+              'min_samples_split' : [0.001, 0.01],
+              'max_features' : ["sqrt"], 
+              'max_samples' : [.5,.9]}
 
 scoring = {'accuracy', 'precision', 'recall', 'f1'}
 
-custom_split = PredefinedSplit(split_index)
-
-rf_val = GridSearchCV(rf, cv_params, scoring=scoring, cv=custom_split, refit='f1')
+rf_val = GridSearchCV(rf, cv_params, scoring=scoring, cv=custom_split, refit='f1', n_jobs = -1, verbose = 1)
 
 rf_val.fit(X_train, y_train)
 
 rf_val.best_params_
+
+#rf_opt = RandomForestClassifier(n_estimators = 50, max_depth = 50, 
+                                min_samples_leaf = 1, min_samples_split = 0.001,
+                                max_features="sqrt", max_samples = 0.9, random_state = 0)
+rf_opt.fit(X_train, y_train)
+
+y_pred = rf_opt.predict(X_test)
+
+pc_test = precision_score(y_test, y_pred, pos_label = "satisfied")
+print("The precision score is {pc:.3f}".format(pc = pc_test))
+
+rc_test = recall_score(y_test, y_pred, pos_label = "satisfied")
+print("The recall score is {rc:.3f}".format(rc = rc_test))
+
+ac_test = accuracy_score(y_test, y_pred)
+print("The accuracy score is {ac:.3f}".format(ac = ac_test))
+
+f1_test = f1_score(y_test, y_pred, pos_label = "satisfied")
+print("The F1 score is {f1:.3f}".format(f1 = f1_test))
+
+print("\nThe precision score is: {pc:.3f}".format(pc = pc_test), "for the test set,", "\nwhich means of all positive predictions,", "{pc_pct:.1f}% prediction are true positive.".format(pc_pct = pc_test * 100))
+
+print("\nThe recall score is: {rc:.3f}".format(rc = rc_test), "for the test set,", "\nwhich means of which means of all real positive cases in test set,", "{rc_pct:.1f}% are  predicted positive.".format(rc_pct = rc_test * 100))
+
+print("\nThe accuracy score is: {ac:.3f}".format(ac = ac_test), "for the test set,", "\nwhich means of all cases in test set,", "{ac_pct:.1f}% are predicted true positive or true negative.".format(ac_pct = ac_test * 100))
+
+print("\nThe F1 score is: {f1:.3f}".format(f1 = f1_test), "for the test set,", "\nwhich means the test set's harmonic mean is {f1_pct:.1f}%.".format(f1_pct = f1_test * 100))
+
+table = pd.DataFrame({'Model': ["Tuned Decision Tree", "Tuned Random Forest"],
+                        'F1':  [0.945422, f1_test],
+                        'Recall': [0.935863, rc_test],
+                        'Precision': [0.955197, pc_test],
+                        'Accuracy': [0.940864, ac_test]
+                      }
+                    )
+table
 
 ##### ML model saving
 path = '/home/jovyan/work/'
