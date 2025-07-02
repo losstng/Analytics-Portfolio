@@ -19,6 +19,11 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
 import pickle as pkl
 from sklearn.model_selection import PredefinedSplit
+from xgboost import XGBClassifier
+from xgboost import plot_importance
+from sklearn.model_selection import GridSearchCV, train_test_split
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, ConfusionMatrixDisplay, RocCurveDisplay
+
 
 #####load & data load
 file = 'Churn_Modelling.csv'
@@ -648,6 +653,8 @@ table = pd.DataFrame({'Model': ["Tuned Decision Tree", "Tuned Random Forest"],
                     )
 table
 
+plot_importance(xgb_cv.best_estimator_)
+
 ##### ML model saving
 path = '/home/jovyan/work/'
 with open(path+'rf_cv_model.pickle', 'wb') as to_write:
@@ -656,3 +663,22 @@ with open(path+'rf_cv_model.pickle', 'wb') as to_write:
 with open(path + 'rf_cv_model.pickle', 'rb') as to_read:
     rf_cv = pickle.load(to_read)
 
+rf_cv.fit(X_train, y_train)
+
+print('F1 score random forest CV: ', rf_cv.best_score_)
+print('F1 score XGB CV: ', xgb_cv.best_score_)
+
+### XGBoost model 
+xgb = XGBClassifier(objective='binary:logistic', random_state=0) 
+
+cv_params = {'max_depth': [4,5,6,7,8], 
+             'min_child_weight': [1,2,3,4,5],
+             'learning_rate': [0.1, 0.2, 0.3],
+             'n_estimators': [75, 100, 125]
+             }    
+
+scoring = {'accuracy', 'precision', 'recall', 'f1'}
+
+xgb_cv = GridSearchCV(xgb, cv_params, scoring=scoring, cv=5, refit='f1')
+
+xgb_cv.fit(X_train, y_train)
