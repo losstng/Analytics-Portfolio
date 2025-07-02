@@ -664,6 +664,8 @@ with open(path+'rf_cv_model.pickle', 'wb') as to_write:
 with open(path + 'rf_cv_model.pickle', 'rb') as to_read:
     rf_cv = pickle.load(to_read)
 
+pickle.dump(xgb_cv, open('xgb_cv.sav', 'wb'))
+
 rf_cv.fit(X_train, y_train)
 
 print('F1 score random forest CV: ', rf_cv.best_score_)
