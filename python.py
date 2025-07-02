@@ -53,7 +53,7 @@ missing_sales = data.Sales.isna().mean()
 missing_sales = round(missing_sales*100, 2)
 print('Percentage of promotions missing Sales: ' +  str(missing_sales) + '%')
 
-
+data.duplicated().sum()
 
 print(data.groupby('TV')['Sales'].mean())
 
