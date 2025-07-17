@@ -85,6 +85,7 @@ p.columns = ["body_mass_g", "bill_length_mm", "gender", "species"]
 X_train, X_test, y_train, y_test = train_test_split(p_X, p_y, test_size=0.3, random_state=42)
 
 data = data.rename(columns={'Social Media': 'Social_Media'})
+df['column_name'] = pd.to_numeric(df['column_name'], errors='coerce')
 
 colorless.to_csv('diamonds.csv',index=False,header=list(colorless.columns)
 
