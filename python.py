@@ -1,29 +1,27 @@
+# ml_imports.py
+
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split
-import statsmodels.api as sm
+from sklearn.model_selection import train_test_split, GridSearchCV, PredefinedSplit
 from sklearn.linear_model import LogisticRegression
-import sklearn.metrics as metrics
 from sklearn.preprocessing import StandardScaler
-%pylab inline
-import plotly.graph_objects as go
+from sklearn.metrics import (
+    accuracy_score, precision_score, recall_score, f1_score,
+    confusion_matrix, ConfusionMatrixDisplay, RocCurveDisplay
+)
+from sklearn.naive_bayes import GaussianNB
+from sklearn import model_selection
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.cluster import KMeans
 from sklearn.datasets import make_blobs
 from sklearn.metrics import silhouette_score
-from sklearn import naive_bayes
-from sklearn import model_selection
-from sklearn import metrics
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.model_selection import GridSearchCV
-from sklearn.ensemble import RandomForestClassifier
+import statsmodels.api as sm
+import plotly.graph_objects as go
 import pickle as pkl
-from sklearn.model_selection import PredefinedSplit
-from xgboost import XGBClassifier
+from xgboost import XGBClassifier, plot_importance
 
-from xgboost import plot_importance
-from sklearn.model_selection import GridSearchCV, train_test_split
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, ConfusionMatrixDisplay, RocCurveDisplay
 
 
 #####load & data load
