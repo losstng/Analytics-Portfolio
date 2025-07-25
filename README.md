@@ -11,6 +11,6 @@ This repository contains my personal collection of analytics projects, notebooks
 - **raw_data** – Sample datasets of daily and intraday stock prices used for experimentation.
 - **SQL** – A set of SQL queries targeting the Classic Models database for practice with selection and aggregation.
 - **python.py** – A single script with many machine learning snippets including model fitting, evaluation metrics, and visualization.
-- **Do Hoang Hai Long - Provisional Transcript - 20030239 - 5.pdf** – Example academic transcript included for completeness.
+- **Do Hoang Hai Long - Provisional Transcript - 20030239 - 5.pdf** – Academic transcript included for completeness.
 
 Run the notebooks with Jupyter or execute the scripts directly to reproduce the analyses.
