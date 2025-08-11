@@ -2,29 +2,32 @@
 
 This plan outlines how to showcase the analytics projects in a web portfolio.
 
-## Organize by Domain
-- Create navigation sections for Operations, Marketing, Healthcare, and Finance projects.
-- Each section links to project pages highlighting multi-domain expertise.
+## Organize by Domain or Skill
+- Create a navigation menu with clear categories such as Operations, Marketing, Healthcare, and Finance.
+- Alternatively, group projects by technique (e.g., Machine Learning, SQL) if that better reflects the work.
+- Each category links to its project page, showcasing multi-domain expertise.
 
-## Project Pages
-- Include problem overview, data pipeline, methods, results, and insights.
-- Embed charts, tables, and diagrams for visual engagement.
+## Project Pages with Detail
+- Start with a brief overview summarizing the problem, data, and outcome.
+- Follow with sections for **Data Pipeline**, **Methods**, **Results**, and **Insights** using headings and bullet points.
+- Embed or link to visuals such as pipeline diagrams, data snapshots, charts, or interactive dashboards to keep readers engaged.
 
-## Highlight Code
-- Display key Python and SQL snippets with clear formatting.
-- Use GitHub gists or markdown code blocks to showcase important logic.
+## Highlight Code (Python & SQL)
+- Show relevant Python and SQL snippets using well-formatted, commented code blocks or embedded GitHub gists.
+- Briefly explain what each snippet accomplishes to emphasize hands-on ability.
 
-## Technical Stack
+## Technical Stack for the Site
 - Host the site with GitHub Pages or another static host.
-- Write content in Markdown or Jupyter notebooks rendered to HTML.
+- Author content in Markdown or Jupyter notebooks that are converted to HTML for static hosting.
+- Optionally use a static site generator such as Jekyll or Hugo, or build a simple HTML/CSS site for full control.
 
 ## Additional Sections
-- Add an "About Me" page summarizing skills and interests.
-- Include a "Skills/Tools" page listing libraries, databases, and concepts.
-- Optional: maintain a blog or update log to show ongoing learning.
+- Add an **About Me** page highlighting skills (Python, SQL, visualization) and domain interests.
+- Include a **Skills/Tools** page listing libraries, databases, and concepts.
+- Optional pages: a blog, FAQ, or news/update log to demonstrate ongoing learning and communication ability.
 
 ## Polish and Professionalism
-- Use concise headings, bullet points, and proper grammar.
-- Incorporate subtle icons or imagery for visual appeal.
-- End each project page with real-world impact or recommendations.
+- Keep the design clean with concise headings, short paragraphs, and bullet points.
+- Use icons or logos for tools where appropriate, keeping them subtle and professional.
+- Conclude each project page with a takeaway that ties technical work to real-world impact.
 
