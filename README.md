@@ -12,6 +12,7 @@ This repository contains my personal collection of analytics projects, notebooks
   - `stock_market_analysis.py` loads sample NVDA prices and fits a regression model to forecast the next day's closing value.
   - `marketing_analytics.py` generates noisy customer data, performs RFM-based clustering, and evaluates an A/B test on conversion rates.
   - `supply_chain_optimization.py` creates synthetic inventory records, cleans them, forecasts demand, and computes EOQ-driven reorder suggestions under budget constraints.
+- **website** – TypeScript and CSS code for a small portfolio site.
 - **raw_data** – Sample datasets of daily and intraday stock prices used for experimentation.
   - `synthetic_patient_readmissions.csv` is the generated dataset used by `patient_readmission_model.py`.
   - `synthetic_marketing_data.csv` supports the marketing segmentation and testing example.
@@ -22,6 +23,10 @@ This repository contains my personal collection of analytics projects, notebooks
 - **Do Hoang Hai Long - Provisional Transcript - 20030239 - 5.pdf** – Academic transcript included for completeness.
 
 Run the notebooks with Jupyter or execute the scripts directly to reproduce the analyses.
+
+## Portfolio Website
+
+The `website` folder contains a simple portfolio front end written in TypeScript with separate CSS styling. Build the site by running `npx tsc` inside `website` and then open `index.html` in a browser.
 
 ## Portfolio Website Plan
 See [Portfolio_Site_Plan.md](Portfolio_Site_Plan.md) for guidance on presenting these projects in a web portfolio.
