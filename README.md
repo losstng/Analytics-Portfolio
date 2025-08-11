@@ -22,3 +22,6 @@ This repository contains my personal collection of analytics projects, notebooks
 - **Do Hoang Hai Long - Provisional Transcript - 20030239 - 5.pdf** – Academic transcript included for completeness.
 
 Run the notebooks with Jupyter or execute the scripts directly to reproduce the analyses.
+
+## Portfolio Website Plan
+See [Portfolio_Site_Plan.md](Portfolio_Site_Plan.md) for guidance on presenting these projects in a web portfolio.
