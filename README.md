@@ -26,7 +26,14 @@ Run the notebooks with Jupyter or execute the scripts directly to reproduce the 
 
 ## Portfolio Website
 
-The `website` folder contains a simple portfolio front end written in TypeScript with separate CSS styling. Build the site by running `npx tsc` inside `website` and then open `index.html` in a browser.
+The `website` folder contains a simple portfolio front end written in TypeScript with separate CSS styling.
+
+### Run locally
+
+1. `cd website`
+2. Install dependencies with `npm install` (needed once).
+3. Compile the TypeScript source using `npx tsc` (or run `npx --prefix website tsc -p website` from the repository root).
+4. Open `index.html` in a browser to view the portfolio.
 
 ## Portfolio Website Plan
 See [Portfolio_Site_Plan.md](Portfolio_Site_Plan.md) for guidance on presenting these projects in a web portfolio.
