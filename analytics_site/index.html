@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Losstng — Analytics Portfolio</title>
+
+  <!-- Preload fonts for smoother rendering -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="Home">
+        <span class="logo" aria-hidden="true">L</span>
+        <span class="brand-text">
+          <strong>Losstng</strong>
+          <span class="tagline">Analytics &amp; Optimization</span>
+        </span>
+      </a>
+      <nav id="nav" class="primary-nav" aria-label="Primary">
+        <a href="#Operations" data-category="Operations">Operations</a>
+        <a href="#Marketing" data-category="Marketing">Marketing</a>
+        <a href="#Healthcare" data-category="Healthcare">Healthcare</a>
+        <a href="#Finance" data-category="Finance">Finance</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="container">
+    <section class="hero">
+      <h1>Analytics Portfolio</h1>
+      <p class="lead">
+        Turning data into operating leverage: forecasting, experimentation,
+        risk modeling, and decision automation—delivered through reproducible code.
+      </p>
+    </section>
+
+    <section id="grid" class="project-grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Losstng — Built with TypeScript &amp; Python.</p>
+    </div>
+  </footer>
+
+  <!-- Chart.js for interactive dashboards -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Main logic for rendering projects and dashboards -->
+  <!-- Use defer instead of type=module to avoid CORS issues on file:// scheme -->
+  <script defer src="main.js"></script>
+</body>
+</html>
