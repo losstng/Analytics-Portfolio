@@ -23,3 +23,14 @@ nav a:hover {
 main {
   padding: 1rem;
 }
+.project {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem 0;
+}

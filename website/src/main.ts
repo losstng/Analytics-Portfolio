@@ -9,28 +9,28 @@ const projects: Record<string, Project[]> = {
     {
       title: 'Supply Chain Optimization',
       description: 'Optimize inventory using forecasting and EOQ.',
-      link: '../Scripts/supply_chain_optimization.py'
+      link: 'projects/supply_chain_optimization.html'
     }
   ],
   Marketing: [
     {
       title: 'Customer Segmentation & A/B Testing',
       description: 'Cluster customers and evaluate campaign lift.',
-      link: '../Scripts/marketing_analytics.py'
+      link: 'projects/marketing_analytics.html'
     }
   ],
   Healthcare: [
     {
       title: 'Patient Readmission Prediction',
       description: 'Model readmission risk with logistic regression.',
-      link: '../Scripts/patient_readmission_model.py'
+      link: 'projects/patient_readmission_model.html'
     }
   ],
   Finance: [
     {
       title: 'Stock Market Analysis',
       description: 'Forecast next-day prices for NVDA.',
-      link: '../Scripts/stock_market_analysis.py'
+      link: 'projects/stock_market_analysis.html'
     }
   ]
 };
@@ -43,7 +43,7 @@ function render(category: string): void {
   const ul = document.createElement('ul');
   list.forEach(p => {
     const li = document.createElement('li');
-    li.innerHTML = `<strong>${p.title}</strong> - ${p.description} (<a href="${p.link}">code</a>)`;
+    li.innerHTML = `<strong>${p.title}</strong> - ${p.description} (<a href="${p.link}">details</a>)`;
     ul.appendChild(li);
   });
   content.appendChild(ul);
