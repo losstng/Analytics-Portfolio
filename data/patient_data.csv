@@ -1,0 +1,11 @@
+PatientID,Age,Gender,AdmissionType,DaysInHospital,PrimaryDiagnosis,Diabetes,BMI,NumMedications,LabResults,Readmitted
+1001,65,F,Emergency,5,Heart Failure,Yes,29.5,12,Normal,1
+1002,76,M,Elective,3,COPD,No,33.2,8,Abnormal,0
+1003,54,M,Elective,2,Diabetes,Yes,28.7,10,Normal,0
+1004,81,F,Emergency,6,Stroke,No,26.9,15,Abnormal,1
+1005,68,F,Emergency,4,Pneumonia,No,31.2,9,Normal,0
+1006,59,M,Elective,2,Heart Failure,Yes,32.1,11,Normal,1
+1007,72,F,Emergency,5,Diabetes,Yes,27.8,10,Abnormal,1
+1008,63,F,Elective,3,Stroke,No,25.7,8,Normal,0
+1009,67,M,Emergency,6,Heart Failure,Yes,35.6,14,Abnormal,1
+1010,75,M,Emergency,7,Pneumonia,No,30.3,13,Abnormal,1
