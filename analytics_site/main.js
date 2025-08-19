@@ -1,6 +1,9 @@
 // Data model for projects. Each entry includes a title, description,
-// a link to the underlying Python script, tags for quick categorisation,
-// and an internal key used to decide which chart to draw.
+// optional link to the underlying Python script, tags, and a type:
+// - 'chart'  -> renders a Chart.js canvas using precomputed data
+// - 'embed'  -> renders provided HTML (iframes, images, etc.)
+// - 'markdown' -> renders provided HTML text content
+// When omitted, type defaults to 'chart' for backward compatibility.
 const projects = {
   Operations: [
     {
@@ -12,11 +15,99 @@ const projects = {
     }
   ],
   Marketing: [
+    // Overview & narrative
     {
-      title: 'Customer Segmentation & A/B Testing',
-      description: 'Cluster customers and evaluate campaign lift.',
+      type: 'markdown',
+      title: 'Marketing Analytics — Overview',
+      description: 'End-to-end synthetic marketing analytics: generation, cleaning, segmentation, and A/B testing.',
       link: '../Scripts/marketing_analytics.py',
-      tags: ['Clustering', 'Experimentation'],
+      tags: ['Synthetic Data', 'RFM', 'A/B Testing'],
+      contentHtml: `
+        <div class="markdown">
+          <p>This project generates a 5,000-customer synthetic dataset; cleans missing, out-of-range, and noisy values; segments customers via KMeans on RFM; and runs a tournament-style A/B test across groups A–D.</p>
+          <h4>Cleaning steps (applied)</h4>
+          <ul>
+            <li><strong>Age</strong>: invalid (&lt;18 or &gt;100) ➜ NaN ➜ median fill</li>
+            <li><strong>Gender</strong>: normalized to M/F; unknowns remapped; mode fill</li>
+            <li><strong>Income</strong>: non-numeric/out-of-range (&lt;1k or &gt;200k) ➜ NaN ➜ median fill</li>
+            <li><strong>Loyalty</strong>: clipped to [0,1]; out-of-bounds ➜ NaN ➜ median fill</li>
+            <li><strong>Region/Channel/Device</strong>: empty/unknown ➜ NaN ➜ mode fill</li>
+            <li><strong>R/F/M</strong>: negatives ➜ NaN ➜ median fill</li>
+            <li><strong>Account age</strong>: negatives ➜ NaN ➜ median fill</li>
+            <li><strong>Dates</strong>: signup ffill; last purchase ➜ signup if missing</li>
+            <li><strong>Group</strong>: mode fill; <strong>Purchase</strong>: missing ➜ 0</li>
+          </ul>
+        </div>
+      `
+    },
+    // Raw data sample (CSV preview)
+    {
+      type: 'embed',
+      title: 'Data Cleaning — Raw Sample',
+      description: 'Preview of the raw data sample (5 rows) before cleaning.',
+      tags: ['Data Quality', 'ETL'],
+      contentHtml: `
+        <figure>
+          <figcaption>Raw sample (5 rows)</figcaption>
+          <iframe class="iframe-embed iframe-csv" src="assets/marketing_analytics/raw_data_sample.html" loading="lazy" title="Raw data sample" aria-label="Raw data sample"></iframe>
+          <div class="downloads"><a class="btn" href="assets/marketing_analytics/raw_data_sample.csv" download>Download CSV</a></div>
+        </figure>
+      `
+    },
+    // Cleaned data sample (CSV preview)
+    {
+      type: 'embed',
+      title: 'Data Cleaning — Cleaned Sample',
+      description: 'Preview of the cleaned data sample (5 rows) after cleaning.',
+      tags: ['Data Quality', 'ETL'],
+      contentHtml: `
+        <figure>
+          <figcaption>Cleaned sample (5 rows)</figcaption>
+          <iframe class="iframe-embed iframe-csv" src="assets/marketing_analytics/cleaned_data_sample.html" loading="lazy" title="Cleaned data sample" aria-label="Cleaned data sample"></iframe>
+          <div class="downloads"><a class="btn" href="assets/marketing_analytics/cleaned_data_sample.csv" download>Download CSV</a></div>
+        </figure>
+        <details>
+          <summary>Interactive table</summary>
+          <iframe class="iframe-embed" style="height:420px" src="assets/marketing_analytics/cleaned_data_table_interactive.html" loading="lazy" title="Interactive cleaned table" aria-label="Interactive cleaned table"></iframe>
+        </details>
+      `
+    },
+    // Interactive conversion chart
+    {
+      type: 'embed',
+      title: 'Interactive — Conversion Rates by Group',
+      description: 'Explore conversion rates across groups (A/B/C/D) with hover details.',
+      tags: ['Plotly', 'Interactivity'],
+      contentHtml: `
+        <iframe class="iframe-embed" style="height:420px" src="assets/marketing_analytics/conversion_rates_interactive.html" loading="lazy" title="Interactive conversion rates" aria-label="Interactive conversion rates"></iframe>
+      `
+    },
+    // Static visuals (exported from notebook)
+    {
+      type: 'embed',
+      title: 'Static Visuals — Summary',
+      description: 'Publication-ready charts exported from the notebook.',
+      tags: ['Seaborn', 'Reporting'],
+      contentHtml: `
+        <div class="image-grid">
+          <figure>
+            <img src="assets/marketing_analytics/static_conversion_rates.png" alt="Conversion rates by group" />
+            <figcaption>Conversion rates by group (with labels)</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/marketing_analytics/static_pairwise_round1.png" alt="Pairwise conversion rates A vs B, C vs D" />
+            <figcaption>Round 1 pairwise comparisons (A vs B, C vs D)</figcaption>
+          </figure>
+        </div>
+      `
+    },
+    // Summary KPI chart using embedded DASHBOARD_DATA
+    {
+      type: 'chart',
+      title: 'Customer Segments & A/B Overview',
+      description: 'Segment sizes and A/B conversion rates summary.',
+      link: '../Scripts/marketing_analytics.py',
+      tags: ['Segments', 'KPIs'],
       chartKey: 'Marketing'
     }
   ],
@@ -75,7 +166,7 @@ function iconFor(category) {
   return categoryIcons[category] || categoryIcons.Operations;
 }
 
-// Chart instances keyed by category to allow clean teardown when re-rendering.
+// Chart instances keyed by canvas id to allow clean teardown when re-rendering.
 const chartInstances = {};
 
 /*
@@ -207,9 +298,9 @@ function setActive(category) {
 }
 
 /**
- * Render the list of projects for a given category.  After inserting
- * the card markup into the DOM this function triggers the appropriate
- * dashboard to render inside the canvas element.
+ * Render the list of projects for a given category. Cards can be charts
+ * or embedded content. After inserting the markup, we render charts
+ * for any cards of type 'chart'.
  * @param {string} category
  */
 function render(category) {
@@ -217,14 +308,23 @@ function render(category) {
   if (!grid) return;
   const list = projects[category] || [];
   setActive(category);
-  // Generate card HTML.  Each card includes a canvas for its chart.
+  // Generate card HTML. Chart cards get a unique canvas id.
   const cards = list
-    .map((p) => {
+    .map((p, idx) => {
+      const type = p.type || 'chart';
       const tags = (p.tags || [])
         .map((t) => `<span class="badge">${t}</span>`)
         .join('');
-      // unique canvas id based on category
-      const canvasId = `chart-${category}`;
+      const canvasId = `chart-${category}-${idx}`;
+      const maybeChart = type === 'chart'
+        ? `<div class="chart-container"><canvas id="${canvasId}" aria-label="Dashboard chart for ${category}" role="img"></canvas></div>`
+        : '';
+      const maybeEmbed = type !== 'chart'
+        ? `<div class="embed-container">${p.contentHtml || ''}</div>`
+        : '';
+      const maybeActions = p.link
+        ? `<div class="actions"><a class="btn" href="${p.link}" target="_blank" rel="noopener">View Code</a></div>`
+        : '';
       return `
         <article class="card">
           <header class="card-header">
@@ -234,40 +334,42 @@ function render(category) {
               <div class="meta">${tags}</div>
             </div>
           </header>
-          <p>${p.description}</p>
-          <div class="chart-container">
-            <canvas id="${canvasId}" aria-label="Dashboard chart for ${category}" role="img"></canvas>
-          </div>
-          <div class="actions">
-            <a class="btn" href="${p.link}" target="_blank" rel="noopener">View Code</a>
-          </div>
+          <p>${p.description || ''}</p>
+          ${maybeChart}
+          ${maybeEmbed}
+          ${maybeActions}
         </article>
       `;
     })
     .join('');
   grid.innerHTML = cards || `<p class="lead">No projects yet in <strong>${category}</strong>.</p>`;
-  // Render the chart for this category after the DOM has been updated.
+  // Render all charts for this category after the DOM has been updated.
   requestAnimationFrame(() => {
-    renderChart(category).catch((err) => {
-      console.error(err);
+    list.forEach((p, idx) => {
+      const type = p.type || 'chart';
+      if (type === 'chart') {
+        const canvasId = `chart-${category}-${idx}`;
+        renderChart(category, canvasId).catch((err) => console.error(err));
+      }
     });
   });
 }
 
 /**
- * Draw the appropriate chart inside the canvas for a given category.
- * If a chart for the category already exists it is destroyed before
+ * Draw the appropriate chart inside the provided canvas for a given category.
+ * If a chart for that canvas already exists it is destroyed before
  * creating a new instance.  The function uses the precomputed JSON
  * summaries to populate chart datasets.
  * @param {string} category
+ * @param {string} canvasId
  */
-async function renderChart(category) {
+async function renderChart(category, canvasId) {
   const data = await loadDashboardData();
-  const canvas = document.getElementById(`chart-${category}`);
+  const canvas = document.getElementById(canvasId);
   if (!(canvas && canvas.getContext)) return;
-  // Clean up any existing chart instance for this category
-  if (chartInstances[category]) {
-    chartInstances[category].destroy();
+  // Clean up any existing chart instance for this canvas
+  if (chartInstances[canvasId]) {
+    chartInstances[canvasId].destroy();
   }
   const ctx = canvas.getContext('2d');
   let config;
@@ -471,7 +573,7 @@ async function renderChart(category) {
   } else {
     return;
   }
-  chartInstances[category] = new Chart(ctx, config);
+  chartInstances[canvasId] = new Chart(ctx, config);
 }
 
 /**
