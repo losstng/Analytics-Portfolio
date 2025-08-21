@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Losstng — Analytics Portfolio</title>
+  <title>Do Hoang Hai Long - Data Analyst Portfolio & CV</title>
+  <meta name="description" content="Experienced Data Analyst & Business Intelligence Specialist. Expert in Python, SQL, statistical analysis, and machine learning. View my portfolio of analytics projects across Marketing, Finance, Healthcare, and Operations domains.">
+  <meta name="keywords" content="data analyst, business intelligence, python, sql, machine learning, analytics portfolio, data science">
+  <meta name="author" content="Do Hoang Hai Long">
 
   <!-- Preload fonts for smoother rendering -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,24 +29,324 @@
         </span>
       </a>
       <nav id="nav" class="primary-nav" aria-label="Primary">
-        <a href="#Operations" data-category="Operations">Operations</a>
-        <a href="#Marketing" data-category="Marketing">Marketing</a>
-        <a href="#Healthcare" data-category="Healthcare">Healthcare</a>
-        <a href="#Finance" data-category="Finance">Finance</a>
+        <button id="nav-portfolio-btn" class="nav-portfolio-button" aria-expanded="false" aria-controls="nav-domain-dropdown">
+          <span>Portfolio</span>
+          <span class="nav-dropdown-arrow">▼</span>
+        </button>
+        
+        <div id="nav-domain-dropdown" class="nav-domain-dropdown" hidden>
+          <div class="nav-dropdown-content">
+            <button class="nav-domain-card" data-category="Marketing">
+              <div class="nav-domain-icon">📈</div>
+              <div class="nav-domain-info">
+                <h4>Marketing Analytics</h4>
+                <p>Customer segmentation, A/B testing</p>
+              </div>
+            </button>
+            <button class="nav-domain-card" data-category="Finance">
+              <div class="nav-domain-icon">💰</div>
+              <div class="nav-domain-info">
+                <h4>Financial Analysis</h4>
+                <p>Stock analysis, forecasting</p>
+              </div>
+            </button>
+            <button class="nav-domain-card" data-category="Healthcare">
+              <div class="nav-domain-icon">🏥</div>
+              <div class="nav-domain-info">
+                <h4>Healthcare Analytics</h4>
+                <p>Patient outcomes, predictions</p>
+              </div>
+            </button>
+            <button class="nav-domain-card" data-category="Operations">
+              <div class="nav-domain-icon">⚙️</div>
+              <div class="nav-domain-info">
+                <h4>Operations Research</h4>
+                <p>Supply chain optimization</p>
+              </div>
+            </button>
+          </div>
+        </div>
+        
+        <button id="cv-nav-btn" class="cv-nav-button">
+          <span>Myself</span>
+        </button>
       </nav>
     </div>
   </header>
 
   <main id="content" class="container">
-    <section class="hero">
-      <h1>Analytics Portfolio</h1>
-      <p class="lead">
-        Turning data into operating leverage: forecasting, experimentation,
-        risk modeling, and decision automation—delivered through reproducible code.
-      </p>
+    <!-- Main CV Landing Page -->
+    <section id="cv-landing" class="cv-landing">
+      <div class="cv-hero">
+        <div class="profile-section">
+          <div class="profile-image">
+            <span class="profile-initial">L</span>
+          </div>
+          <div class="profile-content">
+            <h1>Do Hoang Hai Long</h1>
+            <p class="title">Data Analyst & Business Intelligence Specialist</p>
+            <p class="subtitle">Turning data into operating leverage through advanced analytics</p>
+          </div>
+        </div>
+        
+        <div class="cv-summary">
+          <p>
+            Currently pursuing B.A. (Hons) Business Law at EU Business School Munich with First-Class Honours (71%). 
+            Proven track record as a Data Analyst and BI Specialist with hands-on experience at CPG Vietnam and PhoEver Agency, 
+            specializing in Power BI modeling, marketing analytics, and data-driven decision making across international markets.
+          </p>
+        </div>
+
+        <!-- Professional Journey Timeline -->
+        <div class="journey-timeline">
+          <h3>Professional Journey</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>Associate - PhoEver Agency UG</h4>
+                <span class="timeline-date">09/2024 - 03/2025 • Munich, Germany</span>
+                <p>Built interactive dashboards for marketing KPIs, optimized ad-spend strategies, and implemented accounting workflows</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>Intern - CPG Vietnam Co., Ltd</h4>
+                <span class="timeline-date">06/2024 - 07/2024 • Hanoi, Vietnam</span>
+                <p>Designed Power BI models for Revit exports, reduced reporting inconsistencies by 30%, streamlined data pipelines</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>Student - EU Business School Munich</h4>
+                <span class="timeline-date">10/2023 - Current • Munich, Germany</span>
+                <p>First-Class Honours (71%) in Business Law, focusing on Business Information Systems and Analytics</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications Showcase -->
+        <div class="certifications">
+          <h3>🎓 Recent Certifications</h3>
+          <div class="cert-grid">
+            <div class="cert-card">
+              <div class="cert-logo">🔍</div>
+              <div class="cert-info">
+                <h4>Google Advanced Data Analytics</h4>
+                <p>Python, ML, Statistics, Tableau</p>
+                <span class="cert-date">May - Jul 2025</span>
+              </div>
+            </div>
+            <div class="cert-card">
+              <div class="cert-logo">📊</div>
+              <div class="cert-info">
+                <h4>Google Business Intelligence</h4>
+                <p>Data Modeling, ETL/ELT Pipelines</p>
+                <span class="cert-date">Jun - Jul 2025</span>
+              </div>
+            </div>
+            <div class="cert-card">
+              <div class="cert-logo">💾</div>
+              <div class="cert-info">
+                <h4>Databases for Data Scientists</h4>
+                <p>Schema Design, DBMS, 3NF</p>
+                <span class="cert-date">Jun 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills Matrix -->
+        <div class="skills-matrix">
+          <h3>🛠️ Technical Expertise</h3>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h4>� Analytics & Visualization</h4>
+              <div class="skill-tags">
+                <span class="skill-tag expert">Power BI</span>
+                <span class="skill-tag expert">Excel</span>
+                <span class="skill-tag advanced">Tableau</span>
+                <span class="skill-tag advanced">A/B Testing</span>
+                <span class="skill-tag intermediate">Google Data Studio</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>� Programming & Data</h4>
+              <div class="skill-tags">
+                <span class="skill-tag expert">Python</span>
+                <span class="skill-tag expert">SQL</span>
+                <span class="skill-tag advanced">pandas</span>
+                <span class="skill-tag advanced">scikit-learn</span>
+                <span class="skill-tag intermediate">FAISS</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>🏗️ Development & Ops</h4>
+              <div class="skill-tags">
+                <span class="skill-tag advanced">Git</span>
+                <span class="skill-tag advanced">Next.js</span>
+                <span class="skill-tag intermediate">PostgreSQL</span>
+                <span class="skill-tag intermediate">Linux</span>
+                <span class="skill-tag beginner">PyTest</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>🌐 Languages</h4>
+              <div class="skill-tags">
+                <span class="skill-tag expert">English</span>
+                <span class="skill-tag intermediate">German</span>
+                <span class="skill-tag native">Vietnamese</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Achievements -->
+        <div class="achievements">
+          <h3>🏆 Key Achievements</h3>
+          <div class="achievement-cards">
+            <div class="achievement-card">
+              <div class="achievement-icon">📉</div>
+              <div class="achievement-content">
+                <h4>30% Reduction</h4>
+                <p>Reporting inconsistencies through Power BI automation at CPG Vietnam</p>
+              </div>
+            </div>
+            <div class="achievement-card">
+              <div class="achievement-icon">🎯</div>
+              <div class="achievement-content">
+                <h4>64% Accuracy</h4>
+                <p>XGBoost classifier for intraday stock movement prediction</p>
+              </div>
+            </div>
+            <div class="achievement-card">
+              <div class="achievement-icon">🥇</div>
+              <div class="achievement-content">
+                <h4>First-Class Honours</h4>
+                <p>71% grade in Business Law with analytics focus</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Notable Projects Preview -->
+        <div class="projects-preview">
+          <h3>🚀 Featured Projects</h3>
+          <div class="preview-grid">
+            <div class="preview-card">
+              <div class="preview-header">
+                <span class="preview-icon">🤖</span>
+                <div>
+                  <h4>Legally: AI Legal Assistant</h4>
+                  <span class="preview-tag">Full-Stack AI</span>
+                </div>
+              </div>
+              <p>Multi-agent LLM system with document processing, FAISS retrieval, and PostgreSQL backend</p>
+              <div class="preview-tech">
+                <span>OpenAI GPT</span>
+                <span>PostgreSQL</span>
+                <span>SQLAlchemy</span>
+              </div>
+            </div>
+            <div class="preview-card">
+              <div class="preview-header">
+                <span class="preview-icon">📈</span>
+                <div>
+                  <h4>Marketing Analytics Pipeline</h4>
+                  <span class="preview-tag">Analytics</span>
+                </div>
+              </div>
+              <p>End-to-end synthetic data generation, RFM clustering, and A/B testing framework</p>
+              <div class="preview-tech">
+                <span>Python</span>
+                <span>K-Means</span>
+                <span>A/B Testing</span>
+              </div>
+            </div>
+            <div class="preview-card">
+              <div class="preview-header">
+                <span class="preview-icon">⚙️</span>
+                <div>
+                  <h4>Supply Chain Optimization</h4>
+                  <span class="preview-tag">Operations</span>
+                </div>
+              </div>
+              <p>EOQ-based inventory optimization with demand forecasting and budget constraints</p>
+              <div class="preview-tech">
+                <span>Forecasting</span>
+                <span>EOQ Model</span>
+                <span>Optimization</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact & Social -->
+        <div class="contact-section">
+          <h3>📧 Let's Connect</h3>
+          <div class="contact-grid">
+            <div class="contact-info">
+              <div class="contact-item">
+                <span class="contact-icon">🌍</span>
+                <div>
+                  <h4>Location</h4>
+                  <p>Munich, Germany</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">🎓</span>
+                <div>
+                  <h4>Current Status</h4>
+                  <p>Student & Data Analyst</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">💼</span>
+                <div>
+                  <h4>Open to</h4>
+                  <p>Analytics roles, Internships, Projects</p>
+                </div>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="https://github.com/losstng" class="social-link" target="_blank" rel="noopener">
+                <span class="social-icon">📚</span>
+                <div>
+                  <h4>GitHub</h4>
+                  <p>View my code repositories</p>
+                </div>
+              </a>
+              <a href="mailto:your-email@example.com" class="social-link">
+                <span class="social-icon">📨</span>
+                <div>
+                  <h4>Email</h4>
+                  <p>Get in touch directly</p>
+                </div>
+              </a>
+              <div class="social-link">
+                <span class="social-icon">🏢</span>
+                <div>
+                  <h4>Vietnamese Student Association</h4>
+                  <p>Active community member</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="grid" class="project-grid" aria-live="polite"></section>
+    <!-- Portfolio Projects Grid (hidden by default) -->
+    <section id="portfolio-section" class="portfolio-section" hidden>
+      <div class="portfolio-header">
+        <button id="back-to-cv" class="back-button">← Back to CV</button>
+        <h2 id="domain-title">Portfolio Projects</h2>
+      </div>
+      <section id="grid" class="project-grid" aria-live="polite"></section>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -56,5 +359,57 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <!-- Main logic for rendering projects and dashboards (now modular) -->
   <script type="module" src="main.js"></script>
+  <script>
+    function setActive(category) {
+      // Highlight Portfolio if viewing a project, Myself if on CV
+      const navBtn = document.getElementById('nav-portfolio-btn');
+      const myselfBtn = document.getElementById('cv-nav-btn');
+      if (navBtn) navBtn.classList.remove('active');
+      if (myselfBtn) myselfBtn.classList.remove('active');
+      if (category) {
+        if (navBtn) navBtn.classList.add('active');
+      } else {
+        if (myselfBtn) myselfBtn.classList.add('active');
+      }
+    }
+
+    function showPortfolio(category) {
+      currentView = 'portfolio';
+      currentCategory = category;
+      const cvSection = document.getElementById('cv-landing');
+      const portfolioSection = document.getElementById('portfolio-section');
+      const domainTitle = document.getElementById('domain-title');
+      if (cvSection) cvSection.setAttribute('hidden', '');
+      if (portfolioSection) portfolioSection.removeAttribute('hidden');
+      if (domainTitle) domainTitle.textContent = `${category} Analytics Portfolio`;
+      setActive(category); // <-- Add this line
+      // Close navigation dropdown if open
+      closeNavDropdown();
+      // Render the category
+      render(category);
+      // Update URL
+      history.replaceState(null, '', `#${category}`);
+    }
+
+    function showCVLanding() {
+      currentView = 'cv';
+      currentCategory = null;
+      const cvSection = document.getElementById('cv-landing');
+      const portfolioSection = document.getElementById('portfolio-section');
+      if (cvSection) cvSection.removeAttribute('hidden');
+      if (portfolioSection) portfolioSection.setAttribute('hidden', '');
+      setActive(null); // <-- Add this line
+      // Close navigation dropdown if open
+      closeNavDropdown();
+      // Update URL without triggering hashchange
+      history.replaceState(null, '', '#');
+    }
+
+    // Initial call to setActive to highlight the correct button on page load
+    setActive();
+    window.addEventListener('load', () => {
+      window.addEventListener('hashchange', setActive);
+    });
+  </script>
 </body>
 </html>

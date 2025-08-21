@@ -4,11 +4,69 @@
  * - Data and configuration moved to js/data.js
  * - HTML templates moved to js/templates.js
  * - Chart rendering moved to js/charts.js
+ * 
+ * Updated to support CV landing page with domain dropdown navigation.
  */
 
 import { iconFor } from './js/data.js';
 import { projects } from './js/templates.js';
 import { renderChart } from './js/charts.js';
+
+// State management
+let currentView = 'cv'; // 'cv' or 'portfolio'
+let currentCategory = null;
+
+/**
+ * Show the CV landing page and hide portfolio section
+ */
+function showCVLanding() {
+  currentView = 'cv';
+  currentCategory = null;
+  
+  const cvSection = document.getElementById('cv-landing');
+  const portfolioSection = document.getElementById('portfolio-section');
+  
+  if (cvSection) cvSection.removeAttribute('hidden');
+  if (portfolioSection) portfolioSection.setAttribute('hidden', '');
+  
+  // Set active state
+  setActive(null);
+  
+  // Close navigation dropdown if open
+  closeNavDropdown();
+  
+  // Update URL without triggering hashchange
+  history.replaceState(null, '', '#');
+  
+}
+
+/**
+ * Show the portfolio section and hide CV landing
+ */
+function showPortfolio(category) {
+  currentView = 'portfolio';
+  currentCategory = category;
+  
+  const cvSection = document.getElementById('cv-landing');
+  const portfolioSection = document.getElementById('portfolio-section');
+  const domainTitle = document.getElementById('domain-title');
+  
+  if (cvSection) cvSection.setAttribute('hidden', '');
+  if (portfolioSection) portfolioSection.removeAttribute('hidden');
+  if (domainTitle) domainTitle.textContent = `${category} Analytics Portfolio`;
+  
+  // Set active state
+  setActive(category);
+  
+  // Close navigation dropdown if open
+  closeNavDropdown();
+  
+  // Render the category
+  render(category);
+  
+  // Update URL
+  history.replaceState(null, '', `#${category}`);
+}
 
 /**
  * Update the active state of the navigation links to reflect the currently
@@ -16,15 +74,32 @@ import { renderChart } from './js/charts.js';
  * @param {string} category
  */
 function setActive(category) {
-  document.querySelectorAll('#nav a').forEach((a) => {
-    const el = /** @type {HTMLAnchorElement} */ (a);
-    const isActive = el.getAttribute('data-category') === category;
-    if (isActive) {
-      el.setAttribute('aria-current', 'page');
-    } else {
-      el.removeAttribute('aria-current');
-    }
-  });
+  // Update navigation button state
+  const navBtn = document.getElementById('nav-portfolio-btn');
+  const cvBtn = document.getElementById('cv-nav-btn');
+
+  if (category) {
+    if (navBtn) navBtn.classList.add('active');
+    if (cvBtn) cvBtn.classList.remove('active');
+  } else {
+    if (navBtn) navBtn.classList.remove('active');
+    if (cvBtn) cvBtn.classList.add('active');
+  }
+}
+
+/**
+ * Handle navigation based on URL hash
+ */
+function handleNavigation() {
+  const hash = (location.hash || '').replace('#', '');
+  if (!hash || hash === 'cv') {
+    showCVLanding();
+  } else if (['Marketing', 'Finance', 'Healthcare', 'Operations'].includes(hash)) {
+    showPortfolio(hash);
+  } else {
+    // Unknown hash, default to CV
+    showCVLanding();
+  }
 }
 
 /**
@@ -89,33 +164,127 @@ function render(category) {
 }
 
 /**
- * Attach click handlers to the navigation items and handle deep-linking
- * via URL hash. If the user navigates directly to /#Finance, that
- * category will be selected on page load. Subsequent hash changes
- * trigger re-renders.
+ * Initialize the application and attach all event handlers
  */
-function attachNavHandlers() {
-  document.querySelectorAll('#nav a').forEach((anchor) => {
-    anchor.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = /** @type {HTMLElement} */ (e.currentTarget);
-      const category = target.getAttribute('data-category');
+function initializeApp() {
+  // Header navigation portfolio dropdown button
+  const navPortfolioBtn = document.getElementById('nav-portfolio-btn');
+  if (navPortfolioBtn) {
+    navPortfolioBtn.addEventListener('click', toggleNavDropdown);
+  }
+  
+  // CV navigation button
+  const cvNavBtn = document.getElementById('cv-nav-btn');
+  if (cvNavBtn) {
+    cvNavBtn.addEventListener('click', showCVLanding);
+  }
+  
+  // Domain cards in navigation dropdown
+  document.querySelectorAll('.nav-domain-card').forEach((card) => {
+    card.addEventListener('click', (e) => {
+      const category = e.currentTarget.getAttribute('data-category');
       if (category) {
-        location.hash = category;
-        render(category);
+        showPortfolio(category);
       }
     });
   });
-
-  // load from hash or default
-  const initial = (location.hash || '#Operations').replace('#', '');
-  render(initial);
-
-  // update on manual hash change
-  window.addEventListener('hashchange', () => {
-    const cat = (location.hash || '#Operations').replace('#', '');
-    render(cat);
+  
+  // Back to CV button
+  const backBtn = document.getElementById('back-to-cv');
+  if (backBtn) {
+    backBtn.addEventListener('click', showCVLanding);
+  }
+  
+  // Handle browser navigation (back/forward and hash changes)
+  window.addEventListener('popstate', handleNavigation);
+  window.addEventListener('hashchange', handleNavigation);
+  
+  // Initialize based on current URL
+  requestAnimationFrame(() => {
+    handleNavigation();
   });
 }
 
-document.addEventListener('DOMContentLoaded', attachNavHandlers);
+/**
+ * Toggle the navigation dropdown
+ */
+function toggleNavDropdown() {
+  const button = document.getElementById('nav-portfolio-btn');
+  const dropdown = document.getElementById('nav-domain-dropdown');
+  
+  if (!button || !dropdown) return;
+  
+  const isExpanded = button.getAttribute('aria-expanded') === 'true';
+  
+  if (isExpanded) {
+    closeNavDropdown();
+  } else {
+    openNavDropdown();
+  }
+}
+
+/**
+ * Open the navigation dropdown
+ */
+function openNavDropdown() {
+  const button = document.getElementById('nav-portfolio-btn');
+  const dropdown = document.getElementById('nav-domain-dropdown');
+  
+  if (!button || !dropdown) return;
+  
+  button.setAttribute('aria-expanded', 'true');
+  dropdown.removeAttribute('hidden');
+  
+  // Add click-outside listener
+  setTimeout(() => {
+    document.addEventListener('click', handleNavClickOutside);
+  }, 0);
+}
+
+/**
+ * Close the navigation dropdown
+ */
+function closeNavDropdown() {
+  const button = document.getElementById('nav-portfolio-btn');
+  const dropdown = document.getElementById('nav-domain-dropdown');
+  
+  if (!button || !dropdown) return;
+  
+  button.setAttribute('aria-expanded', 'false');
+  dropdown.setAttribute('hidden', '');
+  
+  // Remove click-outside listener
+  document.removeEventListener('click', handleNavClickOutside);
+}
+
+/**
+ * Handle clicks outside the navigation dropdown to close it
+ */
+function handleNavClickOutside(event) {
+  const dropdown = document.getElementById('nav-domain-dropdown');
+  const button = document.getElementById('nav-portfolio-btn');
+  
+  if (!dropdown || !button) return;
+  
+  if (!dropdown.contains(event.target) && !button.contains(event.target)) {
+    closeNavDropdown();
+  }
+}
+
+/**
+ * Handle navigation based on URL hash
+ */
+function handleNavigation() {
+  const hash = (location.hash || '').replace('#', '');
+  if (!hash || hash === 'cv') {
+    showCVLanding();
+  } else if (['Marketing', 'Finance', 'Healthcare', 'Operations'].includes(hash)) {
+    showPortfolio(hash);
+  } else {
+    // Unknown hash, default to CV
+    showCVLanding();
+  }
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', initializeApp);
