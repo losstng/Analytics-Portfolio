@@ -64,6 +64,9 @@
 * Designed normalized schemas and ER diagrams up to 3NF; mastered entity-relationship modeling and data integrity best practices.  
 * Studied DBMS internals: indexing, transaction control, efficiency, and data integrity.
 
+
+### new notes: https://coursera.org/share/9ce19fe06f92da2d0e782cedfc1b2cb9 Google Data Analytics ,predecessor to Google Advanced Data Analytics
+
 **Skills**\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 * **Data analysis & visualisation:** Power BI, Excel/Google Sheets, Tableau, A/B testing, EDA, dashboards, statistical modeling.  
