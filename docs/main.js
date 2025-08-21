@@ -79,28 +79,30 @@ function setActive(category) {
   const cvBtn = document.getElementById('cv-nav-btn');
 
   if (category) {
-    if (navBtn) navBtn.classList.add('active');
-    if (cvBtn) cvBtn.classList.remove('active');
+    if (navBtn) {
+      navBtn.classList.add('active');
+      navBtn.setAttribute('aria-current', 'page');
+      navBtn.setAttribute('aria-pressed', 'true');
+    }
+    if (cvBtn) {
+      cvBtn.classList.remove('active');
+      cvBtn.removeAttribute('aria-current');
+      cvBtn.setAttribute('aria-pressed', 'false');
+    }
   } else {
-    if (navBtn) navBtn.classList.remove('active');
-    if (cvBtn) cvBtn.classList.add('active');
+    if (navBtn) {
+      navBtn.classList.remove('active');
+      navBtn.removeAttribute('aria-current');
+      navBtn.setAttribute('aria-pressed', 'false');
+    }
+    if (cvBtn) {
+      cvBtn.classList.add('active');
+      cvBtn.setAttribute('aria-current', 'page');
+      cvBtn.setAttribute('aria-pressed', 'true');
+    }
   }
 }
 
-/**
- * Handle navigation based on URL hash
- */
-function handleNavigation() {
-  const hash = (location.hash || '').replace('#', '');
-  if (!hash || hash === 'cv') {
-    showCVLanding();
-  } else if (['Marketing', 'Finance', 'Healthcare', 'Operations'].includes(hash)) {
-    showPortfolio(hash);
-  } else {
-    // Unknown hash, default to CV
-    showCVLanding();
-  }
-}
 
 /**
  * Render the list of projects for a given category. Cards can be charts

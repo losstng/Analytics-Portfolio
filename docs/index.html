@@ -359,57 +359,5 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <!-- Main logic for rendering projects and dashboards (now modular) -->
   <script type="module" src="main.js"></script>
-  <script>
-    function setActive(category) {
-      // Highlight Portfolio if viewing a project, Myself if on CV
-      const navBtn = document.getElementById('nav-portfolio-btn');
-      const myselfBtn = document.getElementById('cv-nav-btn');
-      if (navBtn) navBtn.classList.remove('active');
-      if (myselfBtn) myselfBtn.classList.remove('active');
-      if (category) {
-        if (navBtn) navBtn.classList.add('active');
-      } else {
-        if (myselfBtn) myselfBtn.classList.add('active');
-      }
-    }
-
-    function showPortfolio(category) {
-      currentView = 'portfolio';
-      currentCategory = category;
-      const cvSection = document.getElementById('cv-landing');
-      const portfolioSection = document.getElementById('portfolio-section');
-      const domainTitle = document.getElementById('domain-title');
-      if (cvSection) cvSection.setAttribute('hidden', '');
-      if (portfolioSection) portfolioSection.removeAttribute('hidden');
-      if (domainTitle) domainTitle.textContent = `${category} Analytics Portfolio`;
-      setActive(category); // <-- Add this line
-      // Close navigation dropdown if open
-      closeNavDropdown();
-      // Render the category
-      render(category);
-      // Update URL
-      history.replaceState(null, '', `#${category}`);
-    }
-
-    function showCVLanding() {
-      currentView = 'cv';
-      currentCategory = null;
-      const cvSection = document.getElementById('cv-landing');
-      const portfolioSection = document.getElementById('portfolio-section');
-      if (cvSection) cvSection.removeAttribute('hidden');
-      if (portfolioSection) portfolioSection.setAttribute('hidden', '');
-      setActive(null); // <-- Add this line
-      // Close navigation dropdown if open
-      closeNavDropdown();
-      // Update URL without triggering hashchange
-      history.replaceState(null, '', '#');
-    }
-
-    // Initial call to setActive to highlight the correct button on page load
-    setActive();
-    window.addEventListener('load', () => {
-      window.addEventListener('hashchange', setActive);
-    });
-  </script>
 </body>
 </html>
