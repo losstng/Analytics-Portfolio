@@ -1500,3 +1500,274 @@ body{
     font-size: 16px;
   }
 }
+
+/* ---------- Marketing Analytics Components ---------- */
+
+/* Metrics Grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.metric-card {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  text-align: center;
+  border: 1px solid var(--surface-2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2);
+}
+
+.metric-value {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary-600);
+  margin-bottom: 0.25rem;
+}
+
+.metric-label {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.metric-change {
+  display: block;
+  font-size: 0.875rem;
+  color: #059669; /* Green for positive changes */
+  font-weight: 600;
+}
+
+/* Quality Checks */
+.quality-checks,
+.rigor-scorecard {
+  background: linear-gradient(135deg, var(--surface), var(--surface-2));
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--surface-2);
+}
+
+.check-grid,
+.rigor-checks {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.check-item,
+.rigor-item {
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: var(--bg);
+  border: 1px solid var(--surface-2);
+  font-size: 0.875rem;
+}
+
+.check-item.pass {
+  border-left: 4px solid #059669;
+  background: #f0fdf4;
+}
+
+@media (prefers-color-scheme: dark) {
+  .check-item.pass {
+    background: #052e16;
+  }
+}
+
+/* Scenario Table Styling */
+.scenario-table table,
+.responsive-table,
+.quality-table,
+.rigor-table,
+.recommendations-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  background: var(--bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+}
+
+.scenario-table th,
+.responsive-table th,
+.quality-table th,
+.rigor-table th,
+.recommendations-table th {
+  background: var(--surface);
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 1px solid var(--surface-2);
+  color: var(--text);
+}
+
+.scenario-table td,
+.responsive-table td,
+.quality-table td,
+.rigor-table td,
+.recommendations-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--surface-2);
+  vertical-align: top;
+}
+
+.scenario-table tr.highlighted,
+.responsive-table tr.highlighted {
+  background: var(--primary-50);
+  font-weight: 600;
+}
+
+@media (prefers-color-scheme: dark) {
+  .scenario-table tr.highlighted,
+  .responsive-table tr.highlighted {
+    background: var(--primary-100);
+  }
+}
+
+/* Recommendations Timeline */
+.recommendations {
+  margin: 1rem 0;
+}
+
+.rec-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.rec-item {
+  border: 1px solid var(--surface-2);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  background: var(--surface);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rec-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2);
+}
+
+.rec-item.priority-1 {
+  border-left: 4px solid var(--primary-600);
+}
+
+.rec-item.priority-2 {
+  border-left: 4px solid #f59e0b; /* Amber for secondary priority */
+}
+
+.rec-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.priority {
+  background: var(--primary-600);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.timeline {
+  background: var(--surface-2);
+  color: var(--muted);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+}
+
+.rec-item h5 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text);
+  font-size: 1.125rem;
+}
+
+.rec-item p {
+  margin: 0 0 0.75rem 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.rec-item ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.rec-item li {
+  color: var(--muted);
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Rigor Scorecard */
+.rigor-scorecard h4 {
+  margin: 0 0 1rem 0;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rigor-scorecard h4::before {
+  content: "🏆";
+  font-size: 1.25rem;
+}
+
+.rigor-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: var(--bg);
+  border: 1px solid var(--surface-2);
+}
+
+/* Mobile responsiveness for new components */
+@media (max-width: 768px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .rec-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .scenario-table,
+  .responsive-table,
+  .quality-table,
+  .rigor-table,
+  .recommendations-table {
+    font-size: 0.875rem;
+  }
+  
+  .scenario-table th,
+  .scenario-table td,
+  .responsive-table th,
+  .responsive-table td,
+  .quality-table th,
+  .quality-table td,
+  .rigor-table th,
+  .rigor-table td,
+  .recommendations-table th,
+  .recommendations-table td {
+    padding: 8px 12px;
+  }
+}

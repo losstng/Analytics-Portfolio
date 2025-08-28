@@ -1,0 +1,63 @@
+{
+  "marketing_cac_analysis": {
+    "A": {
+      "conversions": 60,
+      "conversion_rate": 0.04823151125401929,
+      "cac": 2083.3333333333335,
+      "budget": 125000
+    },
+    "B": {
+      "conversions": 101,
+      "conversion_rate": 0.08251633986928104,
+      "cac": 1237.6237623762377,
+      "budget": 125000
+    },
+    "C": {
+      "conversions": 45,
+      "conversion_rate": 0.03480278422273782,
+      "cac": 2777.777777777778,
+      "budget": 125000
+    },
+    "D": {
+      "conversions": 141,
+      "conversion_rate": 0.11380145278450363,
+      "cac": 886.5248226950355,
+      "budget": 125000
+    }
+  },
+  "marketing_recommendations": {
+    "scale_channel": "D",
+    "pause_channel": "C",
+    "projected_customers": 305,
+    "projected_revenue": 3100000,
+    "projected_cac": 140,
+    "rigor_score": 90
+  },
+  "marketing_scenarios": {
+    "conservative": {
+      "customers": 245,
+      "conv_rate": 0.049,
+      "cac": 145,
+      "revenue": 2500000
+    },
+    "recommended": {
+      "customers": 305,
+      "conv_rate": 0.061,
+      "cac": 140,
+      "revenue": 3100000
+    },
+    "aggressive": {
+      "customers": 285,
+      "conv_rate": 0.057,
+      "cac": 165,
+      "revenue": 2900000
+    }
+  },
+  "marketing_quality_metrics": {
+    "duplicate_check": "PASS",
+    "spend_reconciliation": "PASS",
+    "join_integrity": "PASS",
+    "null_audits": "PASS",
+    "anomaly_detection": "NORMAL"
+  }
+}

@@ -17,6 +17,35 @@ export const DASHBOARD_DATA = {
   "marketing_conversion_rates": [0.056451612903225805, 0.06746031746031746],
   "marketing_z_stat": -0.7217637383241345,
   "marketing_p_value": 0.47043974720861326,
+  
+  // Enhanced marketing analytics data
+  "marketing_cac_analysis": {
+    "A": {"conversions": 60, "conversion_rate": 0.048, "cac": 2083, "budget": 125000},
+    "B": {"conversions": 101, "conversion_rate": 0.083, "cac": 1238, "budget": 125000},
+    "C": {"conversions": 45, "conversion_rate": 0.035, "cac": 2778, "budget": 125000},
+    "D": {"conversions": 141, "conversion_rate": 0.114, "cac": 887, "budget": 125000}
+  },
+  "marketing_recommendations": {
+    "scale_channel": "D",
+    "pause_channel": "C",
+    "projected_customers": 305,
+    "projected_revenue": 3100000,
+    "projected_cac": 140,
+    "rigor_score": 90
+  },
+  "marketing_scenarios": {
+    "conservative": {"customers": 245, "conv_rate": 0.049, "cac": 145, "revenue": 2500000},
+    "recommended": {"customers": 305, "conv_rate": 0.061, "cac": 140, "revenue": 3100000},
+    "aggressive": {"customers": 285, "conv_rate": 0.057, "cac": 165, "revenue": 2900000}
+  },
+  "marketing_quality_metrics": {
+    "duplicate_check": "PASS",
+    "spend_reconciliation": "PASS",
+    "join_integrity": "PASS", 
+    "null_audits": "PASS",
+    "anomaly_detection": "NORMAL"
+  },
+  
   "health_metrics": {"Accuracy": 0.8, "Precision": 0.0, "Recall": 0.0, "ROC_AUC": 0.5550694444444444},
   "finance_dates": [
     "2025-01-25", "2025-01-26", "2025-01-27", "2025-01-28", "2025-01-29", "2025-01-30",

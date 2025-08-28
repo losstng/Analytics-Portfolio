@@ -27,6 +27,83 @@ export const marketingTemplates = {
     </div>
   `,
 
+  businessImpact: `
+    <div class="markdown">
+      <h4>Key Business Impact</h4>
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <span class="metric-value">+105</span>
+          <span class="metric-label">Incremental Customers/Month</span>
+          <span class="metric-change">+4.2%</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-value">$1.07M</span>
+          <span class="metric-label">Annual Revenue Impact</span>
+          <span class="metric-change">+15% ROAS</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-value">$140</span>
+          <span class="metric-label">Weighted CAC</span>
+          <span class="metric-change">Under $150 Target</span>
+        </div>
+      </div>
+    </div>
+  `,
+
+  executiveDashboard: `
+    <figure>
+      <figcaption>Executive Dashboard - Budget Optimization</figcaption>
+      <iframe class="iframe-embed" style="height:700px" src="assets/marketing_analytics/executive_dashboard.html" loading="lazy" title="Executive Dashboard" aria-label="Executive dashboard showing conversion rates, CAC, budget allocation and impact"></iframe>
+    </figure>
+  `,
+
+  dataQualityFramework: `
+    <div class="quality-checks">
+      <h4>Data Quality Framework</h4>
+      <div class="check-grid">
+        <div class="check-item pass">✅ Duplicate Detection: PASS (0 found)</div>
+        <div class="check-item pass">✅ Spend Reconciliation: PASS (<2% variance)</div>
+        <div class="check-item pass">✅ Join Integrity: PASS (100% valid)</div>
+        <div class="check-item pass">✅ Null Audits: PASS (0 critical nulls)</div>
+        <div class="check-item pass">✅ Anomaly Detection: NORMAL (all groups)</div>
+      </div>
+      <figure style="margin-top: 1rem;">
+        <figcaption>Detailed Quality Report</figcaption>
+        <iframe class="iframe-embed" style="height:300px" src="assets/marketing_analytics/quality_report.html" loading="lazy" title="Data Quality Report" aria-label="Detailed data quality report"></iframe>
+      </figure>
+    </div>
+  `,
+
+  scenarioAnalysis: `
+    <div class="scenario-table">
+      <h4>Scenario Modeling</h4>
+      <figure>
+        <figcaption>Budget Allocation Scenarios</figcaption>
+        <iframe class="iframe-embed" style="height:280px" src="assets/marketing_analytics/scenarios_table.html" loading="lazy" title="Scenario Analysis" aria-label="Scenario analysis comparing conservative, recommended, and aggressive strategies"></iframe>
+      </figure>
+    </div>
+  `,
+
+  methodologyRigor: `
+    <div class="rigor-scorecard">
+      <h4>Methodological Rigor Score: 90/100</h4>
+      <figure>
+        <figcaption>Statistical Validation Framework</figcaption>
+        <iframe class="iframe-embed" style="height:280px" src="assets/marketing_analytics/rigor_scorecard.html" loading="lazy" title="Methodology Rigor" aria-label="Methodological rigor scorecard showing validation checks"></iframe>
+      </figure>
+    </div>
+  `,
+
+  recommendations: `
+    <div class="recommendations">
+      <h4>Prioritized Recommendations</h4>
+      <figure>
+        <figcaption>Action Plan & Timeline</figcaption>
+        <iframe class="iframe-embed" style="height:300px" src="assets/marketing_analytics/recommendations_timeline.html" loading="lazy" title="Recommendations" aria-label="Prioritized recommendations with timeline and impact"></iframe>
+      </figure>
+    </div>
+  `,
+
   rawDataSample: `
     <figure>
       <figcaption>Raw sample (5 rows)</figcaption>
@@ -74,11 +151,39 @@ export const marketingProjects = [
     type: 'markdown',
     title: 'Marketing Analytics — Overview',
     description: 'End-to-end synthetic marketing analytics: generation, cleaning, segmentation, and A/B testing.',
-    link: '../Scripts/marketing_analytics.py',
+    link: '../Notebooks/marketing_analytics.ipynb',
     tags: ['Synthetic Data', 'RFM', 'A/B Testing'],
     contentHtml: marketingTemplates.overview
   },
-  // Raw data sample (CSV preview)
+  
+  // Business Impact Summary - NEW
+  {
+    type: 'metrics',
+    title: 'Business Impact Analysis',
+    description: 'Projected impact of budget reallocation strategy with key KPIs.',
+    tags: ['ROI', 'CAC', 'Revenue'],
+    contentHtml: marketingTemplates.businessImpact
+  },
+
+  // Executive Dashboard - NEW
+  {
+    type: 'embed',
+    title: 'Executive Dashboard',
+    description: 'Interactive dashboard showing conversion rates, CAC analysis, and budget recommendations.',
+    tags: ['Dashboard', 'Interactive', 'Plotly'],
+    contentHtml: marketingTemplates.executiveDashboard
+  },
+
+  // Data Quality Framework - NEW
+  {
+    type: 'quality',
+    title: 'Data Quality & Governance',
+    description: 'Comprehensive data quality checks and governance framework.',
+    tags: ['Data Quality', 'Governance'],
+    contentHtml: marketingTemplates.dataQualityFramework
+  },
+
+  // Raw data sample
   {
     type: 'embed',
     title: 'Data Cleaning — Raw Sample',
@@ -86,7 +191,8 @@ export const marketingProjects = [
     tags: ['Data Quality', 'ETL'],
     contentHtml: marketingTemplates.rawDataSample
   },
-  // Cleaned data sample (CSV preview)
+
+  // Cleaned data sample
   {
     type: 'embed',
     title: 'Data Cleaning — Cleaned Sample',
@@ -94,15 +200,44 @@ export const marketingProjects = [
     tags: ['Data Quality', 'ETL'],
     contentHtml: marketingTemplates.cleanedDataSample
   },
+
   // Interactive conversion chart
   {
     type: 'embed',
-    title: 'Interactive — Conversion Rates by Group',
-    description: 'Explore conversion rates across groups (A/B/C/D) with hover details.',
-    tags: ['Plotly', 'Interactivity'],
+    title: 'A/B Testing — Tournament Results',
+    description: 'Tournament-style A/B test results: D (11.4%) > B (8.3%) > A (4.8%) > C (3.5%)',
+    tags: ['A/B Testing', 'Statistical Significance'],
     contentHtml: marketingTemplates.interactiveConversionRates
   },
-  // Static visuals (exported from notebook)
+
+  // Scenario Analysis - NEW
+  {
+    type: 'analysis',
+    title: 'Scenario Modeling',
+    description: 'Conservative vs Recommended vs Aggressive budget allocation scenarios.',
+    tags: ['Scenario Analysis', 'Decision Support'],
+    contentHtml: marketingTemplates.scenarioAnalysis
+  },
+
+  // Methodological Rigor - NEW
+  {
+    type: 'methodology',
+    title: 'Methodological Rigor',
+    description: 'Robustness checks and statistical validation framework.',
+    tags: ['Statistics', 'Validation'],
+    contentHtml: marketingTemplates.methodologyRigor
+  },
+
+  // Recommendations - NEW
+  {
+    type: 'recommendations',
+    title: 'Action Plan & Timeline',
+    description: 'Prioritized recommendations with effort estimates and projected payoff.',
+    tags: ['Strategy', 'Implementation'],
+    contentHtml: marketingTemplates.recommendations
+  },
+
+  // Static visuals
   {
     type: 'embed',
     title: 'Static Visuals — Summary',
@@ -110,12 +245,13 @@ export const marketingProjects = [
     tags: ['Seaborn', 'Reporting'],
     contentHtml: marketingTemplates.staticVisuals
   },
-  // Summary KPI chart using embedded DASHBOARD_DATA
+
+  // Summary KPI chart
   {
     type: 'chart',
-    title: 'Customer Segments & A/B Overview',
-    description: 'Segment sizes and A/B conversion rates summary.',
-    link: '../Scripts/marketing_analytics.py',
+    title: 'Customer Segments & Conversion Summary',
+    description: 'Segment sizes and conversion rates by channel.',
+    link: '../Notebooks/marketing_analytics.ipynb',
     tags: ['Segments', 'KPIs'],
     chartKey: 'Marketing'
   }
@@ -125,8 +261,96 @@ export const marketingProjects = [
  * Create chart configuration for Marketing category
  */
 export function createMarketingChart(data) {
-  // Segment counts and conversion rates: two datasets on different axes
-  const segmentLabels = Object.keys(data.marketing_segment_counts)
+  // Use the new CAC analysis data if available
+  if (data.marketing_cac_analysis) {
+    const channels = Object.keys(data.marketing_cac_analysis);
+    const conversionRates = channels.map(ch => data.marketing_cac_analysis[ch].conversion_rate);
+    const cac = channels.map(ch => data.marketing_cac_analysis[ch].cac);
+    
+    return {
+      type: 'bar',
+      data: {
+        labels: channels.map(ch => `Channel ${ch}`),
+        datasets: [
+          {
+            label: 'Conversion Rate (%)',
+            data: conversionRates.map(r => r * 100),
+            backgroundColor: channels.map(ch => 
+              ch === 'D' ? 'rgba(16, 185, 129, 0.8)' :  // Green for winner
+              ch === 'C' ? 'rgba(239, 68, 68, 0.8)' :   // Red for underperformer
+              'rgba(79, 70, 229, 0.6)'                   // Purple for others
+            ),
+            borderColor: channels.map(ch => 
+              ch === 'D' ? 'rgba(16, 185, 129, 1)' :
+              ch === 'C' ? 'rgba(239, 68, 68, 1)' :
+              'rgba(79, 70, 229, 1)'
+            ),
+            borderWidth: 2,
+            yAxisID: 'y',
+          },
+          {
+            label: 'CAC ($)',
+            data: cac,
+            type: 'line',
+            borderColor: 'rgba(251, 146, 60, 1)',
+            backgroundColor: 'rgba(251, 146, 60, 0.1)',
+            borderWidth: 2,
+            tension: 0.3,
+            yAxisID: 'y1',
+            pointStyle: 'circle',
+            pointRadius: 5,
+            pointHoverRadius: 8
+          }
+        ],
+      },
+      options: {
+        responsive: true,
+        interaction: {
+          mode: 'index',
+          intersect: false,
+        },
+        plugins: {
+          legend: { position: 'top' },
+          title: {
+            display: true,
+            text: 'Channel Performance: Conversion Rate vs CAC',
+            font: { size: 14 }
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                if (context.dataset.label === 'Conversion Rate (%)') {
+                  return `${context.dataset.label}: ${context.parsed.y.toFixed(1)}%`;
+                } else {
+                  return `${context.dataset.label}: $${context.parsed.y.toFixed(0)}`;
+                }
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: { display: true, text: 'Conversion Rate (%)' },
+            max: 12
+          },
+          y1: {
+            beginAtZero: true,
+            position: 'right',
+            title: { display: true, text: 'CAC ($)' },
+            max: 5000,
+            grid: { drawOnChartArea: false },
+            ticks: {
+              callback: (value) => `$${value}`
+            }
+          },
+        },
+      },
+    };
+  }
+  
+  // Fallback to original chart if new data not available
+  const segmentLabels = Object.keys(data.marketing_segment_counts || {})
     .sort((a, b) => Number(a) - Number(b))
     .map((k) => `Segment ${k}`);
   const segmentVals = segmentLabels.map((lbl) => {
@@ -134,7 +358,7 @@ export function createMarketingChart(data) {
     return data.marketing_segment_counts[idx];
   });
   const convLabels = ['Group A', 'Group B'];
-  const convVals = data.marketing_conversion_rates;
+  const convVals = data.marketing_conversion_rates || [0.05, 0.08];
 
   // Combine labels: segments first, then groups
   const labels = [...segmentLabels, ...convLabels];

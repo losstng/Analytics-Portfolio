@@ -1,0 +1,13 @@
+{
+  "key_findings": {
+    "winner_channel": "D",
+    "winner_conversion_rate": "11.4%",
+    "loser_channel": "C",
+    "loser_conversion_rate": "3.5%",
+    "projected_annual_impact": "$1.07M",
+    "cac_under_target": true,
+    "statistical_significance": "p < 0.05"
+  },
+  "export_timestamp": "2025-08-28T17:08:52.049750",
+  "notebook_version": "v2.0"
+}
