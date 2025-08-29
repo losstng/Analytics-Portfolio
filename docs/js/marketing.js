@@ -135,8 +135,8 @@ export const marketingTemplates = {
         <figcaption>Conversion rates by group (with labels)</figcaption>
       </figure>
       <figure>
-        <img src="assets/marketing_analytics/static_pairwise_round1.png" alt="Pairwise conversion rates A vs B, C vs D" />
-        <figcaption>Round 1 pairwise comparisons (A vs B, C vs D)</figcaption>
+        <img src="assets/marketing_analytics/static_confidence_int.png" alt="Conversion rates with confidence intervals of A vs B vs C vs D" />
+        <figcaption>Conversion rates with confidence intervals of A vs B vs C vs D</figcaption>
       </figure>
     </div>
   `
