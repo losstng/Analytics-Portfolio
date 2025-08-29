@@ -189,7 +189,8 @@ body{
 .nav-domain-dropdown {
   position: absolute;
   top: 100%;
-  left: 0;
+  right: 0;
+  left: auto;
   margin-top: 8px;
   background: var(--surface);
   border: 1px solid var(--surface-2);
@@ -197,11 +198,15 @@ body{
   box-shadow: var(--shadow-2);
   z-index: 1000;
   min-width: 520px;
-  max-width: 90vw;
+  max-width: calc(100vw - 48px);
+  width: fit-content;
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 0.25s ease, transform 0.25s ease;
   backdrop-filter: blur(8px);
+  
+  /* Ensure it doesn't expand beyond the viewport */
+  box-sizing: border-box;
 }
 
 /* Responsive Grid Layout */
@@ -343,12 +348,13 @@ body{
   .nav-domain-dropdown {
     min-width: unset;
     width: calc(100vw - 32px);
-    left: 50%;
-    transform: translateX(-50%) translateY(-10px);
+    right: 16px;
+    left: auto;
+    transform: translateY(-10px);
   }
   
   .nav-domain-dropdown:not([hidden]) {
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
   }
   
   .nav-dropdown-content {
@@ -1065,6 +1071,33 @@ body{
   margin: 0;
   font-size: 24px;
   color: var(--text);
+  flex: 1; /* Take up remaining space */
+}
+
+/* View Notebook Button */
+.view-notebook-button{
+  appearance: none;
+  background: var(--primary-100);
+  border: 1px solid var(--primary-200);
+  color: var(--primary-700);
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all .2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.view-notebook-button:hover{
+  background: var(--primary-200);
+  border-color: var(--primary-600);
+  color: var(--primary-700);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-1);
 }
 
 /* ---------- Hero ---------- */
@@ -1608,6 +1641,12 @@ body{
   
   .back-button {
     align-self: flex-start;
+  }
+  
+  .view-notebook-button {
+    align-self: flex-start;
+    font-size: 13px;
+    padding: 6px 12px;
   }
   
   /* Enhanced sections mobile responsiveness */

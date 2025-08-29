@@ -25,9 +25,11 @@ function showCVLanding() {
   
   const cvSection = document.getElementById('cv-landing');
   const portfolioSection = document.getElementById('portfolio-section');
+  const notebookBtn = document.getElementById('view-notebook-btn');
   
   if (cvSection) cvSection.removeAttribute('hidden');
   if (portfolioSection) portfolioSection.setAttribute('hidden', '');
+  if (notebookBtn) notebookBtn.setAttribute('hidden', '');
   
   // Set active state
   setActive(null);
@@ -50,10 +52,29 @@ function showPortfolio(category) {
   const cvSection = document.getElementById('cv-landing');
   const portfolioSection = document.getElementById('portfolio-section');
   const domainTitle = document.getElementById('domain-title');
+  const notebookBtn = document.getElementById('view-notebook-btn');
   
   if (cvSection) cvSection.setAttribute('hidden', '');
   if (portfolioSection) portfolioSection.removeAttribute('hidden');
   if (domainTitle) domainTitle.textContent = `${category} Analytics Portfolio`;
+  
+  // Handle notebook button
+  if (notebookBtn) {
+    const notebookLinks = {
+      'Marketing': '../Notebooks/marketing_analytics.ipynb',
+      'Finance': '../Notebooks/Master.ipynb', 
+      'Healthcare': '../Notebooks/Master.ipynb',
+      'Operations': '../Notebooks/Master.ipynb'
+    };
+    
+    const notebookLink = notebookLinks[category];
+    if (notebookLink) {
+      notebookBtn.href = notebookLink;
+      notebookBtn.removeAttribute('hidden');
+    } else {
+      notebookBtn.setAttribute('hidden', '');
+    }
+  }
   
   // Set active state
   setActive(category);
