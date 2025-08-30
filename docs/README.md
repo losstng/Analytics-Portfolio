@@ -23,6 +23,14 @@ docs/
 ├── index.html          # Main HTML page (loads the modular JS)
 ├── main.js             # Small bootstrap renderer (imports domain projects)
 ├── styles.css          # Site styles
+├── notebooks/          # Jupyter notebooks and markdown files
+│   ├── Master.ipynb    # Master notebook
+│   ├── Showcase.ipynb  # Showcase notebook
+│   ├── marketing_analytics.ipynb  # Marketing analytics notebook
+│   └── marketing_analytics.md     # Marketing analytics documentation
+├── data/               # Generated and processed data files
+│   ├── marketing_data.csv         # Primary marketing dataset
+│   └── marketing_data_2.csv       # Secondary marketing dataset
 ├── js/
 │   ├── data.js        # Embedded dashboard data, icons, utilities
 │   ├── templates.js   # Aggregates domain project arrays
@@ -32,6 +40,7 @@ docs/
 │   ├── healthcare.js  # Healthcare domain: templates, projects, createHealthcareChart()
 │   └── finance.js     # Finance domain: templates, projects, createFinanceChart()
 └── assets/            # Static assets (images, exported HTML, CSVs)
+    └── marketing_analytics/  # Marketing analytics specific assets
 ```
 
 ## How it works (high level)
