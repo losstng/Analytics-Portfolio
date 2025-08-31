@@ -61,7 +61,7 @@ export const marketingTemplates = {
   executiveDashboard: `
     <figure>
       <figcaption>Advanced Executive Dashboard - MMM & LTV Integration</figcaption>
-      <iframe class="iframe-embed" style="height:700px" src="assets/marketing_analytics/executive_dashboard_advanced.html" loading="lazy" title="Advanced Executive Dashboard" aria-label="Advanced executive dashboard showing MMM channel contribution, LTV:CAC matrix, budget optimization and ROI projections"></iframe>
+      <iframe class="iframe-embed" style="height:700px" src="assets/marketing_analytics/executive_dashboard.html" loading="lazy" title="Advanced Executive Dashboard" aria-label="Advanced executive dashboard showing MMM channel contribution, LTV:CAC matrix, budget optimization and ROI projections"></iframe>
     </figure>
   `,
 
@@ -90,7 +90,7 @@ export const marketingTemplates = {
       <h4>Advanced Scenario Modeling with Saturation</h4>
       <figure>
         <figcaption>MMM-Driven Budget Allocation Scenarios</figcaption>
-        <iframe class="iframe-embed" style="height:350px" src="assets/marketing_analytics/scenarios_table_advanced.html" loading="lazy" title="Advanced Scenario Analysis" aria-label="Advanced scenario analysis with MMM lift, LTV impact, and risk assessment"></iframe>
+        <iframe class="iframe-embed" style="height:350px" src="assets/marketing_analytics/scenarios_table.html" loading="lazy" title="Advanced Scenario Analysis" aria-label="Advanced scenario analysis with MMM lift, LTV impact, and risk assessment"></iframe>
       </figure>
     </div>
   `,
@@ -166,7 +166,7 @@ Channel Rankings:
       </div>
       <figure>
         <figcaption>Comprehensive Statistical Validation</figcaption>
-        <iframe class="iframe-embed" style="height:350px" src="assets/marketing_analytics/rigor_scorecard_advanced.html" loading="lazy" title="Advanced Methodology Rigor" aria-label="Advanced methodological rigor scorecard with comprehensive validation"></iframe>
+        <iframe class="iframe-embed" style="height:350px" src="assets/marketing_analytics/rigor_scorecard.html" loading="lazy" title="Advanced Methodology Rigor" aria-label="Advanced methodological rigor scorecard with comprehensive validation"></iframe>
       </figure>
     </div>
   `,
@@ -199,7 +199,7 @@ Channel Rankings:
       </div>
       <figure>
         <figcaption>Implementation Timeline & Impact</figcaption>
-        <iframe class="iframe-embed" style="height:350px" src="assets/marketing_analytics/recommendations_timeline_advanced.html" loading="lazy" title="Advanced Recommendations" aria-label="Strategic implementation roadmap with phased approach and impact projections"></iframe>
+        <iframe class="iframe-embed" style="height:350px" src="assets/marketing_analytics/recommendations_timeline.html" loading="lazy" title="Advanced Recommendations" aria-label="Strategic implementation roadmap with phased approach and impact projections"></iframe>
       </figure>
     </div>
   `,
@@ -237,14 +237,6 @@ Channel Rankings:
       <figure>
         <img src="assets/marketing_analytics/static_confidence_int.png" alt="Bayesian confidence intervals for A vs B vs C vs D" />
         <figcaption>Bayesian confidence intervals with posterior distributions</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/marketing_analytics/static_ltv_distribution.png" alt="LTV distribution by channel" />
-        <figcaption>Customer Lifetime Value distribution by acquisition channel</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/marketing_analytics/static_saturation_curves.png" alt="MMM saturation curves" />
-        <figcaption>Hill saturation curves showing diminishing returns by channel</figcaption>
       </figure>
     </div>
   `,

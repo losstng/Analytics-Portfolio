@@ -1,0 +1,29 @@
+{
+  "portfolio_title": "Advanced Marketing Analytics with MMM & LTV Integration",
+  "hero_metrics": {
+    "customers_analyzed": "5,000",
+    "analysis_period": "52 weeks",
+    "channels_optimized": "4",
+    "annual_impact": "$4,028,932",
+    "methodology_score": "92/100"
+  },
+  "key_differentiators": [
+    "Marketing Mix Modeling with causal inference",
+    "Predictive Customer Lifetime Value analysis",
+    "Integrated decision framework combining multiple methodologies",
+    "Executive-ready recommendations with quantified impact",
+    "Comprehensive statistical validation and uncertainty quantification"
+  ],
+  "competitive_advantages": [
+    "Advanced Technical Sophistication: MMM + LTV + Bayesian methods",
+    "Strategic Business Thinking: Long-term value optimization",
+    "Industry Best Practices: Marketing science methodologies",
+    "Implementation Readiness: Specific budget allocations with outcomes"
+  ],
+  "portfolio_assets": {
+    "interactive_dashboards": 8,
+    "static_visualizations": 2,
+    "data_exports": 6,
+    "methodology_validations": 6
+  }
+}
