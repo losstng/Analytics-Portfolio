@@ -2,6 +2,29 @@
 
 This repository contains my personal collection of analytics projects, notebooks, and data.
 
+## Note on Python Environment
+
+Please use the system Python environment instead of a virtual environment.
+
+## Project-local Python launcher
+
+A lightweight launcher is provided at the repository root as `./python`. It delegates
+to the Codespace-managed Python interpreter and is useful when you want a single,
+reproducible interpreter for scripts and notebooks in this Codespace:
+
+```bash
+# Run Python using the project launcher
+./python -V
+./python -m pip install -r requirements.txt
+```
+
+If you prefer to call the interpreter by name from anywhere, add the repo root to your PATH:
+
+```bash
+export PATH="$(pwd):$PATH"
+# then simply run
+python -V
+```
 ## Contents
 
 - **Notebooks** – Example Jupyter notebooks demonstrating data analysis and modeling steps.

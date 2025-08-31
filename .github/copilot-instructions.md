@@ -27,16 +27,29 @@ export function create{Domain}Chart(data) { /* Chart.js config */ }
 ## Development Workflows
 
 ### **Running the Portfolio Site**
-```powershell
+```bash
 cd docs
-python -m http.server 8000  # Required - file:// breaks ES modules
+/usr/bin/python3 -m http.server 8000  # Required - file:// breaks ES modules
 # Navigate to http://127.0.0.1:8000/
 ```
 
 ### **Python Environment**
-- **Virtual Environment**: `.venv/` (Python 3.13)
-- **Activation**: `.venv\Scripts\activate` (Windows)
-- **Package Management**: Use `pip install` in activated environment
+- **System Python**: `/usr/bin/python3` (Python 3.12.3) - Dev Container environment
+- **Current Executable**: `/home/codespace/.python/current/bin/python3` (symlinked to system Python)
+- **Package Management**: Use `/usr/bin/python3 -m pip install` for system packages
+- **Virtual Environment**: Can create `.venv/` if needed with `/usr/bin/python3 -m venv .venv`
+- **Activation**: `source .venv/bin/activate` (Linux/Unix)
+
+### **Notebook kernels & kernelspec**
+- Notebooks may not include an embedded kernelspec. To ensure notebooks open with the correct interpreter, create a named IPython kernel for the system or project interpreter and select it in Jupyter.
+- Create a kernel for the system interpreter (example):
+
+```bash
+/usr/bin/python3 -m pip install --user ipykernel
+/usr/bin/python3 -m ipykernel install --user --name analytics-system --display-name "Python (analytics-system)"
+```
+
+- After installing a kernel, open notebooks and choose the `Python (analytics-system)` kernel. To make notebooks self-contained, add a `kernelspec` entry to notebook metadata that matches the installed kernel name. This ensures reproducible kernel selection across environments.
 
 ### **Data Science Workflow**
 1. **Generate synthetic data**: Run scripts in `/docs/Scripts/` 

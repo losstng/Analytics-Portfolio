@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Lightweight project-local Python launcher for this Codespace.
+# Delegates to the Codespace-managed Python interpreter so you can run
+# `./python` or add the repo root to PATH for easy access.
+exec "/home/codespace/.python/current/bin/python3" "$@"

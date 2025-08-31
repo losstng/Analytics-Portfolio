@@ -1,0 +1,22 @@
+{
+  "key_findings": {
+    "winner_channel": "D",
+    "winner_conversion_rate": "11.4%",
+    "loser_channel": "C",
+    "loser_conversion_rate": "3.5%",
+    "projected_annual_impact": "$4,028,932",
+    "average_cac": "$437",
+    "total_conversions": 347,
+    "statistical_significance": "p < 0.05"
+  },
+  "performance_metrics": {
+    "conversion_rate_lift": "7.9 percentage points",
+    "cac_range": "$222 - $694",
+    "best_quality_channels": [
+      "B",
+      "D"
+    ]
+  },
+  "export_timestamp": "2025-08-31T04:56:53.494599",
+  "notebook_version": "v2.1"
+}
