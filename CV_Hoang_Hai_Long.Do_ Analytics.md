@@ -28,14 +28,16 @@
 * Implemented advanced risk management framework using **VaR/CVaR** with dynamic regime-aware position sizing and **Kelly criterion optimization**  
 * Developed **LLM-based agents** for sentiment analysis, fundamental valuation, and market microstructure analysis with structured **JSON communication protocols**  
 * Built comprehensive **stress testing and scenario analysis** capabilities for portfolio risk assessment under extreme market conditions  
-* Integrated **alternative data sources** (satellite imagery, social media, web traffic) for nowcasting and market signal generation  
+* Integrated **alternative data sources** ( social media, web traffic) for nowcasting and market signal generation  
 * Implemented **reinforcement learning models** for adaptive policy learning and **change-point detection algorithms** for regime recognition  
 * Designed **portfolio optimization** using CVaR-constrained optimization with turnover penalties and sophisticated execution algorithms  
 * Technologies: **Python, PostgreSQL, Machine Learning, Reinforcement Learning, Natural Language Processing, Financial Engineering**
 
 *Traditional Analytics*  
+[**Analytics Portfolio**](https://github.com/losstng/Analytics-Portfolio)
+
 **Intraday stocks movement prediction \-** Analysed intraday trading data to identify patterns; evaluated lead–lag relationships among sector stocks and built an **XGBoost classifier** achieving **64 % accuracy.**  
-**Marketing Analytics Pipeline** \- Generated synthetic customer data and performed **RFM clustering** and A/B‑test evaluation to improve conversion rates.  
+**Advanced Marketing Analytics Platform** \- Developed end-to-end analytics workflow combining **Marketing Mix Modeling (MMM)**, **Customer Lifetime Value (LTV)** prediction, and **A/B testing with causal inference**. Generated synthetic customer datasets (5K+ records), implemented **RFM clustering** and **Bayesian statistical methods**. Built **Random Forest LTV models** (R² = 0.73), conducted **power analysis** and **tournament-style A/B tests**, achieving **67% ROI improvement** through data-driven budget optimization across 4 marketing channels.  
 **Supply-Chain Optimisation Tool** \- Created synthetic inventory records, forecast demand and computed **economic order quantity‑based** reorder suggestions under budget constraints.  
 
 *Full-Stack Applied AI*  
