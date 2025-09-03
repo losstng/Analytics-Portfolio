@@ -71,15 +71,17 @@
 
 **Skills**\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-* **Data analysis & visualisation:** Power BI, Excel/Google Sheets, Tableau, A/B testing, EDA, dashboards, statistical modeling.  
-* **Machine Learning & AI:** Scikit-learn, XGBoost, reinforcement learning, natural language processing (NLP), LLMs (GPT models), multi-agent systems, sentiment analysis.  
+* **Data analysis & visualisation:** Power BI, Excel/Google Sheets, Tableau, A/B testing, EDA, dashboards, statistical modeling, 3D Plotly visualizations.  
+* **Machine Learning & AI:** Scikit-learn, XGBoost, LightGBM, reinforcement learning, natural language processing (NLP), LLMs (GPT models), multi-agent systems, sentiment analysis.  
+* **Operations Research & Optimization:** Mixed-Integer Linear Programming (MILP), OR-Tools, discrete-event simulation (SimPy), batch routing optimization, warehouse slotting algorithms, affinity clustering.  
+* **Causal Inference & Experimental Design:** Difference-in-differences methodology, synthetic control methods, A/B testing, power analysis, treatment effect estimation.  
 * **Quantitative Finance:** Risk management (VaR/CVaR), portfolio optimization, Kelly criterion, algorithmic trading, financial engineering, stress testing.  
 * **Database & querying:** SQL, PostgreSQL, SQLAlchemy, relational schema design, ETL/ELT pipelines (Google Cloud), database normalisation (up to 3NF).  
 * **Backend Programming:** Python (pandas, NumPy, matplotlib, seaborn, scikit‑learn, PyPDFLoader, TextLoader), FAISS, vector databases, document processing.  
-* **Advanced Analytics:** Time series analysis, change-point detection, regime recognition, clustering (RFM), alternative data integration, nowcasting.  
+* **Advanced Analytics:** Time series analysis, velocity forecasting, change-point detection, regime recognition, clustering (RFM), alternative data integration, nowcasting.  
 * **DevOps:** Git, Bash, Linux; unit testing with PyTest.  
 * **Front‑end:** Next.js, React, TypeScript, CSS, interactive data visualization.  
-* **Business acumen:** Marketing analytics, supply‑chain analysis, project management, economic order quantity optimization.  
+* **Business acumen:** Marketing analytics, supply‑chain analysis, warehouse operations optimization, project management, working capital impact analysis.  
 * **Data Sources & Integration:** Real-time market data, satellite imagery, social media analytics, web traffic analysis, alternative data sources.  
 * **Languages:** English (fluent), German (intermediate).
 
