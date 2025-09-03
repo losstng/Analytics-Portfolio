@@ -170,7 +170,7 @@ folium>=0.15.0
 
 # Big Data and Performance
 dask>=2024.1.0
-numba>=0.58.0
+# numba>=0.58.0  # Commented out - not compatible with Python 3.12
 vaex>=4.17.0
 
 # Model Deployment and MLOps
@@ -180,7 +180,7 @@ uvicorn>=0.24.0
 
 # Data Quality and Profiling
 great-expectations>=0.18.0
-pandas-profiling>=3.6.0
+ydata-profiling>=4.0.0
 
 # Advanced Machine Learning
 lightgbm>=4.1.0
