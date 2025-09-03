@@ -61,7 +61,7 @@ export const marketingTemplates = {
   executiveDashboard: `
     <figure>
       <figcaption>Advanced Executive Dashboard - MMM & LTV Integration</figcaption>
-      <iframe class="iframe-embed" style="height:700px" src="assets/marketing_analytics/executive_dashboard.html?v=${Date.now()}" loading="lazy" title="Advanced Executive Dashboard" aria-label="Advanced executive dashboard showing MMM channel contribution, LTV:CAC matrix, budget optimization and ROI projections"></iframe>
+      <iframe class="iframe-embed" style="height:900px" src="assets/marketing_analytics/executive_dashboard.html?v=${Date.now()}" loading="lazy" title="Advanced Executive Dashboard" aria-label="Advanced executive dashboard showing MMM channel contribution, LTV:CAC matrix, budget optimization and ROI projections"></iframe>
     </figure>
   `,
 
@@ -80,7 +80,7 @@ export const marketingTemplates = {
       </div>
       <figure style="margin-top: 1rem;">
         <figcaption>Comprehensive Quality Report</figcaption>
-        <iframe class="iframe-embed" style="height:300px" src="assets/marketing_analytics/quality_report.html?v=${Date.now()}" loading="lazy" title="Data Quality Report" aria-label="Comprehensive data quality report with advanced validation"></iframe>
+        <iframe class="iframe-embed" style="height:600px" src="assets/marketing_analytics/quality_report.html?v=${Date.now()}" loading="lazy" title="Data Quality Report" aria-label="Comprehensive data quality report with advanced validation"></iframe>
       </figure>
     </div>
   `,
@@ -90,7 +90,7 @@ export const marketingTemplates = {
       <h4>Advanced Scenario Modeling with Saturation</h4>
       <figure>
         <figcaption>MMM-Driven Budget Allocation Scenarios</figcaption>
-        <iframe class="iframe-embed" style="height:350px" src="assets/marketing_analytics/scenarios_table.html?v=${Date.now()}" loading="lazy" title="Advanced Scenario Analysis" aria-label="Advanced scenario analysis with MMM lift, LTV impact, and risk assessment"></iframe>
+        <iframe class="iframe-embed" style="height:500px" src="assets/marketing_analytics/scenarios_table.html?v=${Date.now()}" loading="lazy" title="Advanced Scenario Analysis" aria-label="Advanced scenario analysis with MMM lift, LTV impact, and risk assessment"></iframe>
       </figure>
     </div>
   `,
@@ -120,7 +120,7 @@ export const marketingTemplates = {
       </div>
       <figure>
         <figcaption>LTV:CAC Performance Matrix</figcaption>
-        <iframe class="iframe-embed" style="height:300px" src="assets/marketing_analytics/ltv_cac_matrix.html?v=${Date.now()}" loading="lazy" title="LTV CAC Matrix" aria-label="LTV:CAC performance matrix with industry benchmarks"></iframe>
+        <iframe class="iframe-embed" style="height:600px" src="assets/marketing_analytics/ltv_cac_matrix.html?v=${Date.now()}" loading="lazy" title="LTV CAC Matrix" aria-label="LTV:CAC performance matrix with industry benchmarks"></iframe>
       </figure>
     </div>
   `,
