@@ -61,7 +61,7 @@ export const marketingTemplates = {
   executiveDashboard: `
     <figure>
       <figcaption>Advanced Executive Dashboard - MMM & LTV Integration</figcaption>
-      <iframe class="iframe-embed" style="height:700px" src="assets/marketing_analytics/executive_dashboard.html" loading="lazy" title="Advanced Executive Dashboard" aria-label="Advanced executive dashboard showing MMM channel contribution, LTV:CAC matrix, budget optimization and ROI projections"></iframe>
+      <iframe class="iframe-embed" style="height:700px" src="assets/marketing_analytics/executive_dashboard.html?v=${Date.now()}" loading="lazy" title="Advanced Executive Dashboard" aria-label="Advanced executive dashboard showing MMM channel contribution, LTV:CAC matrix, budget optimization and ROI projections"></iframe>
     </figure>
   `,
 
@@ -80,7 +80,7 @@ export const marketingTemplates = {
       </div>
       <figure style="margin-top: 1rem;">
         <figcaption>Comprehensive Quality Report</figcaption>
-        <iframe class="iframe-embed" style="height:300px" src="assets/marketing_analytics/quality_report.html" loading="lazy" title="Data Quality Report" aria-label="Comprehensive data quality report with advanced validation"></iframe>
+        <iframe class="iframe-embed" style="height:300px" src="assets/marketing_analytics/quality_report.html?v=${Date.now()}" loading="lazy" title="Data Quality Report" aria-label="Comprehensive data quality report with advanced validation"></iframe>
       </figure>
     </div>
   `,
@@ -90,7 +90,7 @@ export const marketingTemplates = {
       <h4>Advanced Scenario Modeling with Saturation</h4>
       <figure>
         <figcaption>MMM-Driven Budget Allocation Scenarios</figcaption>
-        <iframe class="iframe-embed" style="height:350px" src="assets/marketing_analytics/scenarios_table.html" loading="lazy" title="Advanced Scenario Analysis" aria-label="Advanced scenario analysis with MMM lift, LTV impact, and risk assessment"></iframe>
+        <iframe class="iframe-embed" style="height:350px" src="assets/marketing_analytics/scenarios_table.html?v=${Date.now()}" loading="lazy" title="Advanced Scenario Analysis" aria-label="Advanced scenario analysis with MMM lift, LTV impact, and risk assessment"></iframe>
       </figure>
     </div>
   `,
@@ -120,7 +120,7 @@ export const marketingTemplates = {
       </div>
       <figure>
         <figcaption>LTV:CAC Performance Matrix</figcaption>
-        <iframe class="iframe-embed" style="height:300px" src="assets/marketing_analytics/ltv_cac_matrix.html" loading="lazy" title="LTV CAC Matrix" aria-label="LTV:CAC performance matrix with industry benchmarks"></iframe>
+        <iframe class="iframe-embed" style="height:300px" src="assets/marketing_analytics/ltv_cac_matrix.html?v=${Date.now()}" loading="lazy" title="LTV CAC Matrix" aria-label="LTV:CAC performance matrix with industry benchmarks"></iframe>
       </figure>
     </div>
   `,
@@ -145,7 +145,7 @@ Channel Rankings:
       </div>
       <figure>
         <figcaption>MMM Scenario Planner</figcaption>
-        <iframe class="iframe-embed" style="height:400px" src="assets/marketing_analytics/mmm_scenario_planner.html" loading="lazy" title="MMM Scenario Planner" aria-label="Interactive MMM scenario planning tool"></iframe>
+        <iframe class="iframe-embed" style="height:400px" src="assets/marketing_analytics/mmm_scenario_planner.html?v=${Date.now()}" loading="lazy" title="MMM Scenario Planner" aria-label="Interactive MMM scenario planning tool"></iframe>
       </figure>
     </div>
   `,
@@ -166,7 +166,7 @@ Channel Rankings:
       </div>
       <figure>
         <figcaption>Comprehensive Statistical Validation</figcaption>
-        <iframe class="iframe-embed" style="height:350px" src="assets/marketing_analytics/rigor_scorecard.html" loading="lazy" title="Advanced Methodology Rigor" aria-label="Advanced methodological rigor scorecard with comprehensive validation"></iframe>
+        <iframe class="iframe-embed" style="height:350px" src="assets/marketing_analytics/rigor_scorecard.html?v=${Date.now()}" loading="lazy" title="Advanced Methodology Rigor" aria-label="Advanced methodological rigor scorecard with comprehensive validation"></iframe>
       </figure>
     </div>
   `,
@@ -199,7 +199,7 @@ Channel Rankings:
       </div>
       <figure>
         <figcaption>Implementation Timeline & Impact</figcaption>
-        <iframe class="iframe-embed" style="height:350px" src="assets/marketing_analytics/recommendations_timeline.html" loading="lazy" title="Advanced Recommendations" aria-label="Strategic implementation roadmap with phased approach and impact projections"></iframe>
+        <iframe class="iframe-embed" style="height:350px" src="assets/marketing_analytics/recommendations_timeline.html?v=${Date.now()}" loading="lazy" title="Advanced Recommendations" aria-label="Strategic implementation roadmap with phased approach and impact projections"></iframe>
       </figure>
     </div>
   `,
@@ -207,7 +207,7 @@ Channel Rankings:
   rawDataSample: `
     <figure>
       <figcaption>Raw sample (5 rows)</figcaption>
-      <iframe class="iframe-embed iframe-csv" src="assets/marketing_analytics/raw_data_sample.html" loading="lazy" title="Raw data sample" aria-label="Raw data sample"></iframe>
+      <iframe class="iframe-embed iframe-csv" src="assets/marketing_analytics/raw_data_sample.html?v=${Date.now()}" loading="lazy" title="Raw data sample" aria-label="Raw data sample"></iframe>
       <div class="downloads"><a class="btn" href="assets/marketing_analytics/raw_data_sample.csv" download>Download CSV</a></div>
     </figure>
   `,
@@ -215,17 +215,17 @@ Channel Rankings:
   cleanedDataSample: `
     <figure>
       <figcaption>Cleaned sample (5 rows)</figcaption>
-      <iframe class="iframe-embed iframe-csv" src="assets/marketing_analytics/cleaned_data_sample.html" loading="lazy" title="Cleaned data sample" aria-label="Cleaned data sample"></iframe>
+      <iframe class="iframe-embed iframe-csv" src="assets/marketing_analytics/cleaned_data_sample.html?v=${Date.now()}" loading="lazy" title="Cleaned data sample" aria-label="Cleaned data sample"></iframe>
       <div class="downloads"><a class="btn" href="assets/marketing_analytics/cleaned_data_sample.csv" download>Download CSV</a></div>
     </figure>
     <details>
       <summary>Interactive table</summary>
-      <iframe class="iframe-embed" style="height:420px" src="assets/marketing_analytics/cleaned_data_table_interactive.html" loading="lazy" title="Interactive cleaned table" aria-label="Interactive cleaned table"></iframe>
+      <iframe class="iframe-embed" style="height:420px" src="assets/marketing_analytics/cleaned_data_table_interactive.html?v=${Date.now()}" loading="lazy" title="Interactive cleaned table" aria-label="Interactive cleaned table"></iframe>
     </details>
   `,
 
   interactiveConversionRates: `
-    <iframe class="iframe-embed" style="height:420px" src="assets/marketing_analytics/conversion_rates_interactive.html" loading="lazy" title="Interactive conversion rates" aria-label="Interactive conversion rates"></iframe>
+    <iframe class="iframe-embed" style="height:420px" src="assets/marketing_analytics/conversion_rates_interactive.html?v=${Date.now()}" loading="lazy" title="Interactive conversion rates" aria-label="Interactive conversion rates"></iframe>
   `,
 
   staticVisuals: `
