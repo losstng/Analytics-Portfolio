@@ -131,7 +131,8 @@ function renderTechnical(techCategory) {
   if (!contentContainer) return;
   
   // Update content
-  contentContainer.innerHTML = renderTechnicalContent(techCategory);
+  const content = renderTechnicalContent(techCategory);
+  contentContainer.innerHTML = content;
   
   // Update navigation active state
   document.querySelectorAll('.tech-nav-btn').forEach(btn => {
@@ -296,7 +297,9 @@ function initializeApp() {
   // Technical Excellence navigation button
   const techNavBtn = document.getElementById('nav-technical-btn');
   if (techNavBtn) {
-    techNavBtn.addEventListener('click', () => showTechnicalExcellence());
+    techNavBtn.addEventListener('click', () => {
+      showTechnicalExcellence();
+    });
   }
   
   // Domain cards in navigation dropdown

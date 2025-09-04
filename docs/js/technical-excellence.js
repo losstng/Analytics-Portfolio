@@ -16,7 +16,7 @@ export const technicalContent = {
         "Cut pick path distance by 22%",
         "Reduce order cycle time by 28%"
       ],
-      timeline: "2 intensive weeks",
+      timeline: "1 intensive weeks",
       technologies: ["Python", "NetworkX", "SimPy", "PuLP", "Plotly", "scikit-learn", "statsmodels"]
     },
     sections: [
