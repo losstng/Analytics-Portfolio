@@ -17,6 +17,7 @@
   />
 
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="technical-excellence.css" />
 </head>
 <body>
   <header class="site-header">
@@ -68,6 +69,10 @@
             </button>
           </div>
         </div>
+        
+        <button id="nav-technical-btn" class="nav-technical-button">
+          <span>Technical Excellence</span>
+        </button>
         
         <button id="cv-nav-btn" class="cv-nav-button">
           <span>Myself</span>
@@ -549,6 +554,38 @@
         </a>
       </div>
       <section id="grid" class="project-grid" aria-live="polite"></section>
+    </section>
+
+    <!-- Technical Excellence Showcase (hidden by default) -->
+    <section id="technical-excellence-section" class="technical-excellence-section" hidden>
+      <div class="technical-header">
+        <button id="back-to-cv-tech" class="back-button">← Back to CV</button>
+        <h2>Technical Excellence Showcase</h2>
+        <p class="technical-subtitle">Deep-dive into advanced methodologies and implementation approaches</p>
+      </div>
+      
+      <div class="technical-navigation">
+        <button class="tech-nav-btn active" data-tech-category="operations">
+          <span class="tech-icon">⚙️</span>
+          <span>Operations Analytics</span>
+        </button>
+        <button class="tech-nav-btn" data-tech-category="marketing">
+          <span class="tech-icon">📈</span>
+          <span>Marketing Science</span>
+        </button>
+        <button class="tech-nav-btn" data-tech-category="finance">
+          <span class="tech-icon">💰</span>
+          <span>Financial Engineering</span>
+        </button>
+        <button class="tech-nav-btn" data-tech-category="healthcare">
+          <span class="tech-icon">🏥</span>
+          <span>Healthcare Analytics</span>
+        </button>
+      </div>
+
+      <div id="technical-content" class="technical-content">
+        <!-- Content will be dynamically loaded here -->
+      </div>
     </section>
   </main>
 

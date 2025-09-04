@@ -1,0 +1,38 @@
+[
+  {
+    "Metric": "Avg Pick Distance (m)",
+    "Baseline": 245,
+    "Optimized": 191.0,
+    "Improvement": "-22%"
+  },
+  {
+    "Metric": "Lines per Hour",
+    "Baseline": 47,
+    "Optimized": 54.0,
+    "Improvement": "+15%"
+  },
+  {
+    "Metric": "P95 Cycle Time (min)",
+    "Baseline": 18.3,
+    "Optimized": 13.2,
+    "Improvement": "-28%"
+  },
+  {
+    "Metric": "Annual Labor Cost ($)",
+    "Baseline": 850000,
+    "Optimized": 722500.0,
+    "Improvement": "-15%"
+  },
+  {
+    "Metric": "ROI (%)",
+    "Baseline": 0,
+    "Optimized": 335.08771929824564,
+    "Improvement": "+335%"
+  },
+  {
+    "Metric": "Payback (months)",
+    "Baseline": "N/A",
+    "Optimized": 3.4,
+    "Improvement": "3.4 months"
+  }
+]

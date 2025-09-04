@@ -11,10 +11,12 @@
 import { iconFor } from './js/data.js';
 import { projects } from './js/templates.js';
 import { renderChart } from './js/charts.js';
+import { renderTechnicalContent } from './js/technical-excellence.js';
 
 // State management
-let currentView = 'cv'; // 'cv' or 'portfolio'
+let currentView = 'cv'; // 'cv', 'portfolio', or 'technical'
 let currentCategory = null;
+let currentTechCategory = 'operations';
 
 /**
  * Show the CV landing page and hide portfolio section
@@ -25,10 +27,12 @@ function showCVLanding() {
   
   const cvSection = document.getElementById('cv-landing');
   const portfolioSection = document.getElementById('portfolio-section');
+  const technicalSection = document.getElementById('technical-excellence-section');
   const notebookBtn = document.getElementById('view-notebook-btn');
   
   if (cvSection) cvSection.removeAttribute('hidden');
   if (portfolioSection) portfolioSection.setAttribute('hidden', '');
+  if (technicalSection) technicalSection.setAttribute('hidden', '');
   if (notebookBtn) notebookBtn.setAttribute('hidden', '');
   
   // Set active state
@@ -51,11 +55,13 @@ function showPortfolio(category) {
   
   const cvSection = document.getElementById('cv-landing');
   const portfolioSection = document.getElementById('portfolio-section');
+  const technicalSection = document.getElementById('technical-excellence-section');
   const domainTitle = document.getElementById('domain-title');
   const notebookBtn = document.getElementById('view-notebook-btn');
   
   if (cvSection) cvSection.setAttribute('hidden', '');
   if (portfolioSection) portfolioSection.removeAttribute('hidden');
+  if (technicalSection) technicalSection.setAttribute('hidden', '');
   if (domainTitle) domainTitle.textContent = `${category} Analytics Portfolio`;
   
   // Handle notebook button
@@ -90,6 +96,55 @@ function showPortfolio(category) {
 }
 
 /**
+ * Show the technical excellence section and hide other sections
+ */
+function showTechnicalExcellence(techCategory = 'operations') {
+  currentView = 'technical';
+  currentTechCategory = techCategory;
+  
+  const cvSection = document.getElementById('cv-landing');
+  const portfolioSection = document.getElementById('portfolio-section');
+  const technicalSection = document.getElementById('technical-excellence-section');
+  
+  if (cvSection) cvSection.setAttribute('hidden', '');
+  if (portfolioSection) portfolioSection.setAttribute('hidden', '');
+  if (technicalSection) technicalSection.removeAttribute('hidden');
+  
+  // Set active state for navigation
+  setActiveTechnical();
+  
+  // Close navigation dropdown if open
+  closeNavDropdown();
+  
+  // Render the technical content
+  renderTechnical(techCategory);
+  
+  // Update URL
+  history.replaceState(null, '', `#technical-${techCategory}`);
+}
+
+/**
+ * Render technical excellence content for a specific category
+ */
+function renderTechnical(techCategory) {
+  const contentContainer = document.getElementById('technical-content');
+  if (!contentContainer) return;
+  
+  // Update content
+  contentContainer.innerHTML = renderTechnicalContent(techCategory);
+  
+  // Update navigation active state
+  document.querySelectorAll('.tech-nav-btn').forEach(btn => {
+    const btnCategory = btn.getAttribute('data-tech-category');
+    if (btnCategory === techCategory) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+}
+
+/**
  * Update the active state of the navigation links to reflect the currently
  * selected category. This sets aria-current appropriately for accessibility.
  * @param {string} category
@@ -98,6 +153,7 @@ function setActive(category) {
   // Update navigation button state
   const navBtn = document.getElementById('nav-portfolio-btn');
   const cvBtn = document.getElementById('cv-nav-btn');
+  const techBtn = document.getElementById('nav-technical-btn');
 
   if (category) {
     if (navBtn) {
@@ -110,6 +166,11 @@ function setActive(category) {
       cvBtn.removeAttribute('aria-current');
       cvBtn.setAttribute('aria-pressed', 'false');
     }
+    if (techBtn) {
+      techBtn.classList.remove('active');
+      techBtn.removeAttribute('aria-current');
+      techBtn.setAttribute('aria-pressed', 'false');
+    }
   } else {
     if (navBtn) {
       navBtn.classList.remove('active');
@@ -121,6 +182,36 @@ function setActive(category) {
       cvBtn.setAttribute('aria-current', 'page');
       cvBtn.setAttribute('aria-pressed', 'true');
     }
+    if (techBtn) {
+      techBtn.classList.remove('active');
+      techBtn.removeAttribute('aria-current');
+      techBtn.setAttribute('aria-pressed', 'false');
+    }
+  }
+}
+
+/**
+ * Set active state for technical excellence navigation
+ */
+function setActiveTechnical() {
+  const navBtn = document.getElementById('nav-portfolio-btn');
+  const cvBtn = document.getElementById('cv-nav-btn');
+  const techBtn = document.getElementById('nav-technical-btn');
+
+  if (navBtn) {
+    navBtn.classList.remove('active');
+    navBtn.removeAttribute('aria-current');
+    navBtn.setAttribute('aria-pressed', 'false');
+  }
+  if (cvBtn) {
+    cvBtn.classList.remove('active');
+    cvBtn.removeAttribute('aria-current');
+    cvBtn.setAttribute('aria-pressed', 'false');
+  }
+  if (techBtn) {
+    techBtn.classList.add('active');
+    techBtn.setAttribute('aria-current', 'page');
+    techBtn.setAttribute('aria-pressed', 'true');
   }
 }
 
@@ -202,6 +293,12 @@ function initializeApp() {
     cvNavBtn.addEventListener('click', showCVLanding);
   }
   
+  // Technical Excellence navigation button
+  const techNavBtn = document.getElementById('nav-technical-btn');
+  if (techNavBtn) {
+    techNavBtn.addEventListener('click', () => showTechnicalExcellence());
+  }
+  
   // Domain cards in navigation dropdown
   document.querySelectorAll('.nav-domain-card').forEach((card) => {
     card.addEventListener('click', (e) => {
@@ -212,11 +309,43 @@ function initializeApp() {
     });
   });
   
+  // Technical excellence category navigation
+  document.querySelectorAll('.tech-nav-btn').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      const techCategory = e.currentTarget.getAttribute('data-tech-category');
+      if (techCategory) {
+        renderTechnical(techCategory);
+        currentTechCategory = techCategory;
+        history.replaceState(null, '', `#technical-${techCategory}`);
+      }
+    });
+  });
+  
+  // Use event delegation for technical navigation buttons (in case they're loaded dynamically)
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('.tech-nav-btn')) {
+      const btn = e.target.closest('.tech-nav-btn');
+      const techCategory = btn.getAttribute('data-tech-category');
+      if (techCategory) {
+        renderTechnical(techCategory);
+        currentTechCategory = techCategory;
+        history.replaceState(null, '', `#technical-${techCategory}`);
+      }
+    }
+  });
+  
   // Back to CV button
   const backBtn = document.getElementById('back-to-cv');
   if (backBtn) {
     backBtn.addEventListener('click', showCVLanding);
   }
+  
+  // Back to CV button from technical excellence (delegated)
+  document.addEventListener('click', (e) => {
+    if (e.target.id === 'back-to-cv-tech') {
+      showCVLanding();
+    }
+  });
   
   // Handle browser navigation (back/forward and hash changes)
   window.addEventListener('popstate', handleNavigation);
@@ -303,6 +432,11 @@ function handleNavigation() {
     showCVLanding();
   } else if (['Marketing', 'Finance', 'Healthcare', 'Operations'].includes(hash)) {
     showPortfolio(hash);
+  } else if (hash.startsWith('technical-')) {
+    const techCategory = hash.replace('technical-', '');
+    showTechnicalExcellence(techCategory);
+  } else if (hash === 'technical') {
+    showTechnicalExcellence();
   } else {
     // Unknown hash, default to CV
     showCVLanding();

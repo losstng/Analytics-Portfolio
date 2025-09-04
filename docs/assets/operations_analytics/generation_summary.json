@@ -1,0 +1,33 @@
+{
+  "generation_date": "2025-09-04 10:32:01",
+  "total_graphics": 7,
+  "interactive_charts": 7,
+  "data_files": 7,
+  "file_inventory": {
+    "html_files": [
+      "congestion_heatmap_interactive.html",
+      "cost_waterfall_interactive.html",
+      "executive_summary_table.html",
+      "simulation_dashboard_interactive.html",
+      "pick_path_comparison_interactive.html",
+      "velocity_pareto_interactive.html",
+      "warehouse_3d_interactive.html"
+    ],
+    "json_files": [
+      "velocity_pareto_data.json",
+      "cost_waterfall_data.json",
+      "executive_summary_data.json",
+      "warehouse_3d_data.json",
+      "portfolio_manifest.json",
+      "simulation_dashboard_data.json",
+      "generation_summary.json",
+      "pick_path_data.json",
+      "congestion_heatmap_data.json"
+    ],
+    "total_files": 16,
+    "total_size_mb": 33.2093620300293
+  },
+  "notebook_cells_executed": 9,
+  "estimated_generation_time": "< 5 minutes",
+  "status": "complete"
+}

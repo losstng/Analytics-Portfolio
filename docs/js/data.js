@@ -134,7 +134,33 @@ export const DASHBOARD_DATA = {
     90.9901294504059, 90.73826915800633, 88.4857181491647, 88.9152717358504,
     88.50041600541061, 89.10810037395393, 89.57755047460327, 89.7307321291958,
     91.51517399080058, 90.54081666780037, 89.48243442960359, 87.49336685044243
-  ]
+  ],
+
+  // Operations Analytics - 3D Warehouse Optimization
+  "operations_performance_metrics": {
+    "pick_distance": {"baseline": 245, "optimized": 191, "improvement": -22},
+    "lines_per_hour": {"baseline": 47, "optimized": 54, "improvement": 15},
+    "cycle_time": {"baseline": 18.3, "optimized": 13.2, "improvement": -28},
+    "labor_cost": {"baseline": 850000, "optimized": 722500, "improvement": -15}
+  },
+  "operations_abc_distribution": {
+    "A": {"sku_count": 109, "sku_percent": 7.3, "velocity_contribution": 80.0},
+    "B": {"sku_count": 286, "sku_percent": 19.1, "velocity_contribution": 15.0},
+    "C": {"sku_count": 1105, "sku_percent": 73.7, "velocity_contribution": 5.0}
+  },
+  "operations_roi_summary": {
+    "implementation_cost": 57000,
+    "annual_savings": 191000,
+    "roi_percent": 335,
+    "payback_months": 3.4
+  },
+  "operations_key_findings": {
+    "distance_reduction": 22,
+    "productivity_increase": 15,
+    "cycle_time_reduction": 28,
+    "confidence_interval": [19.8, 24.2],
+    "statistical_significance": "p<0.001"
+  }
 };
 
 /**

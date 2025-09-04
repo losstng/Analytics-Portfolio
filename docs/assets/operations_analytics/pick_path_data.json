@@ -1,0 +1,3011 @@
+{
+  "comparison_data": [
+    {
+      "batch_id": 1,
+      "baseline_distance": 298.4748459788932,
+      "optimized_distance": 242.07215533885312,
+      "improvement_pct": 18.896966159764304
+    },
+    {
+      "batch_id": 2,
+      "baseline_distance": 231.5264865052912,
+      "optimized_distance": 199.68482587882843,
+      "improvement_pct": 13.752923523821133
+    },
+    {
+      "batch_id": 3,
+      "baseline_distance": 317.05504909133117,
+      "optimized_distance": 233.3172625530469,
+      "improvement_pct": 26.411119071679785
+    },
+    {
+      "batch_id": 4,
+      "baseline_distance": 449.983962195277,
+      "optimized_distance": 356.6171828792218,
+      "improvement_pct": 20.748912663588968
+    },
+    {
+      "batch_id": 5,
+      "baseline_distance": 222.81429130875125,
+      "optimized_distance": 167.2887215296077,
+      "improvement_pct": 24.920111476243864
+    },
+    {
+      "batch_id": 6,
+      "baseline_distance": 222.81575455944125,
+      "optimized_distance": 168.9250347187172,
+      "improvement_pct": 24.186225048259526
+    },
+    {
+      "batch_id": 7,
+      "baseline_distance": 460.2110212784698,
+      "optimized_distance": 353.0406573548177,
+      "improvement_pct": 23.287222375929193
+    },
+    {
+      "batch_id": 8,
+      "baseline_distance": 332.61108404720346,
+      "optimized_distance": 250.79673786002053,
+      "improvement_pct": 24.597600654694965
+    },
+    {
+      "batch_id": 9,
+      "baseline_distance": 202.79796671893638,
+      "optimized_distance": 158.66763032021865,
+      "improvement_pct": 21.760739080722267
+    },
+    {
+      "batch_id": 10,
+      "baseline_distance": 303.99888007462476,
+      "optimized_distance": 228.80962529409695,
+      "improvement_pct": 24.733398610570728
+    },
+    {
+      "batch_id": 11,
+      "baseline_distance": 203.28987636760638,
+      "optimized_distance": 161.27067182453138,
+      "improvement_pct": 20.66960012661537
+    },
+    {
+      "batch_id": 12,
+      "baseline_distance": 203.10195585948435,
+      "optimized_distance": 157.91714447590644,
+      "improvement_pct": 22.247354139139322
+    },
+    {
+      "batch_id": 13,
+      "baseline_distance": 269.5583579933071,
+      "optimized_distance": 207.86603876611545,
+      "improvement_pct": 22.88644273041736
+    },
+    {
+      "batch_id": 14,
+      "baseline_distance": 113.82792772091936,
+      "optimized_distance": 80.0,
+      "improvement_pct": 29.718478055629618
+    },
+    {
+      "batch_id": 15,
+      "baseline_distance": 122.73565140298878,
+      "optimized_distance": 89.96609478864792,
+      "improvement_pct": 26.699297424792807
+    },
+    {
+      "batch_id": 16,
+      "baseline_distance": 195.40708312336528,
+      "optimized_distance": 159.97143709448247,
+      "improvement_pct": 18.13426896429922
+    },
+    {
+      "batch_id": 17,
+      "baseline_distance": 163.18223001118227,
+      "optimized_distance": 132.29131128496599,
+      "improvement_pct": 18.930320246327952
+    },
+    {
+      "batch_id": 18,
+      "baseline_distance": 277.46614702390076,
+      "optimized_distance": 206.64804223065707,
+      "improvement_pct": 25.523151401653138
+    },
+    {
+      "batch_id": 19,
+      "baseline_distance": 170.1687122277711,
+      "optimized_distance": 133.72491859195372,
+      "improvement_pct": 21.41627162755824
+    },
+    {
+      "batch_id": 20,
+      "baseline_distance": 139.08406290967432,
+      "optimized_distance": 115.99944030326387,
+      "improvement_pct": 16.597604444013363
+    },
+    {
+      "batch_id": 21,
+      "baseline_distance": 439.7733618779643,
+      "optimized_distance": 326.3291694535984,
+      "improvement_pct": 25.796058210512147
+    },
+    {
+      "batch_id": 22,
+      "baseline_distance": 223.56215633689266,
+      "optimized_distance": 179.81208386657565,
+      "improvement_pct": 19.56953412293478
+    },
+    {
+      "batch_id": 23,
+      "baseline_distance": 251.39144895519183,
+      "optimized_distance": 189.45909259559116,
+      "improvement_pct": 24.63582457438301
+    },
+    {
+      "batch_id": 24,
+      "baseline_distance": 138.39345138955082,
+      "optimized_distance": 113.65287876978124,
+      "improvement_pct": 17.8769821630719
+    },
+    {
+      "batch_id": 25,
+      "baseline_distance": 196.81159689419852,
+      "optimized_distance": 145.88045401204968,
+      "improvement_pct": 25.878120845454177
+    },
+    {
+      "batch_id": 26,
+      "baseline_distance": 255.7931310281159,
+      "optimized_distance": 181.46982119528522,
+      "improvement_pct": 29.056022549980565
+    },
+    {
+      "batch_id": 27,
+      "baseline_distance": 154.40863605590945,
+      "optimized_distance": 104.16331174477774,
+      "improvement_pct": 32.54048840437817
+    },
+    {
+      "batch_id": 28,
+      "baseline_distance": 284.37085316963504,
+      "optimized_distance": 222.29011493892915,
+      "improvement_pct": 21.83090761192499
+    },
+    {
+      "batch_id": 29,
+      "baseline_distance": 192.43232318292968,
+      "optimized_distance": 152.69443709989997,
+      "improvement_pct": 20.650317693901222
+    },
+    {
+      "batch_id": 30,
+      "baseline_distance": 217.7445311359067,
+      "optimized_distance": 160.79756803496315,
+      "improvement_pct": 26.153108325554097
+    },
+    {
+      "batch_id": 31,
+      "baseline_distance": 192.350139628827,
+      "optimized_distance": 156.4190334982588,
+      "improvement_pct": 18.680052013429002
+    },
+    {
+      "batch_id": 32,
+      "baseline_distance": 513.326078477458,
+      "optimized_distance": 383.7791405897277,
+      "improvement_pct": 25.236773138814765
+    },
+    {
+      "batch_id": 33,
+      "baseline_distance": 243.37442719630707,
+      "optimized_distance": 189.17125522664634,
+      "improvement_pct": 22.271514963213523
+    },
+    {
+      "batch_id": 34,
+      "baseline_distance": 160.27893296344516,
+      "optimized_distance": 112.90740571386266,
+      "improvement_pct": 29.55567919857972
+    },
+    {
+      "batch_id": 35,
+      "baseline_distance": 340.0245989483855,
+      "optimized_distance": 258.7008261017191,
+      "improvement_pct": 23.91702632638384
+    },
+    {
+      "batch_id": 36,
+      "baseline_distance": 150.1541660569697,
+      "optimized_distance": 117.59423623760051,
+      "improvement_pct": 21.68433329183533
+    },
+    {
+      "batch_id": 37,
+      "baseline_distance": 266.01306869359877,
+      "optimized_distance": 198.88605992816753,
+      "improvement_pct": 25.234477800318146
+    },
+    {
+      "batch_id": 38,
+      "baseline_distance": 111.73521834735807,
+      "optimized_distance": 83.30791486864105,
+      "improvement_pct": 25.441668167992777
+    },
+    {
+      "batch_id": 39,
+      "baseline_distance": 143.84345359919882,
+      "optimized_distance": 122.26082189951948,
+      "improvement_pct": 15.00425021761265
+    },
+    {
+      "batch_id": 40,
+      "baseline_distance": 264.7390157149302,
+      "optimized_distance": 200.72751356241406,
+      "improvement_pct": 24.179096526310058
+    },
+    {
+      "batch_id": 41,
+      "baseline_distance": 328.77927599988277,
+      "optimized_distance": 264.80475640056,
+      "improvement_pct": 19.458197115607003
+    },
+    {
+      "batch_id": 42,
+      "baseline_distance": 262.05314127187586,
+      "optimized_distance": 193.104381645487,
+      "improvement_pct": 26.310983830129192
+    },
+    {
+      "batch_id": 43,
+      "baseline_distance": 233.63047185804336,
+      "optimized_distance": 187.52980982842666,
+      "improvement_pct": 19.732298472447553
+    },
+    {
+      "batch_id": 44,
+      "baseline_distance": 216.92648595971977,
+      "optimized_distance": 183.61834525516045,
+      "improvement_pct": 15.354575333297097
+    },
+    {
+      "batch_id": 45,
+      "baseline_distance": 135.44846066310177,
+      "optimized_distance": 80.9333543159465,
+      "improvement_pct": 40.24785965102224
+    },
+    {
+      "batch_id": 46,
+      "baseline_distance": 183.47204574804582,
+      "optimized_distance": 135.13924312877097,
+      "improvement_pct": 26.3434151083965
+    },
+    {
+      "batch_id": 47,
+      "baseline_distance": 203.51597267706757,
+      "optimized_distance": 164.51317995991812,
+      "improvement_pct": 19.164487290163603
+    },
+    {
+      "batch_id": 48,
+      "baseline_distance": 373.47418678117714,
+      "optimized_distance": 289.27941182888827,
+      "improvement_pct": 22.543666452005574
+    },
+    {
+      "batch_id": 49,
+      "baseline_distance": 280.7451493020344,
+      "optimized_distance": 222.69267518929993,
+      "improvement_pct": 20.677997200329116
+    },
+    {
+      "batch_id": 50,
+      "baseline_distance": 120.87826174485242,
+      "optimized_distance": 88.24519229382669,
+      "improvement_pct": 26.9966402395056
+    },
+    {
+      "batch_id": 51,
+      "baseline_distance": 278.5600311257499,
+      "optimized_distance": 218.14272215281395,
+      "improvement_pct": 21.689152147481586
+    },
+    {
+      "batch_id": 52,
+      "baseline_distance": 209.7606435065084,
+      "optimized_distance": 162.05652958115576,
+      "improvement_pct": 22.74216608411219
+    },
+    {
+      "batch_id": 53,
+      "baseline_distance": 186.6492523780997,
+      "optimized_distance": 157.26423747151586,
+      "improvement_pct": 15.743440990086551
+    },
+    {
+      "batch_id": 54,
+      "baseline_distance": 312.5206401690624,
+      "optimized_distance": 246.3103077648808,
+      "improvement_pct": 21.185907071086312
+    },
+    {
+      "batch_id": 55,
+      "baseline_distance": 369.5920423133904,
+      "optimized_distance": 291.65781962519657,
+      "improvement_pct": 21.08655321699556
+    },
+    {
+      "batch_id": 56,
+      "baseline_distance": 355.139989244866,
+      "optimized_distance": 272.8904219497708,
+      "improvement_pct": 23.159759471182728
+    },
+    {
+      "batch_id": 57,
+      "baseline_distance": 174.9172475096124,
+      "optimized_distance": 131.55939081677275,
+      "improvement_pct": 24.78763947532216
+    },
+    {
+      "batch_id": 58,
+      "baseline_distance": 216.22403076646103,
+      "optimized_distance": 164.3291621196434,
+      "improvement_pct": 24.000509315668143
+    },
+    {
+      "batch_id": 59,
+      "baseline_distance": 279.36114535325805,
+      "optimized_distance": 221.84621479932426,
+      "improvement_pct": 20.588020743258678
+    },
+    {
+      "batch_id": 60,
+      "baseline_distance": 361.4840976936997,
+      "optimized_distance": 277.7477513928832,
+      "improvement_pct": 23.16460027842491
+    },
+    {
+      "batch_id": 61,
+      "baseline_distance": 202.01264710295456,
+      "optimized_distance": 160.46761330926867,
+      "improvement_pct": 20.565560814869528
+    },
+    {
+      "batch_id": 62,
+      "baseline_distance": 227.17858115882822,
+      "optimized_distance": 197.9533012903404,
+      "improvement_pct": 12.864452150115092
+    },
+    {
+      "batch_id": 63,
+      "baseline_distance": 157.1916891189686,
+      "optimized_distance": 131.32076454711245,
+      "improvement_pct": 16.458201268055635
+    },
+    {
+      "batch_id": 64,
+      "baseline_distance": 151.64122218080496,
+      "optimized_distance": 115.01991797934946,
+      "improvement_pct": 24.14996639752162
+    },
+    {
+      "batch_id": 65,
+      "baseline_distance": 338.66463111250397,
+      "optimized_distance": 276.17055148939255,
+      "improvement_pct": 18.453087178847134
+    },
+    {
+      "batch_id": 66,
+      "baseline_distance": 420.9424017714936,
+      "optimized_distance": 324.2543196515495,
+      "improvement_pct": 22.969432804355673
+    },
+    {
+      "batch_id": 67,
+      "baseline_distance": 237.74435349085033,
+      "optimized_distance": 165.05935037108472,
+      "improvement_pct": 30.57275685101094
+    },
+    {
+      "batch_id": 68,
+      "baseline_distance": 365.553688570721,
+      "optimized_distance": 275.0510139759883,
+      "improvement_pct": 24.757697001660482
+    },
+    {
+      "batch_id": 69,
+      "baseline_distance": 282.7758148460689,
+      "optimized_distance": 201.8572163696752,
+      "improvement_pct": 28.615813032116037
+    },
+    {
+      "batch_id": 70,
+      "baseline_distance": 189.03876468043478,
+      "optimized_distance": 143.93510161032606,
+      "improvement_pct": 23.859478317241077
+    },
+    {
+      "batch_id": 71,
+      "baseline_distance": 282.7486222211745,
+      "optimized_distance": 220.72810912441165,
+      "improvement_pct": 21.93485952629985
+    },
+    {
+      "batch_id": 72,
+      "baseline_distance": 452.6931969409217,
+      "optimized_distance": 369.8650667366718,
+      "improvement_pct": 18.29674728137329
+    },
+    {
+      "batch_id": 73,
+      "baseline_distance": 241.2104006483547,
+      "optimized_distance": 191.4133862433583,
+      "improvement_pct": 20.64463815455134
+    },
+    {
+      "batch_id": 74,
+      "baseline_distance": 457.5368657418439,
+      "optimized_distance": 354.6877499905496,
+      "improvement_pct": 22.47886967196319
+    },
+    {
+      "batch_id": 75,
+      "baseline_distance": 100.0,
+      "optimized_distance": 86.2940558118349,
+      "improvement_pct": 13.705944188165105
+    },
+    {
+      "batch_id": 76,
+      "baseline_distance": 339.93723640131634,
+      "optimized_distance": 243.03969130294792,
+      "improvement_pct": 28.504539874524088
+    },
+    {
+      "batch_id": 77,
+      "baseline_distance": 253.3618812214231,
+      "optimized_distance": 199.97841293379568,
+      "improvement_pct": 21.070047329248183
+    },
+    {
+      "batch_id": 78,
+      "baseline_distance": 217.1084633589364,
+      "optimized_distance": 177.05325335884007,
+      "improvement_pct": 18.4494005348261
+    },
+    {
+      "batch_id": 79,
+      "baseline_distance": 253.84004146204146,
+      "optimized_distance": 183.20936988259393,
+      "improvement_pct": 27.82487395315425
+    },
+    {
+      "batch_id": 80,
+      "baseline_distance": 110.49523901137144,
+      "optimized_distance": 97.623826860939,
+      "improvement_pct": 11.648838688070345
+    },
+    {
+      "batch_id": 81,
+      "baseline_distance": 224.10870960466755,
+      "optimized_distance": 178.18975756658486,
+      "improvement_pct": 20.489588342677393
+    },
+    {
+      "batch_id": 82,
+      "baseline_distance": 282.264628147576,
+      "optimized_distance": 216.01353081610128,
+      "improvement_pct": 23.47127153914473
+    },
+    {
+      "batch_id": 83,
+      "baseline_distance": 441.9327043554457,
+      "optimized_distance": 351.03532805831054,
+      "improvement_pct": 20.56814881571348
+    },
+    {
+      "batch_id": 84,
+      "baseline_distance": 198.87806787589395,
+      "optimized_distance": 177.83182152124124,
+      "improvement_pct": 10.582487339823825
+    },
+    {
+      "batch_id": 85,
+      "baseline_distance": 177.08016839940325,
+      "optimized_distance": 139.9411939021195,
+      "improvement_pct": 20.97297220404547
+    },
+    {
+      "batch_id": 86,
+      "baseline_distance": 200.1960592389358,
+      "optimized_distance": 158.6351320693733,
+      "improvement_pct": 20.76011252547142
+    },
+    {
+      "batch_id": 87,
+      "baseline_distance": 352.89157157807153,
+      "optimized_distance": 270.66181683549337,
+      "improvement_pct": 23.301705499754664
+    },
+    {
+      "batch_id": 88,
+      "baseline_distance": 279.08054833492383,
+      "optimized_distance": 209.18438400659267,
+      "improvement_pct": 25.04515801812492
+    },
+    {
+      "batch_id": 89,
+      "baseline_distance": 197.96612268262646,
+      "optimized_distance": 162.71693385789112,
+      "improvement_pct": 17.80566712479681
+    },
+    {
+      "batch_id": 90,
+      "baseline_distance": 300.4576983683562,
+      "optimized_distance": 225.79616646822916,
+      "improvement_pct": 24.849265738764075
+    },
+    {
+      "batch_id": 91,
+      "baseline_distance": 254.3804598471807,
+      "optimized_distance": 199.13242105299489,
+      "improvement_pct": 21.718664565421467
+    },
+    {
+      "batch_id": 92,
+      "baseline_distance": 360.4877574433618,
+      "optimized_distance": 276.403876338171,
+      "improvement_pct": 23.325030980671137
+    },
+    {
+      "batch_id": 93,
+      "baseline_distance": 184.7823715198879,
+      "optimized_distance": 148.9200480429765,
+      "improvement_pct": 19.407870557095638
+    },
+    {
+      "batch_id": 94,
+      "baseline_distance": 214.6341908992812,
+      "optimized_distance": 170.75128995430882,
+      "improvement_pct": 20.445438241274797
+    },
+    {
+      "batch_id": 95,
+      "baseline_distance": 209.17197044952232,
+      "optimized_distance": 173.5295363932064,
+      "improvement_pct": 17.039775443965237
+    },
+    {
+      "batch_id": 96,
+      "baseline_distance": 136.2639782234988,
+      "optimized_distance": 101.18573902578161,
+      "improvement_pct": 25.74285563583225
+    },
+    {
+      "batch_id": 97,
+      "baseline_distance": 275.4615655363608,
+      "optimized_distance": 212.16127176542773,
+      "improvement_pct": 22.979719020938138
+    },
+    {
+      "batch_id": 98,
+      "baseline_distance": 271.6249104439924,
+      "optimized_distance": 202.07979298849102,
+      "improvement_pct": 25.603365074957367
+    },
+    {
+      "batch_id": 99,
+      "baseline_distance": 245.19293309331587,
+      "optimized_distance": 186.80755521202528,
+      "improvement_pct": 23.81201494868133
+    },
+    {
+      "batch_id": 100,
+      "baseline_distance": 222.77563561165599,
+      "optimized_distance": 177.53800070754022,
+      "improvement_pct": 20.306365541236442
+    },
+    {
+      "batch_id": 101,
+      "baseline_distance": 138.91353693957336,
+      "optimized_distance": 115.92244497932074,
+      "improvement_pct": 16.550649034480795
+    },
+    {
+      "batch_id": 102,
+      "baseline_distance": 206.79787581499124,
+      "optimized_distance": 152.0806898939169,
+      "improvement_pct": 26.459259170546932
+    },
+    {
+      "batch_id": 103,
+      "baseline_distance": 213.3457722460789,
+      "optimized_distance": 175.10576155299816,
+      "improvement_pct": 17.92395991281873
+    },
+    {
+      "batch_id": 104,
+      "baseline_distance": 177.52103204871875,
+      "optimized_distance": 152.02278358605014,
+      "improvement_pct": 14.363508463420205
+    },
+    {
+      "batch_id": 105,
+      "baseline_distance": 229.40424637973356,
+      "optimized_distance": 183.06966120842918,
+      "improvement_pct": 20.197788795333196
+    },
+    {
+      "batch_id": 106,
+      "baseline_distance": 287.6142989298245,
+      "optimized_distance": 243.10711129084376,
+      "improvement_pct": 15.474608809292931
+    },
+    {
+      "batch_id": 107,
+      "baseline_distance": 520.3357938065458,
+      "optimized_distance": 398.12402717807,
+      "improvement_pct": 23.487095849091748
+    },
+    {
+      "batch_id": 108,
+      "baseline_distance": 262.3897844585359,
+      "optimized_distance": 192.21748484454386,
+      "improvement_pct": 26.743533388237157
+    },
+    {
+      "batch_id": 109,
+      "baseline_distance": 271.2443720099775,
+      "optimized_distance": 193.78340767873968,
+      "improvement_pct": 28.557630065182877
+    },
+    {
+      "batch_id": 110,
+      "baseline_distance": 237.51282777338605,
+      "optimized_distance": 200.22044877813295,
+      "improvement_pct": 15.701206265302952
+    },
+    {
+      "batch_id": 111,
+      "baseline_distance": 113.57819175617813,
+      "optimized_distance": 95.13464613335952,
+      "improvement_pct": 16.238632907989892
+    },
+    {
+      "batch_id": 112,
+      "baseline_distance": 242.11055237061785,
+      "optimized_distance": 188.2903841399774,
+      "improvement_pct": 22.229583842447997
+    },
+    {
+      "batch_id": 113,
+      "baseline_distance": 250.65865766741615,
+      "optimized_distance": 198.3134392437828,
+      "improvement_pct": 20.8830681975035
+    },
+    {
+      "batch_id": 114,
+      "baseline_distance": 600.0,
+      "optimized_distance": 456.7451095270162,
+      "improvement_pct": 23.87581507883063
+    },
+    {
+      "batch_id": 115,
+      "baseline_distance": 226.57037749724384,
+      "optimized_distance": 201.18241424401847,
+      "improvement_pct": 11.20533210637132
+    },
+    {
+      "batch_id": 116,
+      "baseline_distance": 276.0601942187721,
+      "optimized_distance": 216.61916331039453,
+      "improvement_pct": 21.5319093999013
+    },
+    {
+      "batch_id": 117,
+      "baseline_distance": 241.31793395860612,
+      "optimized_distance": 189.32193643376172,
+      "improvement_pct": 21.546677725893097
+    },
+    {
+      "batch_id": 118,
+      "baseline_distance": 153.320236793698,
+      "optimized_distance": 126.84745093807136,
+      "improvement_pct": 17.266335096551824
+    },
+    {
+      "batch_id": 119,
+      "baseline_distance": 386.4989401328557,
+      "optimized_distance": 306.2792656209946,
+      "improvement_pct": 20.75547076126167
+    },
+    {
+      "batch_id": 120,
+      "baseline_distance": 330.55505060958745,
+      "optimized_distance": 260.0717797182695,
+      "improvement_pct": 21.3227027574794
+    },
+    {
+      "batch_id": 121,
+      "baseline_distance": 335.76542585556285,
+      "optimized_distance": 253.99228761288592,
+      "improvement_pct": 24.354246133088616
+    },
+    {
+      "batch_id": 122,
+      "baseline_distance": 170.07593572987955,
+      "optimized_distance": 137.373913440666,
+      "improvement_pct": 19.22789496872269
+    },
+    {
+      "batch_id": 123,
+      "baseline_distance": 428.85451021258206,
+      "optimized_distance": 353.3267629305643,
+      "improvement_pct": 17.61150821162609
+    },
+    {
+      "batch_id": 124,
+      "baseline_distance": 139.66679846025417,
+      "optimized_distance": 122.39430326054803,
+      "improvement_pct": 12.366930000633959
+    },
+    {
+      "batch_id": 125,
+      "baseline_distance": 309.4333858696504,
+      "optimized_distance": 257.2899072447213,
+      "improvement_pct": 16.85127753050367
+    },
+    {
+      "batch_id": 126,
+      "baseline_distance": 587.6798050387406,
+      "optimized_distance": 453.27809116590583,
+      "improvement_pct": 22.869888112621943
+    },
+    {
+      "batch_id": 127,
+      "baseline_distance": 164.64398398419897,
+      "optimized_distance": 118.52625930508938,
+      "improvement_pct": 28.010573823052987
+    },
+    {
+      "batch_id": 128,
+      "baseline_distance": 195.09388576517796,
+      "optimized_distance": 150.91536169584234,
+      "improvement_pct": 22.644750703520504
+    },
+    {
+      "batch_id": 129,
+      "baseline_distance": 254.64248607804464,
+      "optimized_distance": 199.17838826376178,
+      "improvement_pct": 21.781164120933
+    },
+    {
+      "batch_id": 130,
+      "baseline_distance": 200.05848291005717,
+      "optimized_distance": 166.98753185455408,
+      "improvement_pct": 16.530641727584836
+    },
+    {
+      "batch_id": 131,
+      "baseline_distance": 131.5957373716311,
+      "optimized_distance": 85.72002885272406,
+      "improvement_pct": 34.86109005898298
+    },
+    {
+      "batch_id": 132,
+      "baseline_distance": 251.49552343606894,
+      "optimized_distance": 211.4620114747399,
+      "improvement_pct": 15.918180735135703
+    },
+    {
+      "batch_id": 133,
+      "baseline_distance": 159.98475261067213,
+      "optimized_distance": 123.20802805053437,
+      "improvement_pct": 22.987643484773244
+    },
+    {
+      "batch_id": 134,
+      "baseline_distance": 295.7270712125946,
+      "optimized_distance": 226.3983048463496,
+      "improvement_pct": 23.4434967627314
+    },
+    {
+      "batch_id": 135,
+      "baseline_distance": 169.39449866992692,
+      "optimized_distance": 122.00666520994133,
+      "improvement_pct": 27.97483615587953
+    },
+    {
+      "batch_id": 136,
+      "baseline_distance": 454.85275991943223,
+      "optimized_distance": 338.23658601849945,
+      "improvement_pct": 25.638224976713108
+    },
+    {
+      "batch_id": 137,
+      "baseline_distance": 178.87704726987843,
+      "optimized_distance": 147.75580271012433,
+      "improvement_pct": 17.398120683868584
+    },
+    {
+      "batch_id": 138,
+      "baseline_distance": 215.11556460629333,
+      "optimized_distance": 168.52332006479284,
+      "improvement_pct": 21.65916939891081
+    },
+    {
+      "batch_id": 139,
+      "baseline_distance": 338.7989579103881,
+      "optimized_distance": 251.36357817269214,
+      "improvement_pct": 25.807452383257473
+    },
+    {
+      "batch_id": 140,
+      "baseline_distance": 149.5535127240653,
+      "optimized_distance": 103.7009522041348,
+      "improvement_pct": 30.659634591486384
+    },
+    {
+      "batch_id": 141,
+      "baseline_distance": 267.9991942138643,
+      "optimized_distance": 205.6815244939129,
+      "improvement_pct": 23.25293174957149
+    },
+    {
+      "batch_id": 142,
+      "baseline_distance": 412.7561991027828,
+      "optimized_distance": 338.6400505530645,
+      "improvement_pct": 17.956398646665072
+    },
+    {
+      "batch_id": 143,
+      "baseline_distance": 128.63857219974167,
+      "optimized_distance": 97.74217280216246,
+      "improvement_pct": 24.017989992616897
+    },
+    {
+      "batch_id": 144,
+      "baseline_distance": 263.4473514866099,
+      "optimized_distance": 190.45750462837464,
+      "improvement_pct": 27.70566735492312
+    },
+    {
+      "batch_id": 145,
+      "baseline_distance": 271.4975506263891,
+      "optimized_distance": 209.31065884772406,
+      "improvement_pct": 22.90513915694258
+    },
+    {
+      "batch_id": 146,
+      "baseline_distance": 334.53086545215604,
+      "optimized_distance": 258.206839355205,
+      "improvement_pct": 22.815241874255925
+    },
+    {
+      "batch_id": 147,
+      "baseline_distance": 149.18985890422252,
+      "optimized_distance": 89.39922351587785,
+      "improvement_pct": 40.076876422766304
+    },
+    {
+      "batch_id": 148,
+      "baseline_distance": 144.28887330974754,
+      "optimized_distance": 112.00237251642497,
+      "improvement_pct": 22.376292816433985
+    },
+    {
+      "batch_id": 149,
+      "baseline_distance": 301.5019929455616,
+      "optimized_distance": 232.86220919545127,
+      "improvement_pct": 22.765946944338687
+    },
+    {
+      "batch_id": 150,
+      "baseline_distance": 275.55682517256446,
+      "optimized_distance": 221.89638728273445,
+      "improvement_pct": 19.473456284824643
+    },
+    {
+      "batch_id": 151,
+      "baseline_distance": 270.47972458082916,
+      "optimized_distance": 229.4637461225002,
+      "improvement_pct": 15.16416009439994
+    },
+    {
+      "batch_id": 152,
+      "baseline_distance": 281.06312375366633,
+      "optimized_distance": 230.4948868233373,
+      "improvement_pct": 17.99177218803304
+    },
+    {
+      "batch_id": 153,
+      "baseline_distance": 186.4177478242937,
+      "optimized_distance": 142.7169563974008,
+      "improvement_pct": 23.442398557503598
+    },
+    {
+      "batch_id": 154,
+      "baseline_distance": 268.51357702306467,
+      "optimized_distance": 198.37533099057373,
+      "improvement_pct": 26.120930945129167
+    },
+    {
+      "batch_id": 155,
+      "baseline_distance": 275.1259490378538,
+      "optimized_distance": 240.33183828202456,
+      "improvement_pct": 12.646611807249778
+    },
+    {
+      "batch_id": 156,
+      "baseline_distance": 183.87559830592448,
+      "optimized_distance": 144.01515101876598,
+      "improvement_pct": 21.67794294316333
+    },
+    {
+      "batch_id": 157,
+      "baseline_distance": 516.1047787485165,
+      "optimized_distance": 402.70102034297236,
+      "improvement_pct": 21.9730107286611
+    },
+    {
+      "batch_id": 158,
+      "baseline_distance": 295.75552037498437,
+      "optimized_distance": 230.4480550213878,
+      "improvement_pct": 22.081571045840203
+    },
+    {
+      "batch_id": 159,
+      "baseline_distance": 151.9389204767998,
+      "optimized_distance": 120.49320557958241,
+      "improvement_pct": 20.69628690169546
+    },
+    {
+      "batch_id": 160,
+      "baseline_distance": 318.1813309740449,
+      "optimized_distance": 246.7378340405156,
+      "improvement_pct": 22.453704846484907
+    },
+    {
+      "batch_id": 161,
+      "baseline_distance": 165.69145133939037,
+      "optimized_distance": 123.50271197592214,
+      "improvement_pct": 25.462230563151913
+    },
+    {
+      "batch_id": 162,
+      "baseline_distance": 335.23569161247127,
+      "optimized_distance": 256.0152500453237,
+      "improvement_pct": 23.631267060526937
+    },
+    {
+      "batch_id": 163,
+      "baseline_distance": 388.9451112987952,
+      "optimized_distance": 303.0496541109003,
+      "improvement_pct": 22.084210520365264
+    },
+    {
+      "batch_id": 164,
+      "baseline_distance": 176.21891769898102,
+      "optimized_distance": 132.01650809386754,
+      "improvement_pct": 25.083804952553667
+    },
+    {
+      "batch_id": 165,
+      "baseline_distance": 359.7288134822943,
+      "optimized_distance": 273.4600166894179,
+      "improvement_pct": 23.981619920229857
+    },
+    {
+      "batch_id": 166,
+      "baseline_distance": 288.62041179368936,
+      "optimized_distance": 226.18822347599667,
+      "improvement_pct": 21.6312449731796
+    },
+    {
+      "batch_id": 167,
+      "baseline_distance": 339.95867428347634,
+      "optimized_distance": 262.617993766903,
+      "improvement_pct": 22.750024155019034
+    },
+    {
+      "batch_id": 168,
+      "baseline_distance": 522.5481815401723,
+      "optimized_distance": 422.6275114871613,
+      "improvement_pct": 19.121809927364435
+    },
+    {
+      "batch_id": 169,
+      "baseline_distance": 221.8152334548981,
+      "optimized_distance": 146.50618401089042,
+      "improvement_pct": 33.95125225216795
+    },
+    {
+      "batch_id": 170,
+      "baseline_distance": 181.0015390479465,
+      "optimized_distance": 152.09626897662287,
+      "improvement_pct": 15.969626680172455
+    },
+    {
+      "batch_id": 171,
+      "baseline_distance": 171.43329288141953,
+      "optimized_distance": 146.17882037248353,
+      "improvement_pct": 14.731369901647126
+    },
+    {
+      "batch_id": 172,
+      "baseline_distance": 176.56267032517007,
+      "optimized_distance": 116.98498052955117,
+      "improvement_pct": 33.743083793361585
+    },
+    {
+      "batch_id": 173,
+      "baseline_distance": 237.2606477210165,
+      "optimized_distance": 181.63642928158941,
+      "improvement_pct": 23.44435074830992
+    },
+    {
+      "batch_id": 174,
+      "baseline_distance": 280.46832351110226,
+      "optimized_distance": 215.05088367870187,
+      "improvement_pct": 23.324359419081013
+    },
+    {
+      "batch_id": 175,
+      "baseline_distance": 273.32903332592076,
+      "optimized_distance": 199.12152904703999,
+      "improvement_pct": 27.1495140402428
+    },
+    {
+      "batch_id": 176,
+      "baseline_distance": 340.65604400038285,
+      "optimized_distance": 257.9335474443899,
+      "improvement_pct": 24.283290437054447
+    },
+    {
+      "batch_id": 177,
+      "baseline_distance": 245.9678304250259,
+      "optimized_distance": 180.74914927686194,
+      "improvement_pct": 26.51512640310231
+    },
+    {
+      "batch_id": 178,
+      "baseline_distance": 437.6474295510111,
+      "optimized_distance": 358.8876994840249,
+      "improvement_pct": 17.996159636487977
+    },
+    {
+      "batch_id": 179,
+      "baseline_distance": 220.11216706202904,
+      "optimized_distance": 181.04427423985726,
+      "improvement_pct": 17.7490837256453
+    },
+    {
+      "batch_id": 180,
+      "baseline_distance": 600.0,
+      "optimized_distance": 480.7155509499416,
+      "improvement_pct": 19.88074150834307
+    },
+    {
+      "batch_id": 181,
+      "baseline_distance": 314.2745412547226,
+      "optimized_distance": 252.35086281911597,
+      "improvement_pct": 19.703689070193203
+    },
+    {
+      "batch_id": 182,
+      "baseline_distance": 173.6665319618614,
+      "optimized_distance": 124.1693772180796,
+      "improvement_pct": 28.501262842429416
+    },
+    {
+      "batch_id": 183,
+      "baseline_distance": 159.4360658459729,
+      "optimized_distance": 119.11492869706113,
+      "improvement_pct": 25.289847021103114
+    },
+    {
+      "batch_id": 184,
+      "baseline_distance": 296.7793597035666,
+      "optimized_distance": 236.38164618106117,
+      "improvement_pct": 20.35104920464575
+    },
+    {
+      "batch_id": 185,
+      "baseline_distance": 223.76913786831986,
+      "optimized_distance": 162.31864944837002,
+      "improvement_pct": 27.461556586999613
+    },
+    {
+      "batch_id": 186,
+      "baseline_distance": 325.577392263262,
+      "optimized_distance": 261.0803502670683,
+      "improvement_pct": 19.810049324322062
+    },
+    {
+      "batch_id": 187,
+      "baseline_distance": 295.6851038877349,
+      "optimized_distance": 228.23112705085188,
+      "improvement_pct": 22.812774789795903
+    },
+    {
+      "batch_id": 188,
+      "baseline_distance": 237.66650105846742,
+      "optimized_distance": 181.63166275010863,
+      "improvement_pct": 23.577087245700593
+    },
+    {
+      "batch_id": 189,
+      "baseline_distance": 174.3879670414631,
+      "optimized_distance": 143.13221397437613,
+      "improvement_pct": 17.923113387551272
+    },
+    {
+      "batch_id": 190,
+      "baseline_distance": 133.49461101886538,
+      "optimized_distance": 108.5684297095754,
+      "improvement_pct": 18.672050593688336
+    },
+    {
+      "batch_id": 191,
+      "baseline_distance": 204.6689957239898,
+      "optimized_distance": 156.03215500652126,
+      "improvement_pct": 23.76365826461506
+    },
+    {
+      "batch_id": 192,
+      "baseline_distance": 344.6603770154938,
+      "optimized_distance": 280.42839210572765,
+      "improvement_pct": 18.636312495787315
+    },
+    {
+      "batch_id": 193,
+      "baseline_distance": 266.5701664387018,
+      "optimized_distance": 197.11409654618842,
+      "improvement_pct": 26.055455049762628
+    },
+    {
+      "batch_id": 194,
+      "baseline_distance": 148.6663433412881,
+      "optimized_distance": 122.11910387564735,
+      "improvement_pct": 17.85692636879968
+    },
+    {
+      "batch_id": 195,
+      "baseline_distance": 262.243213861354,
+      "optimized_distance": 210.48071939153994,
+      "improvement_pct": 19.738354219980117
+    },
+    {
+      "batch_id": 196,
+      "baseline_distance": 285.46714734843863,
+      "optimized_distance": 219.56891053864223,
+      "improvement_pct": 23.0843504837219
+    },
+    {
+      "batch_id": 197,
+      "baseline_distance": 171.821650907693,
+      "optimized_distance": 137.28221793042172,
+      "improvement_pct": 20.10190962245308
+    },
+    {
+      "batch_id": 198,
+      "baseline_distance": 260.2102719359573,
+      "optimized_distance": 190.45287634619368,
+      "improvement_pct": 26.808086810244074
+    },
+    {
+      "batch_id": 199,
+      "baseline_distance": 250.45605785136428,
+      "optimized_distance": 204.59599531613316,
+      "improvement_pct": 18.310622202018067
+    },
+    {
+      "batch_id": 200,
+      "baseline_distance": 154.9049775505918,
+      "optimized_distance": 118.97686112503173,
+      "improvement_pct": 23.193648773375273
+    },
+    {
+      "batch_id": 201,
+      "baseline_distance": 282.34082603861987,
+      "optimized_distance": 214.9986141049331,
+      "improvement_pct": 23.851390136712073
+    },
+    {
+      "batch_id": 202,
+      "baseline_distance": 306.2230660952628,
+      "optimized_distance": 249.3440838126739,
+      "improvement_pct": 18.574362476304927
+    },
+    {
+      "batch_id": 203,
+      "baseline_distance": 377.36787116795256,
+      "optimized_distance": 287.30350260557543,
+      "improvement_pct": 23.866464382256005
+    },
+    {
+      "batch_id": 204,
+      "baseline_distance": 372.97851625518945,
+      "optimized_distance": 276.8386297154122,
+      "improvement_pct": 25.776253148585905
+    },
+    {
+      "batch_id": 205,
+      "baseline_distance": 141.02430519848983,
+      "optimized_distance": 94.43266631958303,
+      "improvement_pct": 33.03802051237174
+    },
+    {
+      "batch_id": 206,
+      "baseline_distance": 168.15227774971305,
+      "optimized_distance": 137.2188761582326,
+      "improvement_pct": 18.39606457042669
+    },
+    {
+      "batch_id": 207,
+      "baseline_distance": 300.67023725154536,
+      "optimized_distance": 221.71849153124253,
+      "improvement_pct": 26.25858363701312
+    },
+    {
+      "batch_id": 208,
+      "baseline_distance": 300.5200218970671,
+      "optimized_distance": 251.95355889955601,
+      "improvement_pct": 16.160807752817846
+    },
+    {
+      "batch_id": 209,
+      "baseline_distance": 300.6717308764385,
+      "optimized_distance": 213.70465600478482,
+      "improvement_pct": 28.924260560894876
+    },
+    {
+      "batch_id": 210,
+      "baseline_distance": 600.0,
+      "optimized_distance": 484.9645636829004,
+      "improvement_pct": 19.172572719516598
+    },
+    {
+      "batch_id": 211,
+      "baseline_distance": 307.4634456598258,
+      "optimized_distance": 241.9316622866903,
+      "improvement_pct": 21.31368274771732
+    },
+    {
+      "batch_id": 212,
+      "baseline_distance": 385.3786109289977,
+      "optimized_distance": 299.6281854059143,
+      "improvement_pct": 22.250956096492374
+    },
+    {
+      "batch_id": 213,
+      "baseline_distance": 358.3824475376931,
+      "optimized_distance": 274.08911821131113,
+      "improvement_pct": 23.52049602471571
+    },
+    {
+      "batch_id": 214,
+      "baseline_distance": 317.52498257801835,
+      "optimized_distance": 251.66084755437504,
+      "improvement_pct": 20.742977289183848
+    },
+    {
+      "batch_id": 215,
+      "baseline_distance": 215.7008086066212,
+      "optimized_distance": 167.87028368891606,
+      "improvement_pct": 22.174476408632675
+    },
+    {
+      "batch_id": 216,
+      "baseline_distance": 331.4867000132249,
+      "optimized_distance": 269.59264483048065,
+      "improvement_pct": 18.671655659269266
+    },
+    {
+      "batch_id": 217,
+      "baseline_distance": 179.62474309795488,
+      "optimized_distance": 141.24957610302522,
+      "improvement_pct": 21.36407620302204
+    },
+    {
+      "batch_id": 218,
+      "baseline_distance": 222.57687717080248,
+      "optimized_distance": 175.11298180784473,
+      "improvement_pct": 21.32471978503616
+    },
+    {
+      "batch_id": 219,
+      "baseline_distance": 201.51313812384143,
+      "optimized_distance": 153.54412561445778,
+      "improvement_pct": 23.804409457364475
+    },
+    {
+      "batch_id": 220,
+      "baseline_distance": 252.83817403414838,
+      "optimized_distance": 196.64431950942506,
+      "improvement_pct": 22.22522557734251
+    },
+    {
+      "batch_id": 221,
+      "baseline_distance": 600.0,
+      "optimized_distance": 471.07801768892057,
+      "improvement_pct": 21.486997051846572
+    },
+    {
+      "batch_id": 222,
+      "baseline_distance": 115.94244717740192,
+      "optimized_distance": 80.0,
+      "improvement_pct": 31.000248875553645
+    },
+    {
+      "batch_id": 223,
+      "baseline_distance": 321.9847152177203,
+      "optimized_distance": 237.6662236487647,
+      "improvement_pct": 26.187110003635087
+    },
+    {
+      "batch_id": 224,
+      "baseline_distance": 128.36960621629703,
+      "optimized_distance": 107.56093378893883,
+      "improvement_pct": 16.20996826327918
+    },
+    {
+      "batch_id": 225,
+      "baseline_distance": 202.59871589885913,
+      "optimized_distance": 159.73565278238954,
+      "improvement_pct": 21.1566311890484
+    },
+    {
+      "batch_id": 226,
+      "baseline_distance": 378.2594132914452,
+      "optimized_distance": 293.20250900380046,
+      "improvement_pct": 22.486394600868586
+    },
+    {
+      "batch_id": 227,
+      "baseline_distance": 251.06503461895366,
+      "optimized_distance": 196.0150663334378,
+      "improvement_pct": 21.92657705963169
+    },
+    {
+      "batch_id": 228,
+      "baseline_distance": 158.9996639710344,
+      "optimized_distance": 127.49555495102355,
+      "improvement_pct": 19.81394691862373
+    },
+    {
+      "batch_id": 229,
+      "baseline_distance": 183.8055703960283,
+      "optimized_distance": 137.97074810580844,
+      "improvement_pct": 24.93657955602974
+    },
+    {
+      "batch_id": 230,
+      "baseline_distance": 321.1277758626824,
+      "optimized_distance": 242.69661791886918,
+      "improvement_pct": 24.4236605610071
+    },
+    {
+      "batch_id": 231,
+      "baseline_distance": 182.70144039954,
+      "optimized_distance": 144.46557606261803,
+      "improvement_pct": 20.92805850534402
+    },
+    {
+      "batch_id": 232,
+      "baseline_distance": 266.82244463795297,
+      "optimized_distance": 198.337779041453,
+      "improvement_pct": 25.66675591681416
+    },
+    {
+      "batch_id": 233,
+      "baseline_distance": 249.1932589939939,
+      "optimized_distance": 198.45326957245996,
+      "improvement_pct": 20.361702249239773
+    },
+    {
+      "batch_id": 234,
+      "baseline_distance": 188.54936595517717,
+      "optimized_distance": 130.04266940265978,
+      "improvement_pct": 31.029908934525864
+    },
+    {
+      "batch_id": 235,
+      "baseline_distance": 576.8473282428259,
+      "optimized_distance": 460.2324724026607,
+      "improvement_pct": 20.21589597985896
+    },
+    {
+      "batch_id": 236,
+      "baseline_distance": 315.31357155328624,
+      "optimized_distance": 250.6705606356937,
+      "improvement_pct": 20.50118255270475
+    },
+    {
+      "batch_id": 237,
+      "baseline_distance": 108.8469715800283,
+      "optimized_distance": 87.46093517556083,
+      "improvement_pct": 19.64780103114184
+    },
+    {
+      "batch_id": 238,
+      "baseline_distance": 263.6392590996793,
+      "optimized_distance": 215.465531937205,
+      "improvement_pct": 18.272592377548868
+    },
+    {
+      "batch_id": 239,
+      "baseline_distance": 187.78269452379624,
+      "optimized_distance": 163.12524617318684,
+      "improvement_pct": 13.130841696109943
+    },
+    {
+      "batch_id": 240,
+      "baseline_distance": 344.11411565520825,
+      "optimized_distance": 278.5527108612437,
+      "improvement_pct": 19.05222768009175
+    },
+    {
+      "batch_id": 241,
+      "baseline_distance": 178.21518143161637,
+      "optimized_distance": 120.59909920334431,
+      "improvement_pct": 32.329502888271136
+    },
+    {
+      "batch_id": 242,
+      "baseline_distance": 233.7157009300547,
+      "optimized_distance": 169.50247705808567,
+      "improvement_pct": 27.47492941913494
+    },
+    {
+      "batch_id": 243,
+      "baseline_distance": 299.46421010258103,
+      "optimized_distance": 227.3338981030564,
+      "improvement_pct": 24.086454930562983
+    },
+    {
+      "batch_id": 244,
+      "baseline_distance": 345.95270593573343,
+      "optimized_distance": 270.10402113198046,
+      "improvement_pct": 21.924582031696307
+    },
+    {
+      "batch_id": 245,
+      "baseline_distance": 151.39335310670833,
+      "optimized_distance": 123.26340562792373,
+      "improvement_pct": 18.580701795380307
+    },
+    {
+      "batch_id": 246,
+      "baseline_distance": 214.04783234217984,
+      "optimized_distance": 159.69987109536564,
+      "improvement_pct": 25.39056838470235
+    },
+    {
+      "batch_id": 247,
+      "baseline_distance": 202.35465495619243,
+      "optimized_distance": 159.7042985106009,
+      "improvement_pct": 21.07703252728477
+    },
+    {
+      "batch_id": 248,
+      "baseline_distance": 188.41901896555976,
+      "optimized_distance": 139.4130054696034,
+      "improvement_pct": 26.009058833340987
+    },
+    {
+      "batch_id": 249,
+      "baseline_distance": 495.80450015474946,
+      "optimized_distance": 380.6123320907851,
+      "improvement_pct": 23.23338493862214
+    },
+    {
+      "batch_id": 250,
+      "baseline_distance": 287.7214096545708,
+      "optimized_distance": 210.356088562083,
+      "improvement_pct": 26.888969154353216
+    },
+    {
+      "batch_id": 251,
+      "baseline_distance": 147.76843473246456,
+      "optimized_distance": 106.02704663021332,
+      "improvement_pct": 28.247838029701143
+    },
+    {
+      "batch_id": 252,
+      "baseline_distance": 353.2389636735354,
+      "optimized_distance": 262.0095456091943,
+      "improvement_pct": 25.82654447731187
+    },
+    {
+      "batch_id": 253,
+      "baseline_distance": 571.8418566725628,
+      "optimized_distance": 436.2779156748257,
+      "improvement_pct": 23.706543936212974
+    },
+    {
+      "batch_id": 254,
+      "baseline_distance": 369.8087958965032,
+      "optimized_distance": 298.9872787653509,
+      "improvement_pct": 19.150847118026057
+    },
+    {
+      "batch_id": 255,
+      "baseline_distance": 133.2533247052542,
+      "optimized_distance": 94.44360438177884,
+      "improvement_pct": 29.124766987479955
+    },
+    {
+      "batch_id": 256,
+      "baseline_distance": 201.60420031046306,
+      "optimized_distance": 183.5750968905351,
+      "improvement_pct": 8.942821326224259
+    },
+    {
+      "batch_id": 257,
+      "baseline_distance": 406.16702217536596,
+      "optimized_distance": 321.74345630559435,
+      "improvement_pct": 20.78543093371107
+    },
+    {
+      "batch_id": 258,
+      "baseline_distance": 184.36771487157395,
+      "optimized_distance": 145.65517883677643,
+      "improvement_pct": 20.99745937718202
+    },
+    {
+      "batch_id": 259,
+      "baseline_distance": 292.2260864257965,
+      "optimized_distance": 219.35276961030914,
+      "improvement_pct": 24.937307174317482
+    },
+    {
+      "batch_id": 260,
+      "baseline_distance": 333.5702945385931,
+      "optimized_distance": 267.1879285341925,
+      "improvement_pct": 19.90056281726859
+    },
+    {
+      "batch_id": 261,
+      "baseline_distance": 168.88665532524627,
+      "optimized_distance": 125.97521289131434,
+      "improvement_pct": 25.408426942491086
+    },
+    {
+      "batch_id": 262,
+      "baseline_distance": 238.93459599962202,
+      "optimized_distance": 187.5890830261588,
+      "improvement_pct": 21.48935894304082
+    },
+    {
+      "batch_id": 263,
+      "baseline_distance": 100.0,
+      "optimized_distance": 103.60084538268795,
+      "improvement_pct": -3.6008453826879503
+    },
+    {
+      "batch_id": 264,
+      "baseline_distance": 162.42964326106448,
+      "optimized_distance": 125.7345227463838,
+      "improvement_pct": 22.591393897050292
+    },
+    {
+      "batch_id": 265,
+      "baseline_distance": 221.17909090684185,
+      "optimized_distance": 184.01242417019338,
+      "improvement_pct": 16.803878967159083
+    },
+    {
+      "batch_id": 266,
+      "baseline_distance": 148.54481945445912,
+      "optimized_distance": 108.83319492321924,
+      "improvement_pct": 26.73376606271663
+    },
+    {
+      "batch_id": 267,
+      "baseline_distance": 470.1089712589633,
+      "optimized_distance": 366.3351126770218,
+      "improvement_pct": 22.07442634077639
+    },
+    {
+      "batch_id": 268,
+      "baseline_distance": 138.09522022082754,
+      "optimized_distance": 125.42227812860058,
+      "improvement_pct": 9.176959254608311
+    },
+    {
+      "batch_id": 269,
+      "baseline_distance": 205.19940328431386,
+      "optimized_distance": 153.78586398388717,
+      "improvement_pct": 25.055403903485384
+    },
+    {
+      "batch_id": 270,
+      "baseline_distance": 257.8289114185691,
+      "optimized_distance": 219.23103648645315,
+      "improvement_pct": 14.970343984990379
+    },
+    {
+      "batch_id": 271,
+      "baseline_distance": 435.506323215813,
+      "optimized_distance": 346.77245146288885,
+      "improvement_pct": 20.374875638476666
+    },
+    {
+      "batch_id": 272,
+      "baseline_distance": 137.77957692830776,
+      "optimized_distance": 101.84340224513738,
+      "improvement_pct": 26.08236683864214
+    },
+    {
+      "batch_id": 273,
+      "baseline_distance": 389.6564684667309,
+      "optimized_distance": 310.25612279460535,
+      "improvement_pct": 20.37701208568666
+    },
+    {
+      "batch_id": 274,
+      "baseline_distance": 245.6955638972356,
+      "optimized_distance": 201.36808433611108,
+      "improvement_pct": 18.04162796348447
+    },
+    {
+      "batch_id": 275,
+      "baseline_distance": 165.23959963259978,
+      "optimized_distance": 135.1049873355998,
+      "improvement_pct": 18.236919215492215
+    },
+    {
+      "batch_id": 276,
+      "baseline_distance": 294.37115105279327,
+      "optimized_distance": 213.9072506222742,
+      "improvement_pct": 27.334166457122855
+    },
+    {
+      "batch_id": 277,
+      "baseline_distance": 264.9719253316892,
+      "optimized_distance": 199.4067300004689,
+      "improvement_pct": 24.744204597957474
+    },
+    {
+      "batch_id": 278,
+      "baseline_distance": 192.46479408592364,
+      "optimized_distance": 147.64735303150542,
+      "improvement_pct": 23.28604629603584
+    },
+    {
+      "batch_id": 279,
+      "baseline_distance": 251.62020659847872,
+      "optimized_distance": 195.51942685581295,
+      "improvement_pct": 22.295816580497533
+    },
+    {
+      "batch_id": 280,
+      "baseline_distance": 209.74123596979865,
+      "optimized_distance": 169.80488503194974,
+      "improvement_pct": 19.04077219398072
+    },
+    {
+      "batch_id": 281,
+      "baseline_distance": 256.0587571088928,
+      "optimized_distance": 201.50284055426891,
+      "improvement_pct": 21.306014748569275
+    },
+    {
+      "batch_id": 282,
+      "baseline_distance": 318.8919305902939,
+      "optimized_distance": 235.38226227332825,
+      "improvement_pct": 26.187451078609207
+    },
+    {
+      "batch_id": 283,
+      "baseline_distance": 461.46523767507625,
+      "optimized_distance": 363.74486389661917,
+      "improvement_pct": 21.17610727750273
+    },
+    {
+      "batch_id": 284,
+      "baseline_distance": 149.1382607921987,
+      "optimized_distance": 122.43370087075323,
+      "improvement_pct": 17.905908101378618
+    },
+    {
+      "batch_id": 285,
+      "baseline_distance": 574.3352872202003,
+      "optimized_distance": 453.5794285110666,
+      "improvement_pct": 21.02532464853336
+    },
+    {
+      "batch_id": 286,
+      "baseline_distance": 112.07461784165633,
+      "optimized_distance": 98.22600917203816,
+      "improvement_pct": 12.356596824790483
+    },
+    {
+      "batch_id": 287,
+      "baseline_distance": 230.2776977130951,
+      "optimized_distance": 187.95582576170324,
+      "improvement_pct": 18.378623883985952
+    },
+    {
+      "batch_id": 288,
+      "baseline_distance": 309.61416169979066,
+      "optimized_distance": 246.0908469181211,
+      "improvement_pct": 20.516928047775572
+    },
+    {
+      "batch_id": 289,
+      "baseline_distance": 273.7996808150061,
+      "optimized_distance": 212.86209392111832,
+      "improvement_pct": 22.256266593334907
+    },
+    {
+      "batch_id": 290,
+      "baseline_distance": 190.7417067340867,
+      "optimized_distance": 132.16892191742772,
+      "improvement_pct": 30.707906424637056
+    },
+    {
+      "batch_id": 291,
+      "baseline_distance": 225.14645461552055,
+      "optimized_distance": 179.9104167914319,
+      "improvement_pct": 20.091827740009315
+    },
+    {
+      "batch_id": 292,
+      "baseline_distance": 200.8984639878715,
+      "optimized_distance": 158.77767878217088,
+      "improvement_pct": 20.96620569893631
+    },
+    {
+      "batch_id": 293,
+      "baseline_distance": 193.30207044894058,
+      "optimized_distance": 153.49140332212738,
+      "improvement_pct": 20.595054690492265
+    },
+    {
+      "batch_id": 294,
+      "baseline_distance": 343.72462868958934,
+      "optimized_distance": 255.3377246196766,
+      "improvement_pct": 25.7144518293256
+    },
+    {
+      "batch_id": 295,
+      "baseline_distance": 282.2536668341193,
+      "optimized_distance": 209.34729472653044,
+      "improvement_pct": 25.830088560173074
+    },
+    {
+      "batch_id": 296,
+      "baseline_distance": 185.459431848548,
+      "optimized_distance": 155.1898853751965,
+      "improvement_pct": 16.321384235702055
+    },
+    {
+      "batch_id": 297,
+      "baseline_distance": 350.66801517326945,
+      "optimized_distance": 273.1255002965836,
+      "improvement_pct": 22.112799434636525
+    },
+    {
+      "batch_id": 298,
+      "baseline_distance": 276.69610452245433,
+      "optimized_distance": 222.63796850124064,
+      "improvement_pct": 19.53700653448368
+    },
+    {
+      "batch_id": 299,
+      "baseline_distance": 338.7101908613153,
+      "optimized_distance": 264.47713263313057,
+      "improvement_pct": 21.916393492447185
+    },
+    {
+      "batch_id": 300,
+      "baseline_distance": 314.77293473075633,
+      "optimized_distance": 245.8204504849474,
+      "improvement_pct": 21.905467922389203
+    },
+    {
+      "batch_id": 301,
+      "baseline_distance": 175.63394929527388,
+      "optimized_distance": 146.37731851007362,
+      "improvement_pct": 16.657730981163745
+    },
+    {
+      "batch_id": 302,
+      "baseline_distance": 195.57180166106684,
+      "optimized_distance": 147.3855580134584,
+      "improvement_pct": 24.6386458775468
+    },
+    {
+      "batch_id": 303,
+      "baseline_distance": 329.9421849694005,
+      "optimized_distance": 258.31611204554224,
+      "improvement_pct": 21.708673878880024
+    },
+    {
+      "batch_id": 304,
+      "baseline_distance": 312.3574190983393,
+      "optimized_distance": 239.01603400965422,
+      "improvement_pct": 23.479956167007206
+    },
+    {
+      "batch_id": 305,
+      "baseline_distance": 242.65467992966967,
+      "optimized_distance": 184.92568807081918,
+      "improvement_pct": 23.790594879761848
+    },
+    {
+      "batch_id": 306,
+      "baseline_distance": 256.4492920677352,
+      "optimized_distance": 196.93872657814708,
+      "improvement_pct": 23.20558774397777
+    },
+    {
+      "batch_id": 307,
+      "baseline_distance": 407.91791209475343,
+      "optimized_distance": 320.39730915024484,
+      "improvement_pct": 21.455444919069606
+    },
+    {
+      "batch_id": 308,
+      "baseline_distance": 193.13152711993504,
+      "optimized_distance": 145.85510493691459,
+      "improvement_pct": 24.478873484835912
+    },
+    {
+      "batch_id": 309,
+      "baseline_distance": 304.55111927980744,
+      "optimized_distance": 250.10743429398502,
+      "improvement_pct": 17.87669837318906
+    },
+    {
+      "batch_id": 310,
+      "baseline_distance": 225.68109959072282,
+      "optimized_distance": 167.08518465856878,
+      "improvement_pct": 25.964032893502782
+    },
+    {
+      "batch_id": 311,
+      "baseline_distance": 224.28723257551786,
+      "optimized_distance": 173.07532496729033,
+      "improvement_pct": 22.833180034438385
+    },
+    {
+      "batch_id": 312,
+      "baseline_distance": 379.7490883424823,
+      "optimized_distance": 291.8069783243945,
+      "improvement_pct": 23.15795158375099
+    },
+    {
+      "batch_id": 313,
+      "baseline_distance": 340.41536698864866,
+      "optimized_distance": 279.9937650946833,
+      "improvement_pct": 17.74937554331387
+    },
+    {
+      "batch_id": 314,
+      "baseline_distance": 338.79793048797484,
+      "optimized_distance": 266.2279335457361,
+      "improvement_pct": 21.419846584574845
+    },
+    {
+      "batch_id": 315,
+      "baseline_distance": 412.4815687101709,
+      "optimized_distance": 332.0540689886197,
+      "improvement_pct": 19.498446918015723
+    },
+    {
+      "batch_id": 316,
+      "baseline_distance": 246.75638062777057,
+      "optimized_distance": 177.61437315929132,
+      "improvement_pct": 28.020352419084656
+    },
+    {
+      "batch_id": 317,
+      "baseline_distance": 321.43044934025346,
+      "optimized_distance": 253.3862531440903,
+      "improvement_pct": 21.169181804594466
+    },
+    {
+      "batch_id": 318,
+      "baseline_distance": 216.13285701256265,
+      "optimized_distance": 177.47993642603325,
+      "improvement_pct": 17.88387065289324
+    },
+    {
+      "batch_id": 319,
+      "baseline_distance": 278.56921073185015,
+      "optimized_distance": 218.10682426359736,
+      "improvement_pct": 21.70461922529324
+    },
+    {
+      "batch_id": 320,
+      "baseline_distance": 232.27982294442316,
+      "optimized_distance": 191.83306564730358,
+      "improvement_pct": 17.412944776868176
+    },
+    {
+      "batch_id": 321,
+      "baseline_distance": 254.37215859630257,
+      "optimized_distance": 193.23739920411228,
+      "improvement_pct": 24.03358910407065
+    },
+    {
+      "batch_id": 322,
+      "baseline_distance": 310.46240345913367,
+      "optimized_distance": 256.25414909998005,
+      "improvement_pct": 17.46048917845509
+    },
+    {
+      "batch_id": 323,
+      "baseline_distance": 176.39251782350985,
+      "optimized_distance": 160.5751451385302,
+      "improvement_pct": 8.967144910764178
+    },
+    {
+      "batch_id": 324,
+      "baseline_distance": 565.0729909215254,
+      "optimized_distance": 437.1285473143932,
+      "improvement_pct": 22.642109189908265
+    },
+    {
+      "batch_id": 325,
+      "baseline_distance": 163.627589086684,
+      "optimized_distance": 123.1744942736058,
+      "improvement_pct": 24.722661403785402
+    },
+    {
+      "batch_id": 326,
+      "baseline_distance": 150.55441117317437,
+      "optimized_distance": 131.966285486253,
+      "improvement_pct": 12.346450390975573
+    },
+    {
+      "batch_id": 327,
+      "baseline_distance": 388.86970907360677,
+      "optimized_distance": 319.11409453472044,
+      "improvement_pct": 17.93804272003164
+    },
+    {
+      "batch_id": 328,
+      "baseline_distance": 335.85014974624556,
+      "optimized_distance": 256.7345165305389,
+      "improvement_pct": 23.55682535067594
+    },
+    {
+      "batch_id": 329,
+      "baseline_distance": 314.08006165162084,
+      "optimized_distance": 240.7805799173057,
+      "improvement_pct": 23.337833464774118
+    },
+    {
+      "batch_id": 330,
+      "baseline_distance": 314.6113928417346,
+      "optimized_distance": 242.5790403279479,
+      "improvement_pct": 22.895659264959487
+    },
+    {
+      "batch_id": 331,
+      "baseline_distance": 243.49618885027198,
+      "optimized_distance": 176.4825221928694,
+      "improvement_pct": 27.52144375393485
+    },
+    {
+      "batch_id": 332,
+      "baseline_distance": 170.90336014648875,
+      "optimized_distance": 124.11810144941924,
+      "improvement_pct": 27.375271414773717
+    },
+    {
+      "batch_id": 333,
+      "baseline_distance": 252.22506986205883,
+      "optimized_distance": 186.69414682488522,
+      "improvement_pct": 25.981129898392847
+    },
+    {
+      "batch_id": 334,
+      "baseline_distance": 186.63135646911746,
+      "optimized_distance": 137.89448239487032,
+      "improvement_pct": 26.11397944927427
+    },
+    {
+      "batch_id": 335,
+      "baseline_distance": 361.42259370274024,
+      "optimized_distance": 281.56277421426955,
+      "improvement_pct": 22.095967678809007
+    },
+    {
+      "batch_id": 336,
+      "baseline_distance": 230.71358452796372,
+      "optimized_distance": 182.2987432571769,
+      "improvement_pct": 20.98482469935301
+    },
+    {
+      "batch_id": 337,
+      "baseline_distance": 175.8798552456111,
+      "optimized_distance": 152.69129201971745,
+      "improvement_pct": 13.184320167600493
+    },
+    {
+      "batch_id": 338,
+      "baseline_distance": 215.17371170879915,
+      "optimized_distance": 157.85195472547542,
+      "improvement_pct": 26.63975842034966
+    },
+    {
+      "batch_id": 339,
+      "baseline_distance": 288.63779042191777,
+      "optimized_distance": 234.9807005138617,
+      "improvement_pct": 18.58976602808057
+    },
+    {
+      "batch_id": 340,
+      "baseline_distance": 195.2947935658747,
+      "optimized_distance": 150.19005053912718,
+      "improvement_pct": 23.09572221726089
+    },
+    {
+      "batch_id": 341,
+      "baseline_distance": 176.11053572152346,
+      "optimized_distance": 136.87158076626397,
+      "improvement_pct": 22.28086740778898
+    },
+    {
+      "batch_id": 342,
+      "baseline_distance": 269.74441096158733,
+      "optimized_distance": 217.14883547170416,
+      "improvement_pct": 19.49830037344981
+    },
+    {
+      "batch_id": 343,
+      "baseline_distance": 269.8824863306821,
+      "optimized_distance": 199.28111912230906,
+      "improvement_pct": 26.16004030801261
+    },
+    {
+      "batch_id": 344,
+      "baseline_distance": 199.78119243994303,
+      "optimized_distance": 159.65342756499606,
+      "improvement_pct": 20.085857124418716
+    },
+    {
+      "batch_id": 345,
+      "baseline_distance": 202.6711424988913,
+      "optimized_distance": 159.7480132312658,
+      "improvement_pct": 21.178707900095013
+    },
+    {
+      "batch_id": 346,
+      "baseline_distance": 268.4916930054311,
+      "optimized_distance": 214.34803318431776,
+      "improvement_pct": 20.165860334464096
+    },
+    {
+      "batch_id": 347,
+      "baseline_distance": 137.10763350627985,
+      "optimized_distance": 109.83564057397648,
+      "improvement_pct": 19.890936948491824
+    },
+    {
+      "batch_id": 348,
+      "baseline_distance": 139.35358640254012,
+      "optimized_distance": 133.24879879309023,
+      "improvement_pct": 4.3807897356982615
+    },
+    {
+      "batch_id": 349,
+      "baseline_distance": 183.57481792331032,
+      "optimized_distance": 136.81095813766888,
+      "improvement_pct": 25.474005811176877
+    },
+    {
+      "batch_id": 350,
+      "baseline_distance": 224.66741190320164,
+      "optimized_distance": 169.93061173447913,
+      "improvement_pct": 24.36348009043072
+    },
+    {
+      "batch_id": 351,
+      "baseline_distance": 277.0957255909693,
+      "optimized_distance": 209.90326069670843,
+      "improvement_pct": 24.248827639241913
+    },
+    {
+      "batch_id": 352,
+      "baseline_distance": 441.48431234257697,
+      "optimized_distance": 338.8029924356075,
+      "improvement_pct": 23.258203527579077
+    },
+    {
+      "batch_id": 353,
+      "baseline_distance": 344.834243957754,
+      "optimized_distance": 262.59683901398296,
+      "improvement_pct": 23.848386981498862
+    },
+    {
+      "batch_id": 354,
+      "baseline_distance": 229.52789937463854,
+      "optimized_distance": 190.92192682329357,
+      "improvement_pct": 16.819729826539202
+    },
+    {
+      "batch_id": 355,
+      "baseline_distance": 242.8377480523253,
+      "optimized_distance": 203.6184859607123,
+      "improvement_pct": 16.150397706357527
+    },
+    {
+      "batch_id": 356,
+      "baseline_distance": 163.85604273558295,
+      "optimized_distance": 122.10025039625994,
+      "improvement_pct": 25.483217855263955
+    },
+    {
+      "batch_id": 357,
+      "baseline_distance": 242.88661890919357,
+      "optimized_distance": 181.1280070181287,
+      "improvement_pct": 25.426930544145854
+    },
+    {
+      "batch_id": 358,
+      "baseline_distance": 218.00904318570431,
+      "optimized_distance": 174.7612092487134,
+      "improvement_pct": 19.837633019723665
+    },
+    {
+      "batch_id": 359,
+      "baseline_distance": 278.4079333089439,
+      "optimized_distance": 211.63595753816654,
+      "improvement_pct": 23.983503263422374
+    },
+    {
+      "batch_id": 360,
+      "baseline_distance": 175.75792507804508,
+      "optimized_distance": 143.42049973843027,
+      "improvement_pct": 18.398843366667773
+    },
+    {
+      "batch_id": 361,
+      "baseline_distance": 301.18919005693084,
+      "optimized_distance": 236.95679845291906,
+      "improvement_pct": 21.32626061110313
+    },
+    {
+      "batch_id": 362,
+      "baseline_distance": 451.73492794187274,
+      "optimized_distance": 337.1958026446884,
+      "improvement_pct": 25.35538392371615
+    },
+    {
+      "batch_id": 363,
+      "baseline_distance": 234.27507065907724,
+      "optimized_distance": 198.20960712738088,
+      "improvement_pct": 15.39449478351869
+    },
+    {
+      "batch_id": 364,
+      "baseline_distance": 287.34531734974667,
+      "optimized_distance": 242.0881242637576,
+      "improvement_pct": 15.750106354057472
+    },
+    {
+      "batch_id": 365,
+      "baseline_distance": 322.48531382908254,
+      "optimized_distance": 245.4106578818405,
+      "improvement_pct": 23.900206503075566
+    },
+    {
+      "batch_id": 366,
+      "baseline_distance": 208.4109415719901,
+      "optimized_distance": 158.68351882679244,
+      "improvement_pct": 23.860274499081722
+    },
+    {
+      "batch_id": 367,
+      "baseline_distance": 267.6384473738916,
+      "optimized_distance": 211.61664285888452,
+      "improvement_pct": 20.931897141349236
+    },
+    {
+      "batch_id": 368,
+      "baseline_distance": 245.92754506981925,
+      "optimized_distance": 195.16805305432925,
+      "improvement_pct": 20.640018994651165
+    },
+    {
+      "batch_id": 369,
+      "baseline_distance": 254.44137082690864,
+      "optimized_distance": 205.04971197171704,
+      "improvement_pct": 19.411803471532053
+    },
+    {
+      "batch_id": 370,
+      "baseline_distance": 179.61148230094383,
+      "optimized_distance": 160.19900158239972,
+      "improvement_pct": 10.808039925876225
+    },
+    {
+      "batch_id": 371,
+      "baseline_distance": 247.1027074176292,
+      "optimized_distance": 190.97063951081032,
+      "improvement_pct": 22.716087773150083
+    },
+    {
+      "batch_id": 372,
+      "baseline_distance": 298.6281985453696,
+      "optimized_distance": 224.94702242000378,
+      "improvement_pct": 24.673214547142543
+    },
+    {
+      "batch_id": 373,
+      "baseline_distance": 437.2291564479595,
+      "optimized_distance": 327.24554974926315,
+      "improvement_pct": 25.154682636492236
+    },
+    {
+      "batch_id": 374,
+      "baseline_distance": 359.1385798987215,
+      "optimized_distance": 272.81879192158357,
+      "improvement_pct": 24.03523119166993
+    },
+    {
+      "batch_id": 375,
+      "baseline_distance": 578.9829228967546,
+      "optimized_distance": 451.2754101307306,
+      "improvement_pct": 22.05721580302932
+    },
+    {
+      "batch_id": 376,
+      "baseline_distance": 180.0187432876182,
+      "optimized_distance": 158.36019839952007,
+      "improvement_pct": 12.03127212897715
+    },
+    {
+      "batch_id": 377,
+      "baseline_distance": 346.8624330114653,
+      "optimized_distance": 265.37658475858126,
+      "improvement_pct": 23.492266817545676
+    },
+    {
+      "batch_id": 378,
+      "baseline_distance": 263.3112525747593,
+      "optimized_distance": 207.62065652470122,
+      "improvement_pct": 21.15010107068873
+    },
+    {
+      "batch_id": 379,
+      "baseline_distance": 587.5263953633249,
+      "optimized_distance": 458.1063594226659,
+      "improvement_pct": 22.02795260979313
+    },
+    {
+      "batch_id": 380,
+      "baseline_distance": 177.09400368486175,
+      "optimized_distance": 150.01725560867303,
+      "improvement_pct": 15.289477629277451
+    },
+    {
+      "batch_id": 381,
+      "baseline_distance": 174.8819654348062,
+      "optimized_distance": 161.67725729788506,
+      "improvement_pct": 7.550640287059039
+    },
+    {
+      "batch_id": 382,
+      "baseline_distance": 192.52825878217703,
+      "optimized_distance": 144.86335412089488,
+      "improvement_pct": 24.757355082720274
+    },
+    {
+      "batch_id": 383,
+      "baseline_distance": 104.63119204415135,
+      "optimized_distance": 80.0,
+      "improvement_pct": 23.540964757199454
+    },
+    {
+      "batch_id": 384,
+      "baseline_distance": 198.28353301927885,
+      "optimized_distance": 165.10276452572822,
+      "improvement_pct": 16.73400104804694
+    },
+    {
+      "batch_id": 385,
+      "baseline_distance": 180.6112507182765,
+      "optimized_distance": 147.6956904565188,
+      "improvement_pct": 18.224534812120034
+    },
+    {
+      "batch_id": 386,
+      "baseline_distance": 259.86376543399393,
+      "optimized_distance": 221.16081029587562,
+      "improvement_pct": 14.893555888209804
+    },
+    {
+      "batch_id": 387,
+      "baseline_distance": 280.53609295205206,
+      "optimized_distance": 224.65743435586026,
+      "improvement_pct": 19.91852741947979
+    },
+    {
+      "batch_id": 388,
+      "baseline_distance": 518.2554853790235,
+      "optimized_distance": 400.64635768776776,
+      "improvement_pct": 22.69327214264658
+    },
+    {
+      "batch_id": 389,
+      "baseline_distance": 357.8699081392403,
+      "optimized_distance": 285.0450766555305,
+      "improvement_pct": 20.349526413764586
+    },
+    {
+      "batch_id": 390,
+      "baseline_distance": 194.26797837557734,
+      "optimized_distance": 162.61605893877942,
+      "improvement_pct": 16.292916465937285
+    },
+    {
+      "batch_id": 391,
+      "baseline_distance": 170.82405889244583,
+      "optimized_distance": 141.4475877480814,
+      "improvement_pct": 17.19691671936003
+    },
+    {
+      "batch_id": 392,
+      "baseline_distance": 297.90292208068576,
+      "optimized_distance": 237.43701953400787,
+      "improvement_pct": 20.29718343289729
+    },
+    {
+      "batch_id": 393,
+      "baseline_distance": 144.3017678895693,
+      "optimized_distance": 123.2221258497556,
+      "improvement_pct": 14.608027571738036
+    },
+    {
+      "batch_id": 394,
+      "baseline_distance": 509.0689689759211,
+      "optimized_distance": 408.7667517056752,
+      "improvement_pct": 19.703070385928438
+    },
+    {
+      "batch_id": 395,
+      "baseline_distance": 392.20162156455484,
+      "optimized_distance": 319.73885473072806,
+      "improvement_pct": 18.47589679633685
+    },
+    {
+      "batch_id": 396,
+      "baseline_distance": 202.82220121218577,
+      "optimized_distance": 164.68841582140135,
+      "improvement_pct": 18.801583437549883
+    },
+    {
+      "batch_id": 397,
+      "baseline_distance": 123.31550942659344,
+      "optimized_distance": 94.51491654957434,
+      "improvement_pct": 23.355207314099736
+    },
+    {
+      "batch_id": 398,
+      "baseline_distance": 420.5439320362102,
+      "optimized_distance": 329.4914038525772,
+      "improvement_pct": 21.651133507686204
+    },
+    {
+      "batch_id": 399,
+      "baseline_distance": 233.73408070153232,
+      "optimized_distance": 194.3776726122788,
+      "improvement_pct": 16.83811276948947
+    },
+    {
+      "batch_id": 400,
+      "baseline_distance": 401.4674763654958,
+      "optimized_distance": 304.97527485521437,
+      "improvement_pct": 24.034873854248406
+    },
+    {
+      "batch_id": 401,
+      "baseline_distance": 129.3121096031119,
+      "optimized_distance": 104.55017857915631,
+      "improvement_pct": 19.148965321156357
+    },
+    {
+      "batch_id": 402,
+      "baseline_distance": 192.5296159179055,
+      "optimized_distance": 146.23971229269267,
+      "improvement_pct": 24.0430041915997
+    },
+    {
+      "batch_id": 403,
+      "baseline_distance": 245.2057072987639,
+      "optimized_distance": 191.54789992238403,
+      "improvement_pct": 21.88277261874743
+    },
+    {
+      "batch_id": 404,
+      "baseline_distance": 249.33371935138152,
+      "optimized_distance": 207.26481972015057,
+      "improvement_pct": 16.8725272059749
+    },
+    {
+      "batch_id": 405,
+      "baseline_distance": 204.3785295370199,
+      "optimized_distance": 161.32624371907454,
+      "improvement_pct": 21.064974836384227
+    },
+    {
+      "batch_id": 406,
+      "baseline_distance": 313.9205639772499,
+      "optimized_distance": 245.32240538381643,
+      "improvement_pct": 21.852075481874085
+    },
+    {
+      "batch_id": 407,
+      "baseline_distance": 159.6448767678123,
+      "optimized_distance": 110.9244424690944,
+      "improvement_pct": 30.51800676922251
+    },
+    {
+      "batch_id": 408,
+      "baseline_distance": 231.1456903772333,
+      "optimized_distance": 187.75617415451418,
+      "improvement_pct": 18.77150127779011
+    },
+    {
+      "batch_id": 409,
+      "baseline_distance": 256.7539549756476,
+      "optimized_distance": 206.72292669241588,
+      "improvement_pct": 19.485981545241255
+    },
+    {
+      "batch_id": 410,
+      "baseline_distance": 300.59851392884366,
+      "optimized_distance": 256.09938809755266,
+      "improvement_pct": 14.803508257470838
+    },
+    {
+      "batch_id": 411,
+      "baseline_distance": 325.26685939435635,
+      "optimized_distance": 250.63036797806797,
+      "improvement_pct": 22.9462329962729
+    },
+    {
+      "batch_id": 412,
+      "baseline_distance": 156.0448027707739,
+      "optimized_distance": 123.90644943784305,
+      "improvement_pct": 20.595593548951026
+    },
+    {
+      "batch_id": 413,
+      "baseline_distance": 132.4697518851915,
+      "optimized_distance": 105.82024330755692,
+      "improvement_pct": 20.11742922318681
+    },
+    {
+      "batch_id": 414,
+      "baseline_distance": 407.9198580489649,
+      "optimized_distance": 333.95202207582736,
+      "improvement_pct": 18.132933347966297
+    },
+    {
+      "batch_id": 415,
+      "baseline_distance": 279.4785665808242,
+      "optimized_distance": 217.04032660917335,
+      "improvement_pct": 22.340976174140323
+    },
+    {
+      "batch_id": 416,
+      "baseline_distance": 181.38201466377495,
+      "optimized_distance": 144.26818669544784,
+      "improvement_pct": 20.461691329829172
+    },
+    {
+      "batch_id": 417,
+      "baseline_distance": 455.0743399947605,
+      "optimized_distance": 361.03695029307863,
+      "improvement_pct": 20.66418196700886
+    },
+    {
+      "batch_id": 418,
+      "baseline_distance": 256.2798095702744,
+      "optimized_distance": 201.7643426963776,
+      "improvement_pct": 21.27185398073589
+    },
+    {
+      "batch_id": 419,
+      "baseline_distance": 392.1791982100499,
+      "optimized_distance": 301.43543845833364,
+      "improvement_pct": 23.138340882402996
+    },
+    {
+      "batch_id": 420,
+      "baseline_distance": 251.3904712175339,
+      "optimized_distance": 198.02546747865952,
+      "improvement_pct": 21.227934169667247
+    },
+    {
+      "batch_id": 421,
+      "baseline_distance": 557.9666368223307,
+      "optimized_distance": 445.9502942200156,
+      "improvement_pct": 20.075813715360834
+    },
+    {
+      "batch_id": 422,
+      "baseline_distance": 493.8028443288827,
+      "optimized_distance": 374.9010655824179,
+      "improvement_pct": 24.078795841701105
+    },
+    {
+      "batch_id": 423,
+      "baseline_distance": 221.49817288132024,
+      "optimized_distance": 174.09827158889854,
+      "improvement_pct": 21.399680492090916
+    },
+    {
+      "batch_id": 424,
+      "baseline_distance": 360.90991360189577,
+      "optimized_distance": 274.50852446008696,
+      "improvement_pct": 23.939876929264532
+    },
+    {
+      "batch_id": 425,
+      "baseline_distance": 316.76189755388117,
+      "optimized_distance": 259.02474638127575,
+      "improvement_pct": 18.227303100046726
+    },
+    {
+      "batch_id": 426,
+      "baseline_distance": 423.03402916660013,
+      "optimized_distance": 314.7346737021104,
+      "improvement_pct": 25.600625008310868
+    },
+    {
+      "batch_id": 427,
+      "baseline_distance": 166.33945595721218,
+      "optimized_distance": 124.15555717390961,
+      "improvement_pct": 25.360127902638812
+    },
+    {
+      "batch_id": 428,
+      "baseline_distance": 321.9578331436782,
+      "optimized_distance": 254.89922860271423,
+      "improvement_pct": 20.82838112251741
+    },
+    {
+      "batch_id": 429,
+      "baseline_distance": 373.6687817514576,
+      "optimized_distance": 307.11689005848035,
+      "improvement_pct": 17.810396517749137
+    },
+    {
+      "batch_id": 430,
+      "baseline_distance": 121.08638366052362,
+      "optimized_distance": 93.78987664447855,
+      "improvement_pct": 22.54300292968798
+    },
+    {
+      "batch_id": 431,
+      "baseline_distance": 152.42864652820361,
+      "optimized_distance": 113.34234902506684,
+      "improvement_pct": 25.64235686230062
+    },
+    {
+      "batch_id": 432,
+      "baseline_distance": 108.2352532425033,
+      "optimized_distance": 103.23506822355849,
+      "improvement_pct": 4.619737903455358
+    },
+    {
+      "batch_id": 433,
+      "baseline_distance": 219.69435088953372,
+      "optimized_distance": 156.88145468967386,
+      "improvement_pct": 28.5910383883486
+    },
+    {
+      "batch_id": 434,
+      "baseline_distance": 326.03896615883656,
+      "optimized_distance": 232.3223340376917,
+      "improvement_pct": 28.743997450749152
+    },
+    {
+      "batch_id": 435,
+      "baseline_distance": 446.27833230537857,
+      "optimized_distance": 352.4972436987286,
+      "improvement_pct": 21.014035819798128
+    },
+    {
+      "batch_id": 436,
+      "baseline_distance": 252.05262930839208,
+      "optimized_distance": 191.58050861701972,
+      "improvement_pct": 23.99186267459379
+    },
+    {
+      "batch_id": 437,
+      "baseline_distance": 469.3957448198492,
+      "optimized_distance": 355.91635278817523,
+      "improvement_pct": 24.175632882063418
+    },
+    {
+      "batch_id": 438,
+      "baseline_distance": 140.8871783747526,
+      "optimized_distance": 116.97556360530056,
+      "improvement_pct": 16.97217237600457
+    },
+    {
+      "batch_id": 439,
+      "baseline_distance": 123.79748242972012,
+      "optimized_distance": 99.00004343289369,
+      "improvement_pct": 20.030648854999086
+    },
+    {
+      "batch_id": 440,
+      "baseline_distance": 239.31505855239575,
+      "optimized_distance": 181.0249593635014,
+      "improvement_pct": 24.357054479349564
+    },
+    {
+      "batch_id": 441,
+      "baseline_distance": 285.3242290917126,
+      "optimized_distance": 209.74985470482687,
+      "improvement_pct": 26.487191300740754
+    },
+    {
+      "batch_id": 442,
+      "baseline_distance": 241.5127099166848,
+      "optimized_distance": 197.10448701781561,
+      "improvement_pct": 18.38753037642979
+    },
+    {
+      "batch_id": 443,
+      "baseline_distance": 107.02079485128908,
+      "optimized_distance": 89.97823176359209,
+      "improvement_pct": 15.924534209803348
+    },
+    {
+      "batch_id": 444,
+      "baseline_distance": 236.1227942186772,
+      "optimized_distance": 183.1840208527744,
+      "improvement_pct": 22.420018169391696
+    },
+    {
+      "batch_id": 445,
+      "baseline_distance": 145.21453487098847,
+      "optimized_distance": 131.73370715984768,
+      "improvement_pct": 9.283387315958027
+    },
+    {
+      "batch_id": 446,
+      "baseline_distance": 319.8554002765206,
+      "optimized_distance": 238.78636455242454,
+      "improvement_pct": 25.345526651734012
+    },
+    {
+      "batch_id": 447,
+      "baseline_distance": 283.3376506925976,
+      "optimized_distance": 205.74811583097875,
+      "improvement_pct": 27.38412444373597
+    },
+    {
+      "batch_id": 448,
+      "baseline_distance": 168.0141304132726,
+      "optimized_distance": 124.13194102354018,
+      "improvement_pct": 26.118154039659192
+    },
+    {
+      "batch_id": 449,
+      "baseline_distance": 199.22866453482368,
+      "optimized_distance": 154.9424981736075,
+      "improvement_pct": 22.228812537904297
+    },
+    {
+      "batch_id": 450,
+      "baseline_distance": 160.1826283108872,
+      "optimized_distance": 127.37584457571893,
+      "improvement_pct": 20.480862426290003
+    },
+    {
+      "batch_id": 451,
+      "baseline_distance": 238.63337088389042,
+      "optimized_distance": 183.72166871087123,
+      "improvement_pct": 23.01090663457001
+    },
+    {
+      "batch_id": 452,
+      "baseline_distance": 358.5459870849305,
+      "optimized_distance": 283.1864238913888,
+      "improvement_pct": 21.01810253302066
+    },
+    {
+      "batch_id": 453,
+      "baseline_distance": 164.9610823386297,
+      "optimized_distance": 116.15424998222672,
+      "improvement_pct": 29.586876895129137
+    },
+    {
+      "batch_id": 454,
+      "baseline_distance": 299.3515413079577,
+      "optimized_distance": 247.9318482609396,
+      "improvement_pct": 17.17702632241339
+    },
+    {
+      "batch_id": 455,
+      "baseline_distance": 197.92673810453036,
+      "optimized_distance": 153.56134393760797,
+      "improvement_pct": 22.4150585170013
+    },
+    {
+      "batch_id": 456,
+      "baseline_distance": 178.19008381270888,
+      "optimized_distance": 150.1612236897942,
+      "improvement_pct": 15.729753038544555
+    },
+    {
+      "batch_id": 457,
+      "baseline_distance": 234.4372252806885,
+      "optimized_distance": 186.28828918271407,
+      "improvement_pct": 20.538093317017537
+    },
+    {
+      "batch_id": 458,
+      "baseline_distance": 161.72592330718913,
+      "optimized_distance": 130.71375237114538,
+      "improvement_pct": 19.175757542059547
+    },
+    {
+      "batch_id": 459,
+      "baseline_distance": 196.08343900693794,
+      "optimized_distance": 158.64275522773363,
+      "improvement_pct": 19.094261080294274
+    },
+    {
+      "batch_id": 460,
+      "baseline_distance": 151.53988277798067,
+      "optimized_distance": 122.67819416699808,
+      "improvement_pct": 19.045605738832137
+    },
+    {
+      "batch_id": 461,
+      "baseline_distance": 536.9419849332494,
+      "optimized_distance": 425.24197584660993,
+      "improvement_pct": 20.802994033056585
+    },
+    {
+      "batch_id": 462,
+      "baseline_distance": 248.16787209766866,
+      "optimized_distance": 206.8624655375059,
+      "improvement_pct": 16.64413939283271
+    },
+    {
+      "batch_id": 463,
+      "baseline_distance": 184.9544903676163,
+      "optimized_distance": 146.22971418375542,
+      "improvement_pct": 20.937462024788562
+    },
+    {
+      "batch_id": 464,
+      "baseline_distance": 266.55802888011044,
+      "optimized_distance": 215.00530010237128,
+      "improvement_pct": 19.340152309171668
+    },
+    {
+      "batch_id": 465,
+      "baseline_distance": 233.94096100435877,
+      "optimized_distance": 181.57659264052756,
+      "improvement_pct": 22.383582652229748
+    },
+    {
+      "batch_id": 466,
+      "baseline_distance": 223.99240839494112,
+      "optimized_distance": 189.11525070254882,
+      "improvement_pct": 15.570687391733944
+    },
+    {
+      "batch_id": 467,
+      "baseline_distance": 312.83211724582804,
+      "optimized_distance": 237.24512843115318,
+      "improvement_pct": 24.162157479271066
+    },
+    {
+      "batch_id": 468,
+      "baseline_distance": 331.2929681370676,
+      "optimized_distance": 276.4179194760209,
+      "improvement_pct": 16.563903837024068
+    },
+    {
+      "batch_id": 469,
+      "baseline_distance": 197.90745866447605,
+      "optimized_distance": 153.9662382518479,
+      "improvement_pct": 22.20291277001553
+    },
+    {
+      "batch_id": 470,
+      "baseline_distance": 194.35234124047287,
+      "optimized_distance": 137.28707514638836,
+      "improvement_pct": 29.361759024799934
+    },
+    {
+      "batch_id": 471,
+      "baseline_distance": 219.19885272455596,
+      "optimized_distance": 172.25614927426153,
+      "improvement_pct": 21.41557898995136
+    },
+    {
+      "batch_id": 472,
+      "baseline_distance": 100.0,
+      "optimized_distance": 80.0,
+      "improvement_pct": 20.0
+    },
+    {
+      "batch_id": 473,
+      "baseline_distance": 133.47625209938732,
+      "optimized_distance": 112.51791212740936,
+      "improvement_pct": 15.701924231714449
+    },
+    {
+      "batch_id": 474,
+      "baseline_distance": 422.7367762482539,
+      "optimized_distance": 323.2084456806141,
+      "improvement_pct": 23.54380696445283
+    },
+    {
+      "batch_id": 475,
+      "baseline_distance": 472.4760630318703,
+      "optimized_distance": 364.06949483271103,
+      "improvement_pct": 22.94435140343752
+    },
+    {
+      "batch_id": 476,
+      "baseline_distance": 221.4918034759936,
+      "optimized_distance": 153.8681994018197,
+      "improvement_pct": 30.530973612982155
+    },
+    {
+      "batch_id": 477,
+      "baseline_distance": 308.1611268237822,
+      "optimized_distance": 235.84261573005932,
+      "improvement_pct": 23.467759168429193
+    },
+    {
+      "batch_id": 478,
+      "baseline_distance": 277.1337001658205,
+      "optimized_distance": 191.92549286305044,
+      "improvement_pct": 30.7462453147295
+    },
+    {
+      "batch_id": 479,
+      "baseline_distance": 600.0,
+      "optimized_distance": 452.1609717651428,
+      "improvement_pct": 24.63983803914287
+    },
+    {
+      "batch_id": 480,
+      "baseline_distance": 382.9214836247594,
+      "optimized_distance": 306.28290378875533,
+      "improvement_pct": 20.014176042184506
+    },
+    {
+      "batch_id": 481,
+      "baseline_distance": 232.48668705457973,
+      "optimized_distance": 189.19761748908053,
+      "improvement_pct": 18.620020833853786
+    },
+    {
+      "batch_id": 482,
+      "baseline_distance": 166.9649355759879,
+      "optimized_distance": 134.4872253671202,
+      "improvement_pct": 19.451814895641174
+    },
+    {
+      "batch_id": 483,
+      "baseline_distance": 128.69193813636343,
+      "optimized_distance": 90.70995031507135,
+      "improvement_pct": 29.51388282072956
+    },
+    {
+      "batch_id": 484,
+      "baseline_distance": 265.43910491254724,
+      "optimized_distance": 206.56538827036707,
+      "improvement_pct": 22.179745015933868
+    },
+    {
+      "batch_id": 485,
+      "baseline_distance": 180.81234073136585,
+      "optimized_distance": 140.99760037955969,
+      "improvement_pct": 22.019924188116786
+    },
+    {
+      "batch_id": 486,
+      "baseline_distance": 138.53160799508038,
+      "optimized_distance": 96.47100734423728,
+      "improvement_pct": 30.361735678645108
+    },
+    {
+      "batch_id": 487,
+      "baseline_distance": 188.92891747534324,
+      "optimized_distance": 162.39853864843926,
+      "improvement_pct": 14.042518837999701
+    },
+    {
+      "batch_id": 488,
+      "baseline_distance": 158.7579632237729,
+      "optimized_distance": 132.60483422029958,
+      "improvement_pct": 16.473585622038936
+    },
+    {
+      "batch_id": 489,
+      "baseline_distance": 480.51413921780164,
+      "optimized_distance": 372.59138685158865,
+      "improvement_pct": 22.459849473294078
+    },
+    {
+      "batch_id": 490,
+      "baseline_distance": 348.1578269843352,
+      "optimized_distance": 271.83196343772676,
+      "improvement_pct": 21.922776864655294
+    },
+    {
+      "batch_id": 491,
+      "baseline_distance": 243.91283880743873,
+      "optimized_distance": 192.33584234927775,
+      "improvement_pct": 21.145666915417824
+    },
+    {
+      "batch_id": 492,
+      "baseline_distance": 442.2952544479872,
+      "optimized_distance": 324.5729497851871,
+      "improvement_pct": 26.616226034286765
+    },
+    {
+      "batch_id": 493,
+      "baseline_distance": 252.38288593997638,
+      "optimized_distance": 194.38687720797563,
+      "improvement_pct": 22.979374578430726
+    },
+    {
+      "batch_id": 494,
+      "baseline_distance": 173.38010437968083,
+      "optimized_distance": 128.4166389361731,
+      "improvement_pct": 25.93346312968145
+    },
+    {
+      "batch_id": 495,
+      "baseline_distance": 450.00092166551775,
+      "optimized_distance": 340.98451880015466,
+      "improvement_pct": 24.225817685412242
+    },
+    {
+      "batch_id": 496,
+      "baseline_distance": 303.5553655660825,
+      "optimized_distance": 233.9621822126848,
+      "improvement_pct": 22.926026434623378
+    },
+    {
+      "batch_id": 497,
+      "baseline_distance": 161.5963466179771,
+      "optimized_distance": 144.02201563051736,
+      "improvement_pct": 10.875450686398533
+    },
+    {
+      "batch_id": 498,
+      "baseline_distance": 226.7537277487863,
+      "optimized_distance": 183.27633625672343,
+      "improvement_pct": 19.173837591869795
+    },
+    {
+      "batch_id": 499,
+      "baseline_distance": 172.38885304818783,
+      "optimized_distance": 128.75151547975855,
+      "improvement_pct": 25.313317419793574
+    },
+    {
+      "batch_id": 500,
+      "baseline_distance": 140.7351995918857,
+      "optimized_distance": 115.49928349523243,
+      "improvement_pct": 17.931488476112754
+    }
+  ],
+  "metrics": {
+    "baseline_mean": 263.6634527707847,
+    "optimized_mean": 206.01385235043568,
+    "avg_improvement_pct": 21.697103017897405,
+    "baseline_p95": 469.43140614180487,
+    "optimized_p95": 364.18277572492644
+  }
+}

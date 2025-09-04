@@ -1100,6 +1100,232 @@ body{
   box-shadow: var(--shadow-1);
 }
 
+/* ---------- Technical Excellence Section ---------- */
+.technical-excellence-section{
+  padding-bottom: 48px;
+}
+
+.technical-header{
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--surface-2);
+}
+
+.technical-header h2{
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.technical-subtitle{
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.technical-navigation{
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.tech-nav-btn{
+  appearance: none;
+  background: var(--surface);
+  border: 1px solid var(--surface-2);
+  color: var(--text);
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tech-nav-btn:hover{
+  background: var(--surface-2);
+  border-color: var(--primary-200);
+  transform: translateY(-1px);
+}
+
+.tech-nav-btn.active{
+  background: var(--primary-100);
+  border-color: var(--primary-600);
+  color: var(--primary-700);
+  font-weight: 600;
+}
+
+.tech-icon{
+  font-size: 16px;
+}
+
+.technical-content{
+  background: var(--surface);
+  border: 1px solid var(--surface-2);
+  border-radius: var(--radius);
+  padding: 32px;
+  margin-top: 24px;
+  box-shadow: var(--shadow-1);
+}
+
+.tech-project-overview{
+  margin-bottom: 48px;
+}
+
+.tech-project-overview h3{
+  margin: 0 0 16px 0;
+  font-size: 24px;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.tech-project-meta{
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.tech-meta-item{
+  background: var(--surface-2);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.tech-section{
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--surface-2);
+}
+
+.tech-section:last-child{
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.tech-section h4{
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  color: var(--text);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tech-section-icon{
+  font-size: 18px;
+}
+
+.tech-code-block{
+  background: var(--bg);
+  border: 1px solid var(--surface-2);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 16px 0;
+  overflow-x: auto;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.tech-highlights{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 24px 0;
+}
+
+.tech-highlight{
+  background: var(--surface-2);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-600);
+}
+
+.tech-highlight h5{
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.tech-highlight p{
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.tech-metrics{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.tech-metric{
+  text-align: center;
+  padding: 16px;
+  background: var(--surface-2);
+  border-radius: 8px;
+}
+
+.tech-metric-value{
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-600);
+  margin-bottom: 4px;
+}
+
+.tech-metric-label{
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.nav-technical-button{
+  appearance: none;
+  background: var(--surface);
+  border: 1px solid var(--surface-2);
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s, color .2s, transform .06s;
+}
+
+.nav-technical-button:hover{
+  background: var(--surface-2);
+  color: var(--primary-600);
+  transform: translateY(-1px);
+}
+
+.nav-technical-button.active{
+  background: var(--primary-100);
+  color: var(--primary-700);
+  border-color: var(--primary-200);
+  pointer-events: none;
+}
+
+.nav-technical-button.active:hover{
+  background: var(--primary-100);
+  color: var(--primary-700);
+  border-color: var(--primary-200);
+  transform: none;
+}
+
 /* ---------- Hero ---------- */
 .hero{
   padding-block: clamp(24px, 6vw, 48px);

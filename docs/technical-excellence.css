@@ -1,0 +1,75 @@
+/* Technical Excellence Responsive Design */
+@media (max-width: 768px) {
+  .technical-navigation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  
+  .tech-nav-btn {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+  
+  .tech-icon {
+    font-size: 14px;
+  }
+  
+  .technical-content {
+    padding: 20px;
+  }
+  
+  .tech-project-meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .tech-highlights {
+    grid-template-columns: 1fr;
+  }
+  
+  .tech-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .tech-code-block {
+    font-size: 13px;
+    padding: 16px;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .technical-header h2 {
+    font-size: 24px;
+  }
+  
+  .technical-navigation {
+    grid-template-columns: 1fr;
+  }
+  
+  .tech-nav-btn {
+    justify-content: center;
+  }
+  
+  .technical-content {
+    padding: 16px;
+  }
+  
+  .tech-metrics {
+    grid-template-columns: 1fr;
+  }
+  
+  .tech-code-block {
+    font-size: 12px;
+    padding: 12px;
+  }
+  
+  .tech-section h4 {
+    font-size: 18px;
+  }
+  
+  .tech-project-overview h3 {
+    font-size: 20px;
+  }
+}

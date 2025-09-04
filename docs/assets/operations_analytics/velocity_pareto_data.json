@@ -1,0 +1,624 @@
+{
+  "abc_summary": {
+    "A": {
+      "sku_count": 109,
+      "sku_percent": 7.2666666666666675,
+      "velocity_contribution": 79.97307489107125,
+      "avg_velocity": 232.05743119266057
+    },
+    "B": {
+      "sku_count": 286,
+      "sku_percent": 19.066666666666666,
+      "velocity_contribution": 15.019885565125342,
+      "avg_velocity": 16.610349650349647
+    },
+    "C": {
+      "sku_count": 1105,
+      "sku_percent": 73.66666666666667,
+      "velocity_contribution": 5.007039543803415,
+      "avg_velocity": 1.4331674208144798
+    }
+  },
+  "pareto_data": [
+    {
+      "sku_rank": 1,
+      "velocity": 8185.49,
+      "cumulative_percent": 25.88013267793225,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 2,
+      "velocity": 1946.21,
+      "cumulative_percent": 32.03348122751432,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 3,
+      "velocity": 975.72,
+      "cumulative_percent": 35.11842336983103,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 4,
+      "velocity": 951.11,
+      "cumulative_percent": 38.12555586786208,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 5,
+      "velocity": 665.41,
+      "cumulative_percent": 40.22938826949263,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 6,
+      "velocity": 626.66,
+      "cumulative_percent": 42.2107044697388,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 7,
+      "velocity": 547.15,
+      "cumulative_percent": 43.94063323328633,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 8,
+      "velocity": 521.57,
+      "cumulative_percent": 45.58968549537805,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 9,
+      "velocity": 506.44,
+      "cumulative_percent": 47.19090110903245,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 10,
+      "velocity": 450.42,
+      "cumulative_percent": 48.61499781684032,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 11,
+      "velocity": 436.05,
+      "cumulative_percent": 49.99366077461222,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 12,
+      "velocity": 374.88,
+      "cumulative_percent": 51.17892202816006,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 13,
+      "velocity": 357.89,
+      "cumulative_percent": 52.31046585560413,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 14,
+      "velocity": 314.85,
+      "cumulative_percent": 53.3059297525299,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 15,
+      "velocity": 265.65,
+      "cumulative_percent": 54.14583759505279,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 16,
+      "velocity": 260.28,
+      "cumulative_percent": 54.968767063345126,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 17,
+      "velocity": 237.1,
+      "cumulative_percent": 55.718408130396426,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 18,
+      "velocity": 218.62,
+      "cumulative_percent": 56.40962082579395,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 19,
+      "velocity": 213.71,
+      "cumulative_percent": 57.08530953283542,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 20,
+      "velocity": 210.33,
+      "cumulative_percent": 57.750311665407764,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 21,
+      "velocity": 208.33,
+      "cumulative_percent": 58.40899038113445,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 22,
+      "velocity": 206.59,
+      "cumulative_percent": 59.062167724205416,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 23,
+      "velocity": 198.32,
+      "cumulative_percent": 59.68919773861965,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 24,
+      "velocity": 197.08,
+      "cumulative_percent": 60.31230723458958,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 25,
+      "velocity": 188.17,
+      "cumulative_percent": 60.90724590851215,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 26,
+      "velocity": 173.25,
+      "cumulative_percent": 61.45501189276621,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 27,
+      "velocity": 172.94,
+      "cumulative_percent": 62.00179774740919,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 28,
+      "velocity": 169.5,
+      "cumulative_percent": 62.53770732507766,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 29,
+      "velocity": 154.0,
+      "cumulative_percent": 63.02461042219238,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 30,
+      "velocity": 149.74,
+      "cumulative_percent": 63.498044641425885,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 31,
+      "velocity": 143.21,
+      "cumulative_percent": 63.95083290465834,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 32,
+      "velocity": 137.45,
+      "cumulative_percent": 64.38540972737535,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 33,
+      "velocity": 127.24,
+      "cumulative_percent": 64.78770550709532,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 34,
+      "velocity": 126.97,
+      "cumulative_percent": 65.18914762554115,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 35,
+      "velocity": 113.15,
+      "cumulative_percent": 65.54689493358356,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 36,
+      "velocity": 112.13,
+      "cumulative_percent": 65.90141729903469,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 37,
+      "velocity": 108.57,
+      "cumulative_percent": 66.24468398250058,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 38,
+      "velocity": 107.05,
+      "cumulative_percent": 66.58314486916376,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 39,
+      "velocity": 101.04,
+      "cumulative_percent": 66.90260388820577,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 40,
+      "velocity": 96.63,
+      "cumulative_percent": 67.20811977310316,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 41,
+      "velocity": 94.91,
+      "cumulative_percent": 67.50819751951327,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 42,
+      "velocity": 92.42,
+      "cumulative_percent": 67.80040261195055,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 43,
+      "velocity": 90.28,
+      "cumulative_percent": 68.085841648363,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 44,
+      "velocity": 90.0,
+      "cumulative_percent": 68.37039540641705,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 45,
+      "velocity": 89.41,
+      "cumulative_percent": 68.65308375650164,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 46,
+      "velocity": 87.29,
+      "cumulative_percent": 68.92906928472986,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 47,
+      "velocity": 85.33,
+      "cumulative_percent": 69.19885786444934,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 48,
+      "velocity": 83.84,
+      "cumulative_percent": 69.4639354986188,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 49,
+      "velocity": 80.18,
+      "cumulative_percent": 69.71744127996075,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 50,
+      "velocity": 77.92,
+      "cumulative_percent": 69.96380160026709,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 51,
+      "velocity": 75.56,
+      "cumulative_percent": 70.2027002886956,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 52,
+      "velocity": 72.6,
+      "cumulative_percent": 70.43224032019253,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 53,
+      "velocity": 72.34,
+      "cumulative_percent": 70.66095830749953,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 54,
+      "velocity": 72.24,
+      "cumulative_percent": 70.88936012396427,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 55,
+      "velocity": 70.67,
+      "cumulative_percent": 71.11279805820516,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 56,
+      "velocity": 69.21,
+      "cumulative_percent": 71.33161989814872,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 57,
+      "velocity": 68.52,
+      "cumulative_percent": 71.54826015928055,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 58,
+      "velocity": 67.78,
+      "cumulative_percent": 71.76256075617945,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 59,
+      "velocity": 66.75,
+      "cumulative_percent": 71.97360479340288,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 60,
+      "velocity": 66.36,
+      "cumulative_percent": 72.18341576434142,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 61,
+      "velocity": 65.86,
+      "cumulative_percent": 72.39164588106853,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 62,
+      "velocity": 65.73,
+      "cumulative_percent": 72.59946497570068,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 63,
+      "velocity": 65.58,
+      "cumulative_percent": 72.80680981406941,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 64,
+      "velocity": 65.33,
+      "cumulative_percent": 73.01336422533244,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 65,
+      "velocity": 64.12,
+      "cumulative_percent": 73.21609296940382,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 66,
+      "velocity": 61.75,
+      "cumulative_percent": 73.41132846451313,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 67,
+      "velocity": 60.51,
+      "cumulative_percent": 73.60264344117815,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 68,
+      "velocity": 60.22,
+      "cumulative_percent": 73.79304152240054,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 69,
+      "velocity": 59.12,
+      "cumulative_percent": 73.97996172435782,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 70,
+      "velocity": 58.61,
+      "cumulative_percent": 74.16526945501948,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 71,
+      "velocity": 56.56,
+      "cumulative_percent": 74.34409568341434,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 72,
+      "velocity": 56.37,
+      "cumulative_percent": 74.52232118720886,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 73,
+      "velocity": 56.25,
+      "cumulative_percent": 74.70016728599265,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 74,
+      "velocity": 56.16,
+      "cumulative_percent": 74.87772883101837,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 75,
+      "velocity": 55.13,
+      "cumulative_percent": 75.0520338163686,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 76,
+      "velocity": 54.52,
+      "cumulative_percent": 75.2244101595809,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 77,
+      "velocity": 54.2,
+      "cumulative_percent": 75.39577475609791,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 78,
+      "velocity": 54.1,
+      "cumulative_percent": 75.56682318177262,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 79,
+      "velocity": 53.92,
+      "cumulative_percent": 75.73730249993122,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 80,
+      "velocity": 53.22,
+      "cumulative_percent": 75.90556862219385,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 81,
+      "velocity": 52.35,
+      "cumulative_percent": 76.07108405812863,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 82,
+      "velocity": 52.27,
+      "cumulative_percent": 76.23634655738958,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 83,
+      "velocity": 51.08,
+      "cumulative_percent": 76.39784662362737,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 84,
+      "velocity": 50.48,
+      "cumulative_percent": 76.55744966481147,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 85,
+      "velocity": 49.14,
+      "cumulative_percent": 76.71281601670898,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 86,
+      "velocity": 48.2,
+      "cumulative_percent": 76.86521036268906,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 87,
+      "velocity": 48.13,
+      "cumulative_percent": 77.01738338907951,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 88,
+      "velocity": 47.89,
+      "cumulative_percent": 77.1687976054485,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 89,
+      "velocity": 47.77,
+      "cumulative_percent": 77.31983241680676,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 90,
+      "velocity": 47.34,
+      "cumulative_percent": 77.46950769354318,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 91,
+      "velocity": 46.96,
+      "cumulative_percent": 77.61798152107895,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 92,
+      "velocity": 46.59,
+      "cumulative_percent": 77.76528551649827,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 93,
+      "velocity": 46.15,
+      "cumulative_percent": 77.91119836021154,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 94,
+      "velocity": 43.9,
+      "cumulative_percent": 78.04999735997346,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 95,
+      "velocity": 43.71,
+      "cumulative_percent": 78.18819563513505,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 96,
+      "velocity": 43.62,
+      "cumulative_percent": 78.32610935653858,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 97,
+      "velocity": 42.82,
+      "cumulative_percent": 78.46149371120386,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 98,
+      "velocity": 42.55,
+      "cumulative_percent": 78.59602440459497,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 99,
+      "velocity": 42.41,
+      "cumulative_percent": 78.73011245880689,
+      "abc_class": "A"
+    },
+    {
+      "sku_rank": 100,
+      "velocity": 42.03,
+      "cumulative_percent": 78.86299906381812,
+      "abc_class": "A"
+    }
+  ]
+}

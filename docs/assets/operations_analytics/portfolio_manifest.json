@@ -1,0 +1,139 @@
+{
+  "project_info": {
+    "title": "3D Warehouse Optimization Digital Twin",
+    "description": "End-to-end supply chain optimization reducing pick distance 22% and cycle time 28%",
+    "tags": [
+      "Operations Analytics",
+      "3D Modeling",
+      "MILP Optimization",
+      "Supply Chain",
+      "Digital Twin"
+    ],
+    "category": "operations",
+    "type": "comprehensive",
+    "completion_date": "2025-09-04",
+    "duration_weeks": 2,
+    "complexity": "High"
+  },
+  "graphics": {
+    "warehouse_3d": {
+      "file": "warehouse_3d_interactive.html",
+      "data": "warehouse_3d_data.json",
+      "title": "3D Warehouse Digital Twin",
+      "description": "Interactive 3D visualization with before/after optimization",
+      "type": "interactive_3d"
+    },
+    "velocity_pareto": {
+      "file": "velocity_pareto_interactive.html",
+      "data": "velocity_pareto_data.json",
+      "title": "SKU Velocity Distribution",
+      "description": "ABC Pareto analysis showing velocity patterns",
+      "type": "pareto_chart"
+    },
+    "pick_path_comparison": {
+      "file": "pick_path_comparison_interactive.html",
+      "data": "pick_path_data.json",
+      "title": "Pick Path Optimization",
+      "description": "Before vs after path distance analysis",
+      "type": "comparison_analysis"
+    },
+    "congestion_heatmap": {
+      "file": "congestion_heatmap_interactive.html",
+      "data": "congestion_heatmap_data.json",
+      "title": "Congestion Analysis",
+      "description": "Aisle-level congestion patterns by hour",
+      "type": "heatmap"
+    },
+    "simulation_dashboard": {
+      "file": "simulation_dashboard_interactive.html",
+      "data": "simulation_dashboard_data.json",
+      "title": "Performance Dashboard",
+      "description": "KPI trends over 26-week simulation",
+      "type": "dashboard"
+    },
+    "cost_waterfall": {
+      "file": "cost_waterfall_interactive.html",
+      "data": "cost_waterfall_data.json",
+      "title": "Business Impact",
+      "description": "Annual cost savings waterfall",
+      "type": "waterfall_chart"
+    },
+    "executive_summary": {
+      "file": "executive_summary_table.html",
+      "data": "executive_summary_data.json",
+      "title": "Executive Summary",
+      "description": "Key metrics comparison table",
+      "type": "summary_table"
+    }
+  },
+  "key_metrics": {
+    "pick_distance_improvement": "22%",
+    "lines_per_hour_improvement": "15%",
+    "cycle_time_improvement": "28%",
+    "annual_cost_savings": "$191,000",
+    "roi": "335%",
+    "payback_months": 3.4,
+    "skus_analyzed": 1500,
+    "simulation_weeks": 26
+  },
+  "technical_highlights": [
+    "Synthetic 3D warehouse digital twin (1,500 SKUs)",
+    "Multi-layer optimization: forecasting + clustering + MILP + routing",
+    "Discrete-event simulation validation (SimPy)",
+    "Interactive 3D visualization with Plotly",
+    "Comprehensive performance dashboard",
+    "Cost-benefit analysis with ROI calculation"
+  ],
+  "business_impact": [
+    "Reduced warehouse labor costs through optimized picking routes",
+    "Improved customer service levels via faster order fulfillment",
+    "Decreased operational bottlenecks through congestion analysis",
+    "Enhanced decision-making with data-driven slot recommendations",
+    "Quantified ROI with 335% return on investment"
+  ],
+  "methodologies": [
+    "ABC Analysis for SKU classification",
+    "Pareto Analysis for velocity distribution",
+    "MILP Optimization for slot assignment",
+    "Monte Carlo Simulation for performance validation",
+    "Synthetic Data Generation for realistic modeling",
+    "Time Series Analysis for forecasting"
+  ],
+  "data_sources": {
+    "sku_master": "1,500 synthetic SKUs with velocity, dimensions, categories",
+    "warehouse_locations": "10,000 positions across 4 levels and 3 zones",
+    "order_history": "26 weeks of synthetic order data",
+    "congestion_patterns": "Hourly aisle utilization data",
+    "cost_structure": "Labor rates, inventory costs, implementation expenses"
+  },
+  "website_integration": {
+    "display_order": [
+      "warehouse_3d",
+      "velocity_pareto",
+      "pick_path_comparison",
+      "congestion_heatmap",
+      "simulation_dashboard",
+      "cost_waterfall",
+      "executive_summary"
+    ],
+    "hero_graphic": "warehouse_3d",
+    "primary_metrics": [
+      "pick_distance_improvement",
+      "roi",
+      "annual_cost_savings"
+    ],
+    "narrative_flow": [
+      "Problem Definition",
+      "Data Analysis",
+      "Optimization",
+      "Simulation",
+      "Business Impact"
+    ],
+    "interactive_features": [
+      "3D rotation",
+      "hover details",
+      "time series",
+      "drill-down capabilities"
+    ]
+  }
+}

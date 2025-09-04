@@ -1,0 +1,73 @@
+{
+  "components": [
+    {
+      "category": "Labor Savings",
+      "value": 125000,
+      "type": "gain"
+    },
+    {
+      "category": "Inventory Reduction",
+      "value": 89000,
+      "type": "gain"
+    },
+    {
+      "category": "SLA Improvement",
+      "value": 34000,
+      "type": "gain"
+    },
+    {
+      "category": "Implementation Cost",
+      "value": -45000,
+      "type": "cost"
+    },
+    {
+      "category": "Training Cost",
+      "value": -12000,
+      "type": "cost"
+    }
+  ],
+  "waterfall_data": [
+    {
+      "category": "Labor Savings",
+      "value": 125000,
+      "cumulative": 125000,
+      "type": "gain"
+    },
+    {
+      "category": "Inventory Reduction",
+      "value": 89000,
+      "cumulative": 214000,
+      "type": "gain"
+    },
+    {
+      "category": "SLA Improvement",
+      "value": 34000,
+      "cumulative": 248000,
+      "type": "gain"
+    },
+    {
+      "category": "Implementation Cost",
+      "value": -45000,
+      "cumulative": 203000,
+      "type": "cost"
+    },
+    {
+      "category": "Training Cost",
+      "value": -12000,
+      "cumulative": 191000,
+      "type": "cost"
+    },
+    {
+      "category": "Net Benefit",
+      "value": 191000,
+      "cumulative": 191000,
+      "type": "total"
+    }
+  ],
+  "roi_metrics": {
+    "total_benefits": 248000,
+    "total_costs": 57000,
+    "net_benefit": 191000,
+    "roi_percent": 335.08771929824564
+  }
+}
